@@ -11,7 +11,8 @@ public class Player_Control: MonoBehaviour
     public float Brake_Speed;
     public float Responsiveness;
 
-    public float Turn_Sensitivity;
+    public float Turn_Speed;
+    //scale from 0-1 
 
     public float Pitch_Force;
     
@@ -36,11 +37,11 @@ public class Player_Control: MonoBehaviour
                 rigid.AddTorque(0.0f,-(Brake_Force),0.0f);
             }
             if(Input.GetKey("A")){
-                rigid.AddForce(0.0f,Turn_Sensitivity * Responsiveness);
+                rigid.AddForce(0.0f,Turn_Speed * Responsiveness);
                 rigid.AddTorque(Pitch_Force,0.0f,0.0f);
             }
             if(Input.GetKey("D")){
-                rigid.AddForce(0.0f,-(Turn_Sensitivity * Responsiveness));
+                rigid.AddForce(0.0f,-(Turn_Speed * Responsiveness));
                 rigid.AddTorque(-(Pitch_Force),0.0f,0.0f);
             }
     
