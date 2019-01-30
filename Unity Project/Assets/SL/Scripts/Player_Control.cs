@@ -12,7 +12,12 @@ public class Player_Control: MonoBehaviour
     public float Responsiveness;
 
     public float Turn_Sensitivity;
+
+    public float Pitch_Force;
     
+    public float Brake_Force;
+
+    public float Accel_Force;
     private Rigidbody rigid;
     void start(){
         rigid =  GetComponent<Rigidbody>();
@@ -23,16 +28,20 @@ public class Player_Control: MonoBehaviour
             if(Input.GetKey("W")){
                 if(xVel < Max_Speed){
                     rigid.AddForce(Foward_Speed * Responsiveness);
+                    rigid.AddTorque(0.0f,Accel_Force,0.0f);
                 }
             }
             if(Input.GetKey("S")){
                 rigid.AddForce(- (Brake_Speed* Responsiveness));
+                rigid.AddTorque(0.0f,-(Brake_Force),0.0f);
             }
             if(Input.GetKey("A")){
                 rigid.AddForce(0.0f,Turn_Sensitivity * Responsiveness);
+                rigid.AddTorque(Pitch_Force,0.0f,0.0f);
             }
             if(Input.GetKey("D")){
                 rigid.AddForce(0.0f,-(Turn_Sensitivity * Responsiveness));
+                rigid.AddTorque(-(Pitch_Force),0.0f,0.0f);
             }
     
     }
