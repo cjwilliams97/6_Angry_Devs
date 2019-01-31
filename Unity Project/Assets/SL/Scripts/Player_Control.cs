@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Player_Control : MonoBehaviour
-{
+public class Player_Control : MonoBehaviour {
     public float Max_Speed;
     public float Foward_Speed;
     public float Brake_Speed;
