@@ -27,20 +27,20 @@ public class PlayerControl : MonoBehaviour {
             float xVel =  transofrm.InverseTransformDirection(rigid.velocity).x;
             if(Input.GetKey(KeyCode.W)){
                 if(xVel < Max_Speed){
-                    rigid.AddForce(Foward_Speed * Responsiveness);
+                    rigid.AddForce(Foward_Speed * Responsiveness,0.0f,0.0f);
                     rigid.AddTorque(0.0f,Accel_Force,0.0f);
                 }
             }
             if(Input.GetKey("S")){
-                rigid.AddForce(- (Brake_Speed* Responsiveness));
+                rigid.AddForce(- (Brake_Speed* Responsiveness,0.0f,0.0f));
                 rigid.AddTorque(0.0f,-(Brake_Force),0.0f);
             }
             if(Input.GetKey("A")){
-                rigid.AddForce(0.0f,Turn_Speed * Responsiveness);
+                rigid.AddForce(0.0f,Turn_Speed * Responsiveness,0.0f);
                 rigid.AddTorque(Pitch_Force,0.0f,0.0f);
             }
             if(Input.GetKey("D")){
-                rigid.AddForce(0.0f,-(Turn_Speed * Responsiveness));
+                rigid.AddForce(0.0f,-(Turn_Speed * Responsiveness,0.0f));
                 rigid.AddTorque(-(Pitch_Force),0.0f,0.0f);
             }
     
