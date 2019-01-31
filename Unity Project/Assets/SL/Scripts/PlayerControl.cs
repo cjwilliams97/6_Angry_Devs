@@ -24,12 +24,12 @@ public class PlayerControl : MonoBehaviour {
     }
     void Update()
     {
-            float xVel =  transofrm.InverseTransformDirection(rigid.velocity).x;
+           // float xVel =  transofrm.InverseTransformDirection(rigid.velocity).x;
             if(Input.GetKey(KeyCode.W)){
-                if(xVel < Max_Speed){
+               // if(xVel < Max_Speed){
                     rigid.AddForce(Foward_Speed * Responsiveness);
                     rigid.AddTorque(0.0f,Accel_Force,0.0f);
-                }
+              //  }
             }
            /* if(Input.GetKey("S")){
                 rigid.AddForce(- (Brake_Speed* Responsiveness));
