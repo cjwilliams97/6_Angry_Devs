@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Camera_Controller : MonoBehavior{
     //Camera must not have any parents
+	/*
     public transform target;
     //this is the player object that will be the target
 
@@ -24,5 +25,5 @@ public class Camera_Controller : MonoBehavior{
 
             tranform.positon = Vector3.Lerp(transform.position,CamTarget,smoothing);
         }
-    }
+    }*/
 }
