@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player_Control : MonoBehaviour
 {
     public float Max_Speed;
-    public float Accel_Rate;
-    public float Decel_Rate;
-    public float Turn_Rate;
+    public float Accel_Rate = 1000;
+    public float Decel_Rate = 1000;
+    public float Turn_Rate  = 250;
     public Rigidbody rigid;
     private KeyCode Accelerate = KeyCode.W;
     private KeyCode Port = KeyCode.A;
