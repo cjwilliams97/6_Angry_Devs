@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player_Control : MonoBehaviour
 {
     public float Max_Speed;
-    public float Accel_Rate = 1000;
-    public float Decel_Rate = 1000;
+    public float Accel_Rate = 500;
+    public float Decel_Rate = 500;
     public float Turn_Rate  = 250;
     public float Turn_Speed = 5.0f;
     public float Bank_Scale = 8.0f; 
@@ -27,13 +27,15 @@ public class Player_Control : MonoBehaviour
         if(Input.GetKey(Accelerate))
         {
             Debug.Log("Speeding up");
-            rigid.AddForce(Accel_Rate, 0.0f, 0.0f);
+            rigid.AddRelativeForce(Accel_Rate, 0.0f, 0.0f);
         }
         if(Input.GetKey(Port))
         {
             Debug.Log("Turning Left");
             rigid.AddForce(0.0f, 0.0f, Turn_Rate);
             //transform.Rotate(Vector3.left * Time.deltaTime * 10.0f);
+            transform.Rotate(0.0f, -Time.deltaTime * Bank_Scale, 0.0f, Space.World);
+           
 
         }
         if (Input.GetKey(Starboard))
@@ -41,12 +43,12 @@ public class Player_Control : MonoBehaviour
             Debug.Log("Turning Right");
             rigid.AddForce(0.0f, 0.0f, -Turn_Rate);
             //transform.Rotate(Vector3.right * Time.deltaTime * 10.0f);
-            //subscribe to pewdiepie
+            transform.Rotate(0.0f, Time.deltaTime * Bank_Scale, 0.0f, Space.World);
         }
         if (Input.GetKey(Decelerate))
         {
             Debug.Log("Slowing Down");
-            rigid.AddForce(-Decel_Rate, 0.0f, 0.0f);
+            rigid.AddRelativeForce(-Decel_Rate, 0.0f, 0.0f);
         }
     }
 }
