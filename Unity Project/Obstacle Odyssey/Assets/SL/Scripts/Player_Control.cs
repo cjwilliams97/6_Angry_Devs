@@ -41,6 +41,7 @@ public class Player_Control : MonoBehaviour
             Debug.Log("Turning Right");
             rigid.AddForce(0.0f, 0.0f, -Turn_Rate);
             //transform.Rotate(Vector3.right * Time.deltaTime * 10.0f);
+            //subscribe to pewdiepie
         }
         if (Input.GetKey(Decelerate))
         {

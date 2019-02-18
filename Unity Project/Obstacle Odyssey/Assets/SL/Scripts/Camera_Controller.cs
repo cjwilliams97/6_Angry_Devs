@@ -17,5 +17,6 @@ public class Camera_Controller : MonoBehaviour
     void LateUpdate()
     {
         transform.position = player.transform.position + offset;
+        //subscribe to pewdiepie
     }
 }
