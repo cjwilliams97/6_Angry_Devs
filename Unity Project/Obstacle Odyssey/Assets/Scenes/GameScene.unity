@@ -924,6 +924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2073301823}
+  Bank_Scale: 8
 --- !u!81 &873217257
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2310,9 +2311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Max_Speed: 0
-  Accel_Rate: 1000
-  Decel_Rate: 1000
-  Turn_Rate: 250
+  Accel_Rate: 500
+  Decel_Rate: 500
+  Turn_Rate: 50
   Turn_Speed: 5
   Bank_Scale: 8
   rigid: {fileID: 0}
