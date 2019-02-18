@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 83fc974f00117384791c13ae5dcee79e
+guid: e8078d907a5d5344e8ca6252808c1071
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,8 +8,7 @@ ModelImporter:
     2100000: Material
     2300000: //RootNode
     3300000: //RootNode
-    4300000: TextureAtlas_mergedObject
-    2186277476908879412: ImportLogs
+    4300000: TextureAtlas_mergedObject.003
   externalObjects: {}
   materials:
     importMaterials: 1
