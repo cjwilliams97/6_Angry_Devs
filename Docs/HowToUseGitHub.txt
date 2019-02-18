@@ -1,0 +1,18 @@
+How to use GitHub With Unity in a Team:
+
+1) Open GitHub Desktop and select your personal branch in the current branch section. 
+2) Select Fetch Origin.
+3) Select Branch up top and then select update from master.
+4) Keep doing step 3 until you see a confirmation that the master has been merged into your branch.
+	-You now have the master branch version!
+5) Create your features while your personal branch is selected and commit all your changes to that branch.
+6) Select Branch and then create pull request.
+7) This is an attempt to merge into the master branch and must be approved by another member.
+8) Once master is updated, everyone should start from step 1 again to remain on the same page.
+
+Side Notes:
+- If multiple people are working at the same time, stay in a discord call to make sure you aren't both changing the same objects as one version will be overwritten when pull requests are approved.
+- Brandon, Josh, and Sheldon are now very experienced with this so ask us if you have any questions or ever worry that you may mess up the game.
+- If you mess something up, we can undo commits so communicate with others to figure out how to do that.
+- Only commit changes to things you created such as an added script or gameobject. Don't commit changes to anything you didn't mean to change.
+
