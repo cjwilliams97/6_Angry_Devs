@@ -32,7 +32,7 @@ public class Player_Control : MonoBehaviour
         if(Input.GetKey(Port))
         {
             Debug.Log("Turning Left");
-            rigid.AddForce(0.0f, 0.0f, Turn_Rate);
+            rigid.AddRelativeForce(0.0f, 0.0f, Turn_Rate);
             //transform.Rotate(Vector3.left * Time.deltaTime * 10.0f);
             transform.Rotate(0.0f, -Time.deltaTime * Bank_Scale, 0.0f, Space.World);
            
@@ -41,7 +41,7 @@ public class Player_Control : MonoBehaviour
         if (Input.GetKey(Starboard))
         {
             Debug.Log("Turning Right");
-            rigid.AddForce(0.0f, 0.0f, -Turn_Rate);
+            rigid.AddRelativeForce(0.0f, 0.0f, -Turn_Rate);
             //transform.Rotate(Vector3.right * Time.deltaTime * 10.0f);
             transform.Rotate(0.0f, Time.deltaTime * Bank_Scale, 0.0f, Space.World);
         }
