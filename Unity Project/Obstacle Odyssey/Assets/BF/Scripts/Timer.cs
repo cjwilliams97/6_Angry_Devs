@@ -6,34 +6,57 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text timerText;
-    private float startTime;
-    private bool finnished = false;
+    private float millisecondCounter;
+    private float secondCounter;
+    private float minuteCounter;
+    string minutesString = "";
+    string secondsString = "";
+    string millisecondsString = "";
+    private bool finished = false;
+    public bool paused = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        startTime = Time.time;
+        finished = false;
+        paused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(finnished)
+        if(finished)
         {
             return;
         }
 
-        float t = Time.time - startTime;
+        if (!paused)
+        {
+            secondCounter += Time.deltaTime;
 
-        string minutes = ((int)t / 60).ToString();
-        string seconds = (t % 60).ToString("f2");
+            timerText.text = minuteCounter.ToString("00") + ":" + (secondCounter).ToString("00.00");
 
-        timerText.text = minutes + ":" + seconds;
+            if(secondCounter >= 60)
+            {
+                minuteCounter++;
+                secondCounter = 0;
+            }         
+        }
     }
 
-    public void Finnish()
+    public void Finish()
     {
-        finnished = true;
+        finished = true;
         timerText.color = Color.yellow; 
+    }
+
+    public void PausedGame()
+    {
+        paused = true;
+    }
+
+    public void ResumedGame()
+    {
+        paused = false;
     }
 }
