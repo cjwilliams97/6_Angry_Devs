@@ -16,7 +16,7 @@ public class MainMenuControl : MonoBehaviour
 
     void Play_Clicked()
     {
-        SceneManager.LoadScene("Lobby", LoadSceneMode.Single);
+        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
         Debug.Log("Loading");
     }
     void Exit_Clicked()
