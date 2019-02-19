@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Finishing : MonoBehaviour
+public class GameFinish : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("caravel").SendMessage("Finish"); 
+        GameObject.Find("caravel").SendMessage("GameFinish");
     }
 }
