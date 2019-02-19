@@ -400,8 +400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af69d6407bc296149baa7a13cf8d2244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &214961818
-BoxCollider:
+--- !u!64 &214961816
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -410,9 +410,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.020000001, z: 0.23344314}
-  m_Center: {x: 0, y: 0.0000000013969836, z: 0.052466772}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: f0976df30c921b945a25e374f9307540, type: 3}
 --- !u!1001 &252574262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2025,8 +2026,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 740715251}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &740715253
-BoxCollider:
+--- !u!64 &740715253
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2035,9 +2036,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0343111, y: 0.028192904, z: 0.11195929}
-  m_Center: {x: -0.00562106, y: -0.0040575634, z: 0.0036354559}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 775d6a086160e8c488d43b351f8bff62, type: 3}
 --- !u!114 &740715254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2068,8 +2070,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af69d6407bc296149baa7a13cf8d2244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &805494035
-BoxCollider:
+--- !u!64 &805494035
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2078,9 +2080,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.020000001, z: 0.23344314}
-  m_Center: {x: 0, y: 0.0000000013969836, z: 0.052466772}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: f0976df30c921b945a25e374f9307540, type: 3}
 --- !u!1001 &811341106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2394,8 +2397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec250b500b8670e48a0216e83a780362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &932221100
-BoxCollider:
+--- !u!64 &932221097
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2404,9 +2407,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.13592395, y: 0.056477558, z: 0.055473235}
-  m_Center: {x: 0.006427199, y: 4.5210266e-10, z: 0.008742852}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 449b0102d968cd942bb52e715758149a, type: 3}
 --- !u!1001 &934793701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4754,8 +4758,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1814625865}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1814625867
-BoxCollider:
+--- !u!64 &1814625867
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4764,9 +4768,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0343111, y: 0.028192904, z: 0.11195929}
-  m_Center: {x: -0.00562106, y: -0.0040575634, z: 0.0036354559}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 775d6a086160e8c488d43b351f8bff62, type: 3}
 --- !u!114 &1814625868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5356,7 +5361,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b876abdfdf8379a43a2cbfdda5475119, type: 3}
       propertyPath: m_LocalPosition.x
-
       value: -959.41
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b876abdfdf8379a43a2cbfdda5475119, type: 3}
