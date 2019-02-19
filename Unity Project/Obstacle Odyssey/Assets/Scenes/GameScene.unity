@@ -1716,7 +1716,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1090645167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea25ce6abaa9aae43ad4c9eb7f4458da, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e4b5cd61ad146446b93acf5fb4b49f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &1090645170
@@ -3139,6 +3139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 666744177}
+  paused: 0
 --- !u!65 &2073301827
 BoxCollider:
   m_ObjectHideFlags: 0

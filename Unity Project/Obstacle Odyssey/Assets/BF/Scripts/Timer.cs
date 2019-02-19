@@ -44,7 +44,7 @@ public class Timer : MonoBehaviour
         }
     }
 
-    public void Finish()
+    public void GameFinish()
     {
         finished = true;
         timerText.color = Color.yellow; 
