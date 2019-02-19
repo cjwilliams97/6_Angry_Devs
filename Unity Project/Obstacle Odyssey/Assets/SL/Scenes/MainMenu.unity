@@ -325,7 +325,6 @@ GameObject:
   - component: {fileID: 204835445}
   - component: {fileID: 204835444}
   - component: {fileID: 204835448}
-  - component: {fileID: 204835449}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -449,21 +448,6 @@ VideoPlayer:
   m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
---- !u!114 &204835449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204835443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa94b7acb3ad4bd4785da85cc54ee93b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Start_btn: {fileID: 17170797}
-  Settings_btn: {fileID: 527738200}
-  Exit_btn: {fileID: 828539754}
 --- !u!1 &235793165
 GameObject:
   m_ObjectHideFlags: 0
