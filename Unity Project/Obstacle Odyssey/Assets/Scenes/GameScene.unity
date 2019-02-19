@@ -3589,8 +3589,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1892733325}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1529434271
-BoxCollider:
+--- !u!64 &1529434275
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3599,9 +3599,10 @@ BoxCollider:
   m_Material: {fileID: 13400000, guid: 694ee1f5519b7954db7863f6c709bb4b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.07593104, y: 0.020384476, z: 0.02757866}
-  m_Center: {x: -3.616612e-15, y: -0.00066208554, z: 0.006651507}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: b876abdfdf8379a43a2cbfdda5475119, type: 3}
 --- !u!1001 &1608505207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4783,19 +4784,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 666744177}
   paused: 0
---- !u!65 &2073301827
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073301823}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.09774288, y: 0.03284406, z: 0.034195263}
-  m_Center: {x: 0.0010037385, y: 0.0011097012, z: 0.016358083}
 --- !u!114 &2073301828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4864,8 +4852,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 719470703}
---- !u!65 &2073301833
-BoxCollider:
+--- !u!64 &2073301833
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4874,9 +4862,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.033615265, y: 0.0023667023, z: 0.010306763}
-  m_Center: {x: 0.05157352, y: 0.0012004727, z: 0.021224057}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: ccecc9f121b2c01418c977e2219c2b19, type: 3}
 --- !u!1 &2085690083
 GameObject:
   m_ObjectHideFlags: 0
