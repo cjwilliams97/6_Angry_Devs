@@ -16,8 +16,9 @@ public class LobbyMenuControl : MonoBehaviour
 
     void Play_Clicked()
     {
-        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
         Debug.Log("Loading");
+        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
+        
     }
     void Exit_Clicked()
     {
