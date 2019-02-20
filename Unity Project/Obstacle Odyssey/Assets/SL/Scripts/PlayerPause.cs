@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerPause : MonoBehaviour
 {
     private KeyCode Escape = KeyCode.Escape;
-    private Rigidbody rigid;
+    public Rigidbody rigid;
     private GameObject Menu;
     public bool Paused = false;
     void Start()
@@ -21,21 +21,29 @@ public class PlayerPause : MonoBehaviour
         {
             if (Paused == false)
             {
-                Paused = true;
-                rigid.GetComponent<Timer>().PausedGame();
-                Time.timeScale = 0.0f;
-                Debug.Log("Escape Initiated");
-                rigid.GetComponent<PauseCanvasControl>().EnablePauseCanvas();
+                OpenPause();
                 
             }
             else if(Paused == true)
             {
-                Paused = false;
-                rigid.GetComponent<Timer>().ResumedGame();
-                Time.timeScale = 1.0f;
-                Debug.Log("Escape Closed");
-                rigid.GetComponent<PauseCanvasControl>().DisablePauseCanvas();
+                ClosePause();
             }
         }
+    }
+    public void OpenPause()
+    {
+        Paused = true;
+        rigid.GetComponent<Timer>().PausedGame();
+        Time.timeScale = 0.0f;
+        Debug.Log("Escape Initiated");
+        rigid.GetComponent<PauseCanvasControl>().EnablePauseCanvas();
+    }
+    public void ClosePause()
+    {
+        Paused = false;
+        rigid.GetComponent<Timer>().ResumedGame();
+        Time.timeScale = 1.0f;
+        Debug.Log("Escape Closed");
+        rigid.GetComponent<PauseCanvasControl>().DisablePauseCanvas();
     }
 }

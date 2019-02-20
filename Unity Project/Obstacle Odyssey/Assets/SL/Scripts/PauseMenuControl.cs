@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class PauseMenuControl : MonoBehaviour
 {
     public Button Resume_btn, Reset_btn, Exit_btn;
-    public Rigidbody rigid;
+    public GameObject Menu;
 
     void Start()
     {
+        
         Resume_btn.onClick.AddListener(Resume_Clicked);
         Reset_btn.onClick.AddListener(Restart_Clicked);
         Exit_btn.onClick.AddListener(Exit_Clicked);
@@ -18,12 +19,11 @@ public class PauseMenuControl : MonoBehaviour
 
     void Resume_Clicked()
     {
-        
+       // rigid.GetComponent<PlayerPause>().ClosePause();
     }
     void Restart_Clicked()
     {
-        //rigid.GetComponent<Timer>().Start();
-        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
+        //SceneManager.LoadScene("GameScene",LoadSceneMode.Single);
     }
     void Exit_Clicked()
     {
