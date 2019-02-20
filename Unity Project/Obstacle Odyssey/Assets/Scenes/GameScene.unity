@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44871342, g: 0.49508643, b: 0.55591035, a: 1}
+  m_IndirectSpecularColor: {r: 0.44871354, g: 0.4950869, b: 0.55591035, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1935,7 +1935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -52.9}
+  m_AnchoredPosition: {x: 0, y: -52.899902}
   m_SizeDelta: {x: 500, y: 105.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &666744177
@@ -2137,7 +2137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 249.49976, y: -50.299927}
+  m_AnchoredPosition: {x: 249.49976, y: -50.299805}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &719470703
@@ -3345,7 +3345,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Settings
+  m_Text: Restart
 --- !u!222 &1123141929
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4068,7 +4068,7 @@ GameObject:
   - component: {fileID: 1346785516}
   - component: {fileID: 1346785515}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4913,6 +4913,7 @@ GameObject:
   - component: {fileID: 1594993538}
   - component: {fileID: 1594993537}
   - component: {fileID: 1594993536}
+  - component: {fileID: 1594993535}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -4920,6 +4921,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1594993535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594993534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826540ef8beda664992761d043e7f92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resume_btn: {fileID: 1653095395}
+  Reset_btn: {fileID: 1346785515}
+  Exit_btn: {fileID: 1742255956}
+  Menu: {fileID: 0}
 --- !u!328 &1594993536
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -6919,6 +6936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648fc4cff32a6a540b59ca8234809d6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigid: {fileID: 0}
   Paused: 0
 --- !u!114 &2073301826
 MonoBehaviour:
