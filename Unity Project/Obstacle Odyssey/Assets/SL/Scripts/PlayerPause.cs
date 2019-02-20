@@ -6,10 +6,13 @@ public class PlayerPause : MonoBehaviour
 {
     private KeyCode Escape = KeyCode.Escape;
     private Rigidbody rigid;
+    private GameObject Menu;
     public bool Paused = false;
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
+        Menu = GameObject.Find("PauseMenu");
+        rigid.GetComponent<PauseCanvasControl>().DisablePauseCanvas();
     }
 
     void LateUpdate()
@@ -22,6 +25,7 @@ public class PlayerPause : MonoBehaviour
                 rigid.GetComponent<Timer>().PausedGame();
                 Time.timeScale = 0.0f;
                 Debug.Log("Escape Initiated");
+                rigid.GetComponent<PauseCanvasControl>().EnablePauseCanvas();
                 
             }
             else if(Paused == true)
@@ -30,6 +34,7 @@ public class PlayerPause : MonoBehaviour
                 rigid.GetComponent<Timer>().ResumedGame();
                 Time.timeScale = 1.0f;
                 Debug.Log("Escape Closed");
+                rigid.GetComponent<PauseCanvasControl>().DisablePauseCanvas();
             }
         }
     }
