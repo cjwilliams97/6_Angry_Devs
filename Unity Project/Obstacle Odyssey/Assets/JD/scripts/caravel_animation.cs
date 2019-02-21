@@ -5,11 +5,10 @@ using UnityEngine;
 public class caravel_animation : MonoBehaviour
 {
     private Vector3[] RandomIncrements = new Vector3[10];
-    public float turnTime = 7f;
-    public float threshhold = 0.5f;
     private int cycle;
 
-    void Start()
+    //starts ship idle animation when IdleShip is called with true passed as a parameter 
+    void IdleShip(bool state, float threshhold, float turnTime)
     {
         cycle = 0;
         for (int i = 0; i < 10; i++)
@@ -18,32 +17,38 @@ public class caravel_animation : MonoBehaviour
                                              Random.Range(-threshhold, threshhold) * Time.deltaTime,
                                                Random.Range(-threshhold, threshhold) * Time.deltaTime);
         }
-        StartCoroutine(Sway());
+
+        if (state)
+            StartCoroutine(Sway(state, threshhold, turnTime));
+        return;
     }
-    IEnumerator Sway()
+
+    IEnumerator Sway(bool state, float threshhold, float turnTime)
     {
-
-        
-        Vector3 turnIncrement = new Vector3(Random.Range(-threshhold, threshhold) * Time.deltaTime,
-                                             Random.Range(-threshhold, threshhold) * Time.deltaTime, 
-                                               Random.Range(-threshhold, threshhold) * Time.deltaTime);
-        float time = 0;
-        for (; ;)
+        if (state)
         {
-            while (time < turnTime)
+            float time = 0;
+            for (; ;)
             {
-                time += Time.deltaTime;
-                transform.Rotate(RandomIncrements[cycle % 10]);  
-                yield return null;
-            }
+                while (time < turnTime)
+                {
+                    time += Time.deltaTime;
+                    transform.Rotate(RandomIncrements[cycle % 10]);
+                    yield return null;
+                }
 
-            while (time > 0)
-            {
-                time -= Time.deltaTime;
-                transform.Rotate(-RandomIncrements[cycle % 10]);
-                yield return null;
+                while (time > 0)
+                {
+                    time -= Time.deltaTime;
+                    transform.Rotate(-RandomIncrements[cycle % 10]);
+                    yield return null;
+                }
+                cycle++;
             }
-            cycle++;
+        }
+        else
+        {
+            yield return null;
         }
     }
 }
