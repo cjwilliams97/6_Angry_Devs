@@ -6,12 +6,8 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text timerText;
-    private float millisecondCounter;
     private float secondCounter;
     private float minuteCounter;
-    string minutesString = "";
-    string secondsString = "";
-    string millisecondsString = "";
     private bool finished = false;
     public bool paused = false;
 
