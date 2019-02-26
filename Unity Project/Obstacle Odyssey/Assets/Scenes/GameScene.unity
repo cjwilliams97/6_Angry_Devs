@@ -6951,6 +6951,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 1594993534}
+--- !u!114 &2073301827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073301823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83dc32fcd7ad38847afa396326fc7bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2073301828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6963,12 +6975,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b898632dac73d4988fe16923957ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Max_Speed: 0
+  Max_Speed: 100
   Accel_Rate: 100
   Decel_Rate: 100
   Turn_Rate: 35
   Turn_Speed: 25
   Bank_Scale: 12
+  Velocity: 0
   rigid: {fileID: 0}
 --- !u!54 &2073301829
 Rigidbody:
@@ -6998,8 +7011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 166d8007d296a4944ae72121b3ad4928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnTime: 7
-  threshhold: 0.5
 --- !u!4 &2073301831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ccecc9f121b2c01418c977e2219c2b19,
