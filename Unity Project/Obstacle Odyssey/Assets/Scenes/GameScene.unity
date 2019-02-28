@@ -459,6 +459,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: f0976df30c921b945a25e374f9307540, type: 3}
+--- !u!114 &214961817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214961814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a28c970d88ed7409e193fa90bfe079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delta_y: 1.5
+  delta: 3
+  speed: 2
 --- !u!4 &214961819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f0976df30c921b945a25e374f9307540,
@@ -2333,6 +2348,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 30436913}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &805494039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805494033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a28c970d88ed7409e193fa90bfe079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delta_y: 1.5
+  delta: 3
+  speed: 2
 --- !u!1001 &811341106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2706,6 +2736,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 449b0102d968cd942bb52e715758149a, type: 3}
+--- !u!114 &932221098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932221095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2209c1646c4ee6f4793960a958897e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delta: 50.5
+  speed: 0.25
 --- !u!4 &932221100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 449b0102d968cd942bb52e715758149a,
@@ -3058,6 +3102,75 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6dd65890786ff344c957c74386907c77, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cba1d6b94ff3774b9a14ebb9c390750, type: 3}
+--- !u!1 &1053109825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1053109827}
+  - component: {fileID: 1053109826}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1053109826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053109825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48cac34dcbfc72b44b291450d7ecef73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio:
+  - fileName: high Cs
+    clip: {fileID: 8300000, guid: 858865dd146fc2e4e9156fb85ccbeade, type: 3}
+    volume: 1
+    loop: 1
+    playOnAwake: 0
+  - fileName: ocean
+    clip: {fileID: 8300000, guid: caf37e87bd88f154cb67f6a112932bbf, type: 3}
+    volume: 0.6
+    loop: 1
+    playOnAwake: 0
+  - fileName: barrel impact
+    clip: {fileID: 8300000, guid: f36bda8d93076734e842ac0c08e29eac, type: 3}
+    volume: 0.6
+    loop: 0
+    playOnAwake: 0
+  - fileName: rock impact
+    clip: {fileID: 8300000, guid: 19f318f86f8c92e4d834218bfc42dd9c, type: 3}
+    volume: 0.4
+    loop: 0
+    playOnAwake: 0
+  - fileName: orca impact
+    clip: {fileID: 8300000, guid: 69b6dbf524f804b4f9f3b1992a73ea7b, type: 3}
+    volume: 0.4
+    loop: 0
+    playOnAwake: 0
+--- !u!4 &1053109827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053109825}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1065722441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4676,7 +4789,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1500627630}
   - component: {fileID: 1500627632}
-  - component: {fileID: 1500627631}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -4698,14 +4810,6 @@ Transform:
   m_Father: {fileID: 2073301831}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!81 &1500627631
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500627629}
-  m_Enabled: 1
 --- !u!20 &1500627632
 Camera:
   m_ObjectHideFlags: 0

@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class RockCollision : MonoBehaviour
 {
+    // bind audio
+    AudioHandler audioHandler;
+    void Start() 
+    {
+        audioHandler = AudioHandler.instance;
+    }
+
     private float damage = 25;
 
     private void OnTriggerEnter(Collider other)
     {
         GameObject.Find("caravel").SendMessage("HealthChangeDamage", damage);
+        audioHandler.PlayAudio("rock impact");
     }
 }
 
