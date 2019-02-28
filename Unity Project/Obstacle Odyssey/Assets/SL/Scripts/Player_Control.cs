@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Control : MonoBehaviour
 {
-    public float Max_Speed = 100;
+    static public float Max_Speed = 100;
     public float Accel_Rate = 500;
     public float Decel_Rate = 500;
     public float Turn_Rate  = 250;
