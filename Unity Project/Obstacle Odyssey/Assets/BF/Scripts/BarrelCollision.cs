@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class BarrelCollision : MonoBehaviour
 {
-    // bind audio
-    AudioHandler audioHandler;
-    void Start() {
-        audioHandler = AudioHandler.instance;
-    }
-
     private float damage = 25;
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("caravel").SendMessage("HealthChangeDamage", damage);
-        audioHandler.PlayAudio("barrel impact");
+        GameObject.Find("caravel").SendMessage("HealthChangeDamage", damage); 
     }
 }
 

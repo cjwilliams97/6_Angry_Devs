@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44871342, g: 0.49508643, b: 0.55591035, a: 1}
+  m_IndirectSpecularColor: {r: 0.44871408, g: 0.49508715, b: 0.5559112, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3711,75 +3711,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1159907972}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1201676466
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1201676468}
-  - component: {fileID: 1201676467}
-  m_Layer: 0
-  m_Name: Audio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1201676467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201676466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48cac34dcbfc72b44b291450d7ecef73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio:
-  - fileName: high Cs
-    clip: {fileID: 8300000, guid: 858865dd146fc2e4e9156fb85ccbeade, type: 3}
-    volume: 1
-    loop: 1
-    playOnAwake: 0
-  - fileName: ocean
-    clip: {fileID: 8300000, guid: caf37e87bd88f154cb67f6a112932bbf, type: 3}
-    volume: 0.5
-    loop: 1
-    playOnAwake: 0
-  - fileName: barrel impact
-    clip: {fileID: 8300000, guid: 221b278a8f2f4a6489d3d731aef45ad6, type: 3}
-    volume: 0.5
-    loop: 0
-    playOnAwake: 0
-  - fileName: rock impact
-    clip: {fileID: 8300000, guid: 19f318f86f8c92e4d834218bfc42dd9c, type: 3}
-    volume: 0.4
-    loop: 0
-    playOnAwake: 0
-  - fileName: orca impact
-    clip: {fileID: 8300000, guid: 69b6dbf524f804b4f9f3b1992a73ea7b, type: 3}
-    volume: 0.4
-    loop: 0
-    playOnAwake: 0
---- !u!4 &1201676468
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201676466}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1221102027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4745,6 +4676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1500627630}
   - component: {fileID: 1500627632}
+  - component: {fileID: 1500627631}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -4766,6 +4698,14 @@ Transform:
   m_Father: {fileID: 2073301831}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!81 &1500627631
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500627629}
+  m_Enabled: 1
 --- !u!20 &1500627632
 Camera:
   m_ObjectHideFlags: 0
