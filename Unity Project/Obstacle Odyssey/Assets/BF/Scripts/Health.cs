@@ -28,7 +28,8 @@ public class Health : MonoBehaviour
         if (updatedHealth <= 0) // checks to make sure health doesn't go over max
         {
             updatedHealth = 0;
-            healthText.text = ("You Dead!"); // alters the text that is displayed to the screen
+            healthText.color = Color.red;
+            healthText.text = ("You Died!!"); // alters the text that is displayed to the screen
             return;
         }
 
