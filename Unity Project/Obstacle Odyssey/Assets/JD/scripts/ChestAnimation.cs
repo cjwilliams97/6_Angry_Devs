@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChestAnimation : MonoBehaviour
+public class ChestAnimation : BasicAnimation
 {
-    public float speed = 5f;
-    public float Intensity = 0.0005f;
+    private float speed = 10f;
+    private float Intensity = 0.005f;
     private Vector3 Increment;
-    public float TurnTime = 10f;
+    private float TurnTime = 10f;
 
     // Start is called before the first frame update
     void Start()
     {
-        Increment = new Vector3(0.0f, Intensity * 0.1f, 0.0f); ;
-        StartCoroutine(Turn());
-        StartCoroutine(Bob());
+       Increment = new Vector3(0.0f, Intensity * 0.1f, 0.0f);
+       StartCoroutine(Turn(speed));
+       StartCoroutine(Bob(TurnTime));
     }
-
-    IEnumerator Turn()
+   
+    private IEnumerator Turn(float speed)
     {
         for (; ;)
         {
@@ -26,13 +26,12 @@ public class ChestAnimation : MonoBehaviour
         }
     }
 
-   
-    IEnumerator Bob()
+    private IEnumerator Bob(float turnTime)
     {
         float time = 0;
         for (; ;)
         {
-            while (time < TurnTime)
+            while (time < turnTime)
             {
                 time += Time.deltaTime;
                 transform.position += Increment;
@@ -46,6 +45,6 @@ public class ChestAnimation : MonoBehaviour
                 yield return null;
             }
         }
-
     }
+   
 }
