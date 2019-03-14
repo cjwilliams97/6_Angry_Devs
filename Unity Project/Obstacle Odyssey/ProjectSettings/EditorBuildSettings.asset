@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/SL/Scenes/Lobby.unity
     guid: d3e6248bf568e634fb67a64e399378a0
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
+    path: Assets/Scenes/Connors_Scene.unity
     guid: a21dff4af16f1684bb8c99867c4d02da
   m_configObjects: {}
