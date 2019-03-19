@@ -6,6 +6,6 @@ public class GameFinish : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("caravel").SendMessage("GameFinish");
+        GameObject.Find("Scripts").SendMessage("GameFinish");
     }
 }

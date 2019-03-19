@@ -15,7 +15,7 @@ public class RockCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("caravel").SendMessage("HealthChangeDamage", damage);
+        GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage);
         audioHandler.PlayAudio("rock impact");
     }
 }
