@@ -14,7 +14,7 @@ public class WhaleCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("caravel").SendMessage("HealthChangeDamage", damage);
+        GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage);
         audioHandler.PlayAudio("orca impact");
     }
 }
