@@ -744,7 +744,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Input Applied?:'
+  m_Text: 'Input Recognized? :'
 --- !u!222 &1282232259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -787,7 +787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2, y: 0.9}
   m_AnchorMax: {x: 0.8, y: 1}
-  m_AnchoredPosition: {x: -23, y: -48.19995}
+  m_AnchoredPosition: {x: 28, y: -48.19995}
   m_SizeDelta: {x: -297, y: -12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1485992288
@@ -823,7 +823,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '!#bool'
+  m_Text: '!#BOOL'
 --- !u!222 &1485992289
 CanvasRenderer:
   m_ObjectHideFlags: 0
