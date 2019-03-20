@@ -1003,6 +1003,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeBetweenInputs: {fileID: 656035941}
   rigid: {fileID: 1727812804}
+  Buffer: 0.001
+  Condition: {fileID: 791034227}
 --- !u!1 &1936439787
 GameObject:
   m_ObjectHideFlags: 0
