@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class InputTestCase : MonoBehaviour
+public class FailInputTestCase : MonoBehaviour
 {
     public Text TimeBetween;
     public Rigidbody rigid;
@@ -14,6 +15,8 @@ public class InputTestCase : MonoBehaviour
     public bool Failed = false;
     public bool firstFrame = true;
     public Text Condition;
+    public bool CoroutineStarted = false;
+    private IEnumerator coroutine;
   
     void Start()
     {
@@ -21,6 +24,9 @@ public class InputTestCase : MonoBehaviour
         TimeBetween.text = "0.000";
         Condition.text = "Yes";
         Condition.color = Color.green;
+        coroutine = WaitAndChangeScene(5.0f);
+        
+        
         
         
     }
@@ -58,6 +64,8 @@ public class InputTestCase : MonoBehaviour
             {
                 Condition.text = "No";
                 Condition.color = Color.red;
+                
+
             }
         }
         else
@@ -71,14 +79,26 @@ public class InputTestCase : MonoBehaviour
         {
             rigid.GetComponent<Player_Control>().Forward();
             NewVelocity = rigid.velocity.magnitude;
+        }           
+        if( Failed == true)
+        {
+            TimeScaler = 1.0f;
+            Debug.Log("Failed State Triggered");
+            if (CoroutineStarted == false)
+            {
+                StartCoroutine(coroutine);
+                Debug.Log("Started Coroutine");
+                CoroutineStarted = true;
+            }
+            
         }
-        
-      
-
-        
-
     }
 
-
-
+    private IEnumerator WaitAndChangeScene(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Debug.Log("Returned from wait time");
+        SceneManager.LoadScene("SLSucessTest", LoadSceneMode.Single);
+    }
+    
 }

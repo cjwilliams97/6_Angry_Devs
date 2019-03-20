@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/BF/Scenes/BrandonLevel.unity
     guid: f78bb010642e08f4caed41479ed3b3a6
   - enabled: 1
-    path: Assets/SL/Scenes/SL_Test_Enviroment.unity
+    path: Assets/SL/Scenes/SLFailedTest.unity
     guid: 44de0aa325b05444e8fd1154dde1a2b8
   m_configObjects: {}
