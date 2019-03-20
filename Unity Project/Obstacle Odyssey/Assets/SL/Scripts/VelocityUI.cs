@@ -8,6 +8,7 @@ public class VelocityUI : MonoBehaviour
     public Rigidbody rigid;
     public Text VelocityValue;
     public float Velocity;
+    public bool firstFrame = true;
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
@@ -17,9 +18,17 @@ public class VelocityUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Velocity = rigid.velocity.magnitude;
-        string temp = Velocity.ToString();
-        VelocityValue.text = temp;
+        if (firstFrame == false)
+        {
+            Velocity = rigid.velocity.magnitude;
+            string temp = Velocity.ToString();
+            VelocityValue.text = temp;
+        }
+        else
+        {
+            firstFrame = false;
+        }
+
 
     }
     public float CurrentVelocity()
@@ -27,3 +36,4 @@ public class VelocityUI : MonoBehaviour
         return Velocity;
     }
 }
+   
