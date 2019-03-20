@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -842,7 +842,7 @@ PrefabInstance:
     - target: {fileID: 943443921653970020, guid: e75cb3a352e92fa4ead073d8e476af60,
         type: 3}
       propertyPath: m_Name
-      value: caravel (1)
+      value: 'caravel '
       objectReference: {fileID: 0}
     - target: {fileID: 943443921653970021, guid: e75cb3a352e92fa4ead073d8e476af60,
         type: 3}
@@ -972,7 +972,7 @@ MonoBehaviour:
   Turn_Speed: 5
   Bank_Scale: 8
   Velocity: 0
-  rigid: {fileID: 0}
+  rigid: {fileID: 1727812804}
 --- !u!114 &1727812807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,6 +1001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b423e91305a3f82448175dadfa8e55c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeBetweenInputs: {fileID: 656035941}
+  rigid: {fileID: 1727812804}
 --- !u!1 &1936439787
 GameObject:
   m_ObjectHideFlags: 0

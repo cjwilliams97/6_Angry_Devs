@@ -8,7 +8,7 @@ public class FailInputTestCase : MonoBehaviour
 {
     public Text TimeBetween;
     public Rigidbody rigid;
-    private float TimeVal = .5f;
+    static public float TimeVal = .5f;
     private float OldVelocity;
     private float NewVelocity;
     public float TimeScaler = .1f;
@@ -100,5 +100,8 @@ public class FailInputTestCase : MonoBehaviour
         Debug.Log("Returned from wait time");
         SceneManager.LoadScene("SLSucessTest", LoadSceneMode.Single);
     }
-    
+    public float MaxInputValue()
+    {
+        return TimeVal;
+    }
 }

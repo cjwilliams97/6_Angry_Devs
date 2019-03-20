@@ -8,17 +8,21 @@ public class SuccessInputTestCase : MonoBehaviour
 {
     public Text TimeBetweenInputs;
     public Rigidbody rigid;
+    public float Buffer = .001f; // amount to add between inputs
+
 
     void Start()
     {
-        rigid.GetComponent<Rigidbody>();
-        float safeVal = rigid.GetComponent<FailInputTestCase>().MaxInputValue();
-        string temp = safeVal.ToString();
-        TimeBetweenInputs.text = temp;
+       rigid.GetComponent<Rigidbody>();
+       float safeVal = FailInputTestCase.TimeVal +Buffer;
+       string temp = safeVal.ToString();
+       TimeBetweenInputs.text = temp;
     }
-
-    // Update is called once per frame
     void Update()
+    {
+        
+    }
+    private void FixedUpdate()
     {
         
     }
