@@ -76,4 +76,15 @@ public class AudioHandler : MonoBehaviour
         }
     }
 
+    public void TestAudio()
+    {
+        // loop through audio array
+        for (int i = 0; i < audio.Length; i++)
+        {
+            audio[i].Play();
+            Debug.Log("Playing: " + audio[i].fileName);
+        }
+        return;
+    }
+
 }
