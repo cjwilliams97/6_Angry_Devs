@@ -62,7 +62,7 @@ public class Player_Control : MonoBehaviour
         Vector3 vel = rigid.velocity;
         if (vel.magnitude < Max_Speed)
         {
-            Debug.Log("Speeding up");
+            //Debug.Log("Speeding up");
             rigid.AddRelativeForce(Accel_Rate, 0.0f, 0.0f);
         }
     }

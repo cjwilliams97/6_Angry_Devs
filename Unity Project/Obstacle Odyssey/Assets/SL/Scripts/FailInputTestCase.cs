@@ -17,10 +17,17 @@ public class FailInputTestCase : MonoBehaviour
     public Text Condition;
     public bool CoroutineStarted = false;
     private IEnumerator coroutine;
+    public float framecount;
   
     void Start()
     {
         rigid.GetComponent<Rigidbody>();
+        firstFrame = true;
+        Failed = false;
+        CoroutineStarted = false;
+        framecount = 0;
+        
+        TimeVal = .5f;
         TimeBetween.text = "0.000";
         Condition.text = "Yes";
         Condition.color = Color.green;
@@ -70,7 +77,15 @@ public class FailInputTestCase : MonoBehaviour
         }
         else
         {
-            firstFrame = false;
+            if (framecount < 25)
+            {
+                framecount++;
+            }
+            else
+            {
+                firstFrame = false;
+            }
+            
         }
     }
     void FixedUpdate()
