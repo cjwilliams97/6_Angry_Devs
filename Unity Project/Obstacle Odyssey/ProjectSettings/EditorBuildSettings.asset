@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SL/Scenes/SLFailedTest.unity
     guid: 44de0aa325b05444e8fd1154dde1a2b8
+  - enabled: 1
+    path: Assets/SL/Scenes/SLSucessTest.unity
+    guid: e660256bb2d58914a8defb116a7f10ce
   m_configObjects: {}
