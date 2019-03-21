@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour
     private string minuteString = ""; // creates/initializes a string to print minutes
     private bool finished = false;
     public bool paused = false;
+    private bool flag = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class Timer : MonoBehaviour
         timerText.text = "00:00:00"; // starts clock display at 00 for all values
         finished = false; // ensures finished starts as false
         paused = false; // ensures paused starts as false
+        flag = false; // ensures flag starts as false
     }
 
     // Update is called once per frame
@@ -29,6 +31,13 @@ public class Timer : MonoBehaviour
         // if the finished variable is set to true, then update stops running
         if (finished) 
         {
+            if(flag == true) // This stops timer and displays message if minutes exceed 99
+            {
+                timerText.fontSize = 25;
+                timerText.color = Color.red;
+                timerText.text = "You Took Too Long!!";
+            }
+
             return;
         }
 
@@ -39,7 +48,8 @@ public class Timer : MonoBehaviour
             // this keeps time consistent throughout the game regardless of fps
             centisecondCounter += Time.deltaTime * 100; 
 
-            //millisecondCounter += Time.deltaTime * 8; // this can be enabled to test time increments at slower rate
+            //centisecondCounter += Time.deltaTime * 80000; // this can be enabled to test time increments at a faster rate
+            //centisecondCounter += Time.deltaTime * 8; // this can be enabled to test time increments at slower rate
 
             // this checks if centisecond hits 100 so it can increment other values
             if (centisecondCounter >= 99)
@@ -48,6 +58,16 @@ public class Timer : MonoBehaviour
                 if(secondCounter >= 59)
                 {
                     minuteCounter++; // instead of seconds hitting 60, the minute field is updated
+
+                    if(minuteCounter == 99) // This checks if minute is about to wrap too high
+                    {
+                        if(secondCounter == 59)
+                        {
+                            flag = true;
+                            finished = true;
+                        }
+                    }
+
                     secondCounter = 0; // then the seconds field resets
                 }
 

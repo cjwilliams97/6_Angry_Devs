@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuControl : MonoBehaviour
 {
-    public Button Start_btn, Setting_Btn, Exit_btn;
+    public Button Start_btn, Setting_Btn, Exit_btn, Test_btn;
 
     void Start()
     {
+        Test_btn.onClick.AddListener(Test_Clicked);
         Start_btn.onClick.AddListener(Play_Clicked);
         Exit_btn.onClick.AddListener(Exit_Clicked);
     }
@@ -17,11 +18,15 @@ public class MainMenuControl : MonoBehaviour
     void Play_Clicked()
     {
         SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
-        Debug.Log("Loading");
+        //Debug.Log("Loading");
     }
     void Exit_Clicked()
     {
         Application.Quit();
 
+    }
+    void Test_Clicked()
+    {
+        SceneManager.LoadScene("BrandonHudTest", LoadSceneMode.Single);
     }
 }
