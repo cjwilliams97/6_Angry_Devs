@@ -35,7 +35,9 @@ public class SuccessInputTestCase : MonoBehaviour
     private IEnumerator WaitAndChangeScene(float time)
     {
         yield return new WaitForSeconds(time);
-        SceneManager.LoadScene("BrandonHudTest", LoadSceneMode.Single);
+
+        SceneManager.LoadScene("stressTest", LoadSceneMode.Single);
+
     }
     private IEnumerator Timer(float time)
     {
