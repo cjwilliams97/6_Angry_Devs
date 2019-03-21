@@ -14,14 +14,24 @@ public class GenerateSmoke : MonoBehaviour
    
     void Start()
     {
-        int amount = 50;   //number of particles to be spawned
+        SmokeySmoke();
+        return;
+    }
+
+    public void SmokeySmoke()
+    {
+        int amount = 150;   //number of particles to be spawned
         float range = 1f; //distance from origin when generating particles
-        float speed = 10* 0.1f; //upper limit for rising speed
+        float speed = 3 * 0.1f; //upper limit for rising speed
         float ScaleFactor = 1f; //affects how quickly things shrink (high number = faster shrinking)
         float lifetime = 1f;    //upper limit of how long a particle can live for 
         float ThreshHold = .05f;   //minimum size a particle can be before it get auto destroyed
-
         SmokeySmoke(amount, range, speed, ScaleFactor, lifetime, ThreshHold);
+    }
+
+    private void SmokeySmokeRepeating()
+    {
+        InvokeRepeating("SmokeySmoke", 2.0f, 3.5f);
         return;
     }
 
@@ -54,9 +64,9 @@ public class GenerateSmoke : MonoBehaviour
         {
             //generates an equal distribution of medium and smoke particles
             if(i % 2 == 0)
-              Particles[i] = Instantiate(Resources.Load("JD/Smoke/smoke_medium", typeof(GameObject)), transform.position, transform.rotation, this.transform) as GameObject;
+              Particles[i] = Instantiate(Resources.Load("JD/Smoke/smoke_medium", typeof(GameObject)), transform.position, this.transform.rotation, this.transform) as GameObject;
             else
-                Particles[i] = Instantiate(Resources.Load("JD/Smoke/smoke_small", typeof(GameObject)), transform.position, transform.rotation, this.transform) as GameObject;
+                Particles[i] = Instantiate(Resources.Load("JD/Smoke/smoke_small", typeof(GameObject)), transform.position, this.transform.rotation, this.transform) as GameObject;
  
             //assigns textures half and half to particles
             if (i % 2 == 0)
@@ -65,10 +75,10 @@ public class GenerateSmoke : MonoBehaviour
                 Particles[i].gameObject.GetComponent<Renderer>().material.mainTexture = Smoke_texture2;
 
             //sets particles position to a random place within the range
-            Particles[i].transform.position = new Vector3(Random.Range(transform.position.x - range, transform.position.x + range), transform.position.y, Random.Range(transform.position.z - range, transform.position.z + range));
+            Particles[i].transform.position = this.transform.position;
+            Particles[i].transform.position -= new Vector3(Random.Range(transform.position.x - range, transform.position.x + range), transform.position.y, Random.Range(transform.position.z - range, transform.position.z + range));
 
             //sets a random scale factor for the particles to decrease by
-
             Particles[i].transform.localScale = Vector3.one * Scales[i] * 100;
 
             time += Time.deltaTime;

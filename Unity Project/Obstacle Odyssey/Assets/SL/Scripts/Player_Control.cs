@@ -23,39 +23,25 @@ public class Player_Control : MonoBehaviour
         Velocity = rigid.velocity.magnitude;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Vector3 vel = rigid.velocity;
+        
         if(Input.GetKey(Accelerate))
         {
-            if( vel.magnitude < Max_Speed)
-            {
-                Debug.Log("Speeding up");
-                rigid.AddRelativeForce(Accel_Rate, 0.0f, 0.0f);
-            }
+            Forward();
            
         }
         if(Input.GetKey(Port))
         {
-            Debug.Log("Turning Left");
-            rigid.AddRelativeForce(0.0f, 0.0f, Turn_Rate);
-            //transform.Rotate(Vector3.left * Time.deltaTime * 10.0f);
-            transform.Rotate(0.0f, -Time.deltaTime * Bank_Scale, 0.0f, Space.World);
-           
-
+            Left();
         }
         if (Input.GetKey(Starboard))
         {
-            Debug.Log("Turning Right");
-            rigid.AddRelativeForce(0.0f, 0.0f, -Turn_Rate);
-            //transform.Rotate(Vector3.right * Time.deltaTime * 10.0f);
-            transform.Rotate(0.0f, Time.deltaTime * Bank_Scale, 0.0f, Space.World);
+            Right();
         }
         if (Input.GetKey(Decelerate))
-        {
-            Debug.Log("Slowing Down");
-            rigid.AddRelativeForce(-Decel_Rate, 0.0f, 0.0f);
+        {     
+            Slow(); 
         }
     }
     /*
@@ -71,4 +57,33 @@ public class Player_Control : MonoBehaviour
         Max_Speed = x;
         return oldSpeed;
     }
+    public void Forward()
+    {
+        Vector3 vel = rigid.velocity;
+        if (vel.magnitude < Max_Speed)
+        {
+            //Debug.Log("Speeding up");
+            rigid.AddRelativeForce(Accel_Rate, 0.0f, 0.0f);
+        }
+    }
+    public void Slow()
+    {
+        //Debug.Log("Slowing Down");
+        rigid.AddRelativeForce(-Decel_Rate, 0.0f, 0.0f);
+    }
+    public void Left()
+    {
+        //Debug.Log("Turning Left");
+        rigid.AddRelativeForce(0.0f, 0.0f, Turn_Rate);
+        //transform.Rotate(Vector3.left * Time.deltaTime * 10.0f);
+        transform.Rotate(0.0f, -Time.deltaTime * Bank_Scale, 0.0f, Space.World);
+    }
+    public void Right()
+    {
+        // Debug.Log("Turning Right");
+        rigid.AddRelativeForce(0.0f, 0.0f, -Turn_Rate);
+        //transform.Rotate(Vector3.right * Time.deltaTime * 10.0f);
+        transform.Rotate(0.0f, Time.deltaTime * Bank_Scale, 0.0f, Space.World);
+    }
+    
 }
