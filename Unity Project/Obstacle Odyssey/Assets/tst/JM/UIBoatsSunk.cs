@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UIBoatsSunk : MonoBehaviour
 {
+    public float startTime = (Time.time+30);
     public Text countText;
     public Text TimeText;
     public float Alreadysunk = 0;
@@ -16,6 +17,7 @@ public class UIBoatsSunk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startTime = (Time.time+30);
         startPos = transform.position;
         countText.text = "Number of Boats Sunk: " + count.ToString();
         coroutine = WaitAndChangeScene(3.0f);
@@ -33,7 +35,7 @@ public class UIBoatsSunk : MonoBehaviour
             Alreadysunk = 1;
         }
         // Once enough time has passed end the test
-        if(Time.time > 30)
+        if(Time.time > startTime)
         {
             StartCoroutine(coroutine);
             CoroutineStarted = true;
