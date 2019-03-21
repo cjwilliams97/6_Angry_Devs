@@ -59,6 +59,6 @@ public class AudioStressTest : MonoBehaviour
             seconds = seconds/2;
         }
 
-        SceneManager.LoadScene("JDTest", LoadSceneMode.Single);
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }
