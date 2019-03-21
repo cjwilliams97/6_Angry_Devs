@@ -76,15 +76,23 @@ public class AudioHandler : MonoBehaviour
         }
     }
 
-    public void TestAudio()
+    // play the clip at specified index
+    public void TestAudio(int i)
     {
-        // loop through audio array
-        for (int i = 0; i < audio.Length; i++)
-        {
-            audio[i].Play();
-            Debug.Log("Playing: " + audio[i].fileName);
-        }
+        audio[i].Play();
         return;
+    }
+
+    // returns the audio array size
+    public int AudioAmount()
+    {
+        return audio.Length;
+    }
+
+    // returns clip name at specified index
+    public string CurrPlaying(int i)
+    {
+        return audio[i].fileName;
     }
 
 }
