@@ -592,7 +592,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1 &268612032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 943443921653970020, guid: e75cb3a352e92fa4ead073d8e476af60,
@@ -613,7 +615,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1 &274016315 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 943443921653970020, guid: e75cb3a352e92fa4ead073d8e476af60,
@@ -634,7 +638,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1 &287958905 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 943443921653970020, guid: e75cb3a352e92fa4ead073d8e476af60,
@@ -655,7 +661,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1 &308146907 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 943443921653970020, guid: e75cb3a352e92fa4ead073d8e476af60,
@@ -676,7 +684,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1001 &355275532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1471,7 +1481,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1 &749345859 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 943443921653970020, guid: e75cb3a352e92fa4ead073d8e476af60,
@@ -1492,7 +1504,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1001 &776770880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1763,7 +1777,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1 &860465285 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3952336815199108807, guid: 6142099543124084ba43098312de3419,
@@ -2130,7 +2146,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1001 &941209972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2618,7 +2636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -50, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1036451133
@@ -3991,7 +4009,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1 &1508190204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 943443921653970020, guid: e75cb3a352e92fa4ead073d8e476af60,
@@ -4012,7 +4032,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1 &1519937439 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3952336815199108807, guid: 6142099543124084ba43098312de3419,
@@ -5084,7 +5106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1001 &1819041847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5221,7 +5245,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 1168788201}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1001 &1846341398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5335,7 +5361,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1 &1876961545
 GameObject:
   m_ObjectHideFlags: 0
@@ -5688,7 +5716,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 887525290}
   TimeText: {fileID: 0}
+  Alreadysunk: 0
   count: 0
+  CoroutineStarted: 0
 --- !u!1 &1926339979 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3952336815199108807, guid: 6142099543124084ba43098312de3419,

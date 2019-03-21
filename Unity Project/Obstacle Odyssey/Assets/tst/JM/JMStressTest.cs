@@ -18,7 +18,7 @@ public class JMStressTest : MonoBehaviour
     {
         //StartCoroutine(coroutine);
         startPos = transform.position;
-        speedText.text = "Speed: " + speed.ToString();
+        speedText.text = "Whale Speed: " + speed.ToString();
         //countText.text = "Number of Boats Sunk: " + count.ToString();
     }
     
@@ -26,7 +26,7 @@ public class JMStressTest : MonoBehaviour
     void Update()
     {
         speed += i * Time.deltaTime;
-        speedText.text = "Speed: " + speed.ToString();
+        speedText.text = "Whale Speed: " + speed.ToString();
         Vector3 v = startPos;
         v.z += delta * Mathf.Sin(Time.time * speed);
         transform.position = v;
