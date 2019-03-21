@@ -101,6 +101,7 @@ public class ModelStressTest : MonoBehaviour
             Objects[i] = Instantiate(Whale, transform.position, Quaternion.identity, this.transform) as GameObject;
             Objects[i].transform.position += position;
             transform.Translate(Vector3.left * Time.deltaTime * (K * 2));
+           
             MODELTEXT = string.Format($"MODEL TEST:\nAMOUNT: {amount}\nINSTANTIATED:{i + 1}\n");//updates model test GUI text
             yield return null;
         }
@@ -132,12 +133,13 @@ public class ModelStressTest : MonoBehaviour
         int w = Screen.width;
         int h = Screen.height;
         Rect FPSRect = new Rect(10, 10, w, h * 2 / 50);
-        Rect MODELRect = new Rect(10, 30, w, h * 2 / 50);
-        Rect SMOKERect = new Rect(10, 120, w, h * 2 / 50);
+        Rect MODELRect = new Rect(10, h/3, w, h * 2 / 50);
+        Rect SMOKERect = new Rect(10 , (2 * h)/3, w, h * 2 / 50);
+
         GUIStyle style = new GUIStyle();
         style.alignment = TextAnchor.UpperLeft;
         style.fontSize = h * 2 / 50;
-        style.normal.textColor = new Color(0.0f, 0.0f, 0.5f, 1.0f);
+        
         float msec = deltaTime * 1000.0f;
         float fps = 1.0f / deltaTime;
         FPSTEXT = string.Format("CURRENT FPS: {0:0.0} ms ({1:0.} fps)", msec, fps);
