@@ -11,11 +11,14 @@ public class AudioStressTest : MonoBehaviour
     public Text audioName;
     public Text audioAmount;
     public Text audioStatus;
+    private IEnumerator coroutine;
+    private bool CoroutineStarted;
 
     void Start()
     {
         audioHandler = AudioHandler.instance;
         StartCoroutine(AudioTester());
+        coroutine = WaitAndChangeScene(5.0f);
     }
 
     private IEnumerator AudioTester()
@@ -58,7 +61,11 @@ public class AudioStressTest : MonoBehaviour
             // cut the wait time in half
             seconds = seconds/2;
         }
-
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        StartCoroutine(coroutine);
+    }
+    private IEnumerator WaitAndChangeScene(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene("JDTest", LoadSceneMode.Single);
     }
 }

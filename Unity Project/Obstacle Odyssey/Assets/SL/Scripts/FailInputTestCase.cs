@@ -112,7 +112,7 @@ public class FailInputTestCase : MonoBehaviour
     private IEnumerator WaitAndChangeScene(float time)
     {
         yield return new WaitForSeconds(time);
-        Debug.Log("Returned from wait time");
+        //Debug.Log("Returned from wait time");
         SceneManager.LoadScene("SLSucessTest", LoadSceneMode.Single);
     }
     public float MaxInputValue()
