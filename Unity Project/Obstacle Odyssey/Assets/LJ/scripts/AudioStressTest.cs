@@ -63,9 +63,10 @@ public class AudioStressTest : MonoBehaviour
         }
         StartCoroutine(coroutine);
     }
+
     private IEnumerator WaitAndChangeScene(float time)
     {
         yield return new WaitForSeconds(time);
-        SceneManager.LoadScene("JDTest", LoadSceneMode.Single);
+        SceneManager.LoadScene("JubalTest", LoadSceneMode.Single);
     }
 }

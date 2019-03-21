@@ -44,7 +44,7 @@ public class ModelStressTest : MonoBehaviour
             Debug.Log(": SUCCESS");
 
         //Tests are complete, load back to the main menu scene.
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        SceneManager.LoadScene("Connor_Test", LoadSceneMode.Single);
         yield break;
     }
 

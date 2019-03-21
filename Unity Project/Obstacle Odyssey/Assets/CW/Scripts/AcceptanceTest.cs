@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Timers;
+using UnityEngine.SceneManagement;
 
 //---------Place next scene to be loaded in the function named "DisplayStats()"-------------------//
 
@@ -83,6 +84,7 @@ public class AcceptanceTest : MonoBehaviour
         yield return new WaitForSeconds(5f);
         
         //-------------------------LOAD NEXT SCENE HERE------------------------------------//
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
 }
