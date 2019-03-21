@@ -20,8 +20,6 @@ public class ModelStressTest : MonoBehaviour
     int FrameCounter = 0;
     void Start()
     {
-        Time.fixedDeltaTime = 1.0f;
-        Time.timeScale = 1.0f;
         Whale = Resources.Load("JD/Whale/Whale") as GameObject; //uses whale.fbx gameobject (unimportant) for mass instantiations
         int amount = 1000;
         StartModelTest(amount); //starts model stress test
