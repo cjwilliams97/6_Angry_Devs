@@ -27,6 +27,6 @@ public class MainMenuControl : MonoBehaviour
     }
     void Test_Clicked()
     {
-        SceneManager.LoadScene("BrandonHudTest", LoadSceneMode.Single);
+        SceneManager.LoadScene("SLFailedTest", LoadSceneMode.Single);
     }
 }

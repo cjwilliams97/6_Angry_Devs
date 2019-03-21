@@ -205,6 +205,6 @@ public class TimerTestScript : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         Debug.Log("Returned from wait time");
-        SceneManager.LoadScene("SLFailedTest", LoadSceneMode.Single);
+        SceneManager.LoadScene("JDTest", LoadSceneMode.Single);
     }
 }
