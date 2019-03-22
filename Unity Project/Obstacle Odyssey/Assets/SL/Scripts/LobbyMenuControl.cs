@@ -13,7 +13,6 @@ public class LobbyMenuControl : MonoBehaviour
         Play_btn.onClick.AddListener(Play_Clicked);
         Exit_btn.onClick.AddListener(Exit_Clicked);
     }
-
     void Play_Clicked()
     {
         Debug.Log("Loading");
@@ -22,7 +21,9 @@ public class LobbyMenuControl : MonoBehaviour
     }
     void Exit_Clicked()
     {
+        Debug.Log("Loading Main Menu");
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        
 
     }
 }
