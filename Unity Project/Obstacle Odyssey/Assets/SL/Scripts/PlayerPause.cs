@@ -13,6 +13,7 @@ public class PlayerPause : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         Menu = GameObject.Find("PauseMenu");
         rigid.GetComponent<PauseCanvasControl>().DisablePauseCanvas();
+      
     }
 
     void LateUpdate()
@@ -42,7 +43,7 @@ public class PlayerPause : MonoBehaviour
     {
         Paused = false;
         rigid.GetComponent<Timer>().ResumedGame();
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
         Debug.Log("Escape Closed");
         rigid.GetComponent<PauseCanvasControl>().DisablePauseCanvas();
     }

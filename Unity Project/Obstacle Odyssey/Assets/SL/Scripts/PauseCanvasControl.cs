@@ -9,6 +9,7 @@ public class PauseCanvasControl : MonoBehaviour
     public void DisablePauseCanvas()
     {
         Menu.SetActive(false);
+        
     }
     public void EnablePauseCanvas()
     {
