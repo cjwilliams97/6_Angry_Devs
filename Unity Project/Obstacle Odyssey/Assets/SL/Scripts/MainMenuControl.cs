@@ -13,6 +13,12 @@ public class MainMenuControl : MonoBehaviour
         Test_btn.onClick.AddListener(Test_Clicked);
         Start_btn.onClick.AddListener(Play_Clicked);
         Exit_btn.onClick.AddListener(Exit_Clicked);
+        //Time.fixedDeltaTime = 1.0f;
+        //Time.timeScale = 1.0f;
+    }
+    void Update()
+    {
+        
     }
 
     void Play_Clicked()
