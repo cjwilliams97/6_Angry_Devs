@@ -16,6 +16,7 @@ public class BarrelCollision : MonoBehaviour
     {
         GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage);
         audioHandler.PlayAudio("barrel impact");
+        Destroy(gameObject);
     }
 }
 

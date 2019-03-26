@@ -20,7 +20,11 @@ public class Caravel_Sails : ShipDecorator
         {
             Debug.Log("Instantiating caravel attribute");
             Attribute = Instantiate(Resources.Load("JD/Caravel/caravel_sails", typeof(GameObject)), PARENT.transform.position, PARENT.transform.rotation) as GameObject;
+            Attribute.transform.localScale = PARENT.transform.lossyScale;
             Attribute.transform.SetParent(PARENT.transform);
+
+
+
 
             return;
         }
