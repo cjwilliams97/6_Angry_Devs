@@ -9,7 +9,7 @@ public class DropDownHandler : MonoBehaviour
     //THIS IS THE LIST OF ALL SELECTABLE MAPS
     //If you edit this list, it will break stuff unlesss you know what you are doing
     //each element in list is indexed from 0 starting at "Gamescene"
-    List<string> Maps = new List<string> { "GameScene", "SLFailedTest", "SLSucessTest", "StressTest","JDTest","BrandonTest" };
+    List<string> Maps = new List<string> { "1st Demo","Oasis"  };
     private Dropdown drop;
     private Canvas SceneCanvas;
     public Scene DesiredScene;
@@ -40,34 +40,10 @@ public class DropDownHandler : MonoBehaviour
         }
         else if (drop.value == 1)
         {
-            DesiredSceneString = "SLFailedTest";
-            //Debug.Log("Desired Scene set to SLFailedTest");
+            DesiredSceneString = "BFGameLevel";
+            //Debug.Log("Desired Scene set to BFGameLevel");
         }
-        else if (drop.value == 2)
-        {
-            DesiredSceneString = "SLSucessTest";
-            //Debug.Log("Desired Scene set to SLSucessTest");
-        }
-        else if (drop.value == 3)
-        {
-            DesiredSceneString = "StressTest";
-            //Debug.Log("Desired Scene set to StressTest");
-        }
-        else if (drop.value == 4)
-        {
-            DesiredSceneString = "JDTest";
-            //Debug.Log("Desired Scene set to JDTest");
-        }
-        else if (drop.value == 5)
-        {
-            DesiredSceneString = "BrandonTest";
-            //Debug.Log("Desired Scene set to BrandonTest");
-        }
-        else if (drop.value == 6)
-        {
-            DesiredSceneString = "SLFailedTest";
-            //Debug.Log("Desired Scene set to SLFailedTest");
-        }
+        
 
     }
     // Drop.value table
