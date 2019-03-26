@@ -13,7 +13,12 @@ ModelImporter:
     7400002: Rudder_Left
     7400004: Caravel.002|Idle
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: bc074962d044102438389c6358238284, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
