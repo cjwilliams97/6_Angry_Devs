@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WinningScreen : MonoBehaviour
 {
@@ -9,14 +10,10 @@ public class WinningScreen : MonoBehaviour
     public GameObject Old_Camera;
     public GameObject HUD;
     public GameObject NewHud;
+    public Text NewTime;
+   
 
-    private void Update()
-    {
-        if (Input.GetKeyDown("space"))
-        {
-            GameFinish();
-        }
-    }
+    
 
     public void GameFinish()
     {
@@ -25,6 +22,7 @@ public class WinningScreen : MonoBehaviour
         Old_Camera.SetActive(false);
         HUD.SetActive(false);
         NewHud.SetActive(true);
+        NewTime.text = GetComponent<Timer>().GetTime();
         
     }
 }
