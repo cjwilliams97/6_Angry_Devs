@@ -15,18 +15,16 @@ public class Caravel_Plating : ShipDecorator
 
     private class Plating : MonoBehaviour
     {
-        public void AddPlating()
+         public void AddPlating()
         {
             Debug.Log("Instantiating caravel attribute");
             Attribute = Instantiate(Resources.Load("JD/Caravel/caravel_plating", typeof(GameObject)), PARENT.transform.position, PARENT.transform.rotation) as GameObject;
             Attribute.transform.localScale = PARENT.transform.lossyScale;
             Attribute.transform.SetParent(PARENT.transform);
-            Attribute.transform.Translate(0, 0, .005f);
-
-
-
+            Attribute.transform.localPosition += new Vector3(0.000f, 0.001f, 0.004f);
             return;
         }
+
     }
 
     public Caravel_Plating(CaravelInterface newShip) : base(newShip)
