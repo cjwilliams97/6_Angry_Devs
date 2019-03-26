@@ -22,6 +22,7 @@ public class Caravel_Lantern : ShipDecorator
             Attribute = Instantiate(Resources.Load("JD/Caravel/caravel_lanterns", typeof(GameObject)), PARENT.transform.position, PARENT.transform.rotation) as GameObject;
             Attribute.transform.localScale = PARENT.transform.lossyScale;
             Attribute.transform.SetParent(PARENT.transform);
+            Attribute.transform.Translate(0, 0, .005f);
 
 
             return;
