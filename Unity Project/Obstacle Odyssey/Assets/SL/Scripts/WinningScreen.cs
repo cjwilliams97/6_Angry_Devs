@@ -13,14 +13,7 @@ public class WinningScreen : MonoBehaviour
     public Text NewTime;
    
 
-    private void Update()
-    {
-
-        if (Input.GetKeyDown("space"))
-        {
-            GameFinish();
-        }
-    }
+    
 
     public void GameFinish()
     {
