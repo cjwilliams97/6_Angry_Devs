@@ -16,7 +16,7 @@ public class WhaleCollision : MonoBehaviour
     {
         GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage);
         audioHandler.PlayAudio("orca impact");
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
 
