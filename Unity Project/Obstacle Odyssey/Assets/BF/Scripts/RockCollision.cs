@@ -17,7 +17,7 @@ public class RockCollision : MonoBehaviour
     {
         GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage);
         audioHandler.PlayAudio("rock impact");
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
 

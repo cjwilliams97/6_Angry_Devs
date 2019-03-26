@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     private static float maxHealth = 100; // creates max ship health
     private float oldHealth;
     private float updatedHealth;
+    private bool flag = false;
     
     // this will initialize the health hud to the max health value
     void Start()
@@ -23,19 +24,27 @@ public class Health : MonoBehaviour
     // this can be called to decrease health when damage is applied from obstacle
     public void HealthChangeDamage(float healthChange)
     {
-        updatedHealth = oldHealth - healthChange; // figures out new health value
-
-        if (updatedHealth <= 0) // checks to make sure health doesn't go over max
+        if (flag == false)
         {
-            updatedHealth = 0;
-            healthText.color = Color.red;
-            healthText.text = ("You Died!!"); // alters the text that is displayed to the screen
-            return;
-        }
+            updatedHealth = oldHealth - healthChange; // figures out new health value
 
-        string newHealth = (updatedHealth).ToString(); // converts the float values to a string
-        oldHealth = oldHealth - healthChange; // changes oldHealth to updated version after being used
-        healthText.text = "Health: " + newHealth + " / " + maxHealth; // alters the text that is displayed to the screen
+            if (updatedHealth <= 0) // checks to make sure health doesn't go over max
+            {
+                if(flag == false)
+                {
+                    flag = true;
+                }
+
+                updatedHealth = 0;
+                healthText.color = Color.red;
+                healthText.text = ("You Died!!"); // alters the text that is displayed to the screen
+                return;
+            }
+
+            string newHealth = (updatedHealth).ToString(); // converts the float values to a string
+            oldHealth = oldHealth - healthChange; // changes oldHealth to updated version after being used
+            healthText.text = "Health: " + newHealth + " / " + maxHealth; // alters the text that is displayed to the screen
+        }
     }
 
     // this can be called to increase health when a bonus is picked up
