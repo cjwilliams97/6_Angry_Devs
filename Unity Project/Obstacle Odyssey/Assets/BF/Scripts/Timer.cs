@@ -139,4 +139,9 @@ public class Timer : MonoBehaviour
     {
         paused = false; // sets paused to false
     }
+
+    public string GetTime()
+    {
+        return minuteString + ":" + secondString + ":" + centisecondString;
+    }
 }

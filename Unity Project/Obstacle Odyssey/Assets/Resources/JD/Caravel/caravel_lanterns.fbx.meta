@@ -16,7 +16,27 @@ ModelImporter:
     7400002: Rudder_Left
     7400004: Caravel.003|Idle
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light
+    second: {fileID: 2100000, guid: aa0e35c60bab73f45ba1dea1987053ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brass
+    second: {fileID: 2100000, guid: ffdda79eafc999643b5489da3586e1ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brown_1
+    second: {fileID: 2100000, guid: 886d066f89f3b554f81815ecba70255d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark_brown
+    second: {fileID: 2100000, guid: 4475e7970ce4bc04fbf8cb47f67c741d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
