@@ -7,22 +7,33 @@ using UnityEngine.SceneManagement;
 public class LobbyMenuControl : MonoBehaviour
 {
     public Button Play_btn, Exit_btn;
-
+    public Dropdown drop;
+    public string DesiredMap;
     void Start()
     {
+        drop = GetComponent<Dropdown>();
         Play_btn.onClick.AddListener(Play_Clicked);
         Exit_btn.onClick.AddListener(Exit_Clicked);
+        //Time.fixedDeltaTime = 1.0f;
+        //Time.timeScale = 1.0f;
     }
 
+    void Update()
+    {
+        
+        DesiredMap = GameObject.Find("Dropdown").GetComponent<DropDownHandler>().RequestMap();
+    }
     void Play_Clicked()
     {
         Debug.Log("Loading");
-        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
+        SceneManager.LoadScene(DesiredMap, LoadSceneMode.Single);
         
     }
     void Exit_Clicked()
     {
+        Debug.Log("Loading Main Menu");
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        
 
     }
 }

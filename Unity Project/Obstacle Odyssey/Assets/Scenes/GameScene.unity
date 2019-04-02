@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44871408, g: 0.49508715, b: 0.5559112, a: 1}
+  m_IndirectSpecularColor: {r: 0.44871342, g: 0.49508643, b: 0.55591035, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -311,12 +311,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &214961819 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6667405527703985831, guid: 6421751499363e14eaad589163e8513c,
-    type: 3}
-  m_PrefabInstance: {fileID: 6667405529082507628}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &252574262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1754,7 +1748,6 @@ GameObject:
   - component: {fileID: 873217259}
   - component: {fileID: 873217258}
   - component: {fileID: 873217257}
-  - component: {fileID: 873217255}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1762,18 +1755,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &873217255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873217254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c0a1984261d4e14c92753809155458c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!81 &873217257
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1883,8 +1864,8 @@ Transform:
   m_Children:
   - {fileID: 740715257}
   - {fileID: 1814625871}
-  - {fileID: 1090645173}
-  - {fileID: 214961819}
+  - {fileID: 5564403383123878680}
+  - {fileID: 6667405529082507629}
   - {fileID: 805494038}
   - {fileID: 932221100}
   m_Father: {fileID: 0}
@@ -2315,12 +2296,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cc41fd707ee804f40b95f1c90a10bcfe, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b876abdfdf8379a43a2cbfdda5475119, type: 3}
---- !u!4 &1090645173 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5564403383723192032, guid: b8cbf91f009dde34787321bf7e73e3d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 5564403383123878679}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1104519473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5052,11 +5027,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 886879195}
     m_Modifications:
-    - target: {fileID: 5564403383723029184, guid: b8cbf91f009dde34787321bf7e73e3d9,
-        type: 3}
-      propertyPath: m_Name
-      value: chest
-      objectReference: {fileID: 0}
     - target: {fileID: 5564403383723192032, guid: b8cbf91f009dde34787321bf7e73e3d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5112,8 +5082,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 5564403383723029184, guid: b8cbf91f009dde34787321bf7e73e3d9,
+        type: 3}
+      propertyPath: m_Name
+      value: chest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8cbf91f009dde34787321bf7e73e3d9, type: 3}
+--- !u!4 &5564403383123878680 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9156974754481880498, guid: b8cbf91f009dde34787321bf7e73e3d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 5564403383123878679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6457207388796811421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5240,11 +5221,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 886879195}
     m_Modifications:
-    - target: {fileID: 6667405527703749255, guid: 6421751499363e14eaad589163e8513c,
-        type: 3}
-      propertyPath: m_Name
-      value: barrel
-      objectReference: {fileID: 0}
     - target: {fileID: 6667405527703985831, guid: 6421751499363e14eaad589163e8513c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5300,8 +5276,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6667405527703749255, guid: 6421751499363e14eaad589163e8513c,
+        type: 3}
+      propertyPath: m_Name
+      value: barrel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6421751499363e14eaad589163e8513c, type: 3}
+--- !u!4 &6667405529082507629 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2471581962881858169, guid: 6421751499363e14eaad589163e8513c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6667405529082507628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7098189640476961920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5487,6 +5474,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737228311192580845, guid: 2eadb5d448177344286d0fe8ff132db8,
+        type: 3}
+      propertyPath: audio.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 21f6b1b904af34349b5a0061bbab8048, type: 3}
+    - target: {fileID: 8737228311192580845, guid: 2eadb5d448177344286d0fe8ff132db8,
+        type: 3}
+      propertyPath: audio.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a7724f28876d4cd4dac24c0853a6fabf, type: 3}
+    - target: {fileID: 8737228311192580845, guid: 2eadb5d448177344286d0fe8ff132db8,
+        type: 3}
+      propertyPath: audio.Array.data[4].volume
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eadb5d448177344286d0fe8ff132db8, type: 3}

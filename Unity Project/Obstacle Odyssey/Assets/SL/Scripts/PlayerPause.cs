@@ -13,6 +13,7 @@ public class PlayerPause : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         Menu = GameObject.Find("PauseMenu");
         rigid.GetComponent<PauseCanvasControl>().DisablePauseCanvas();
+      
     }
 
     void LateUpdate()

@@ -326,6 +326,7 @@ ModelImporter:
     2300176: Plane.005
     2300178: Text
     2300180: Torus
+    2300182: //RootNode
     3300000: Cube
     3300002: Cube.001
     3300004: Cube.002
@@ -417,6 +418,7 @@ ModelImporter:
     3300176: Plane.005
     3300178: Text
     3300180: Torus
+    3300182: //RootNode
     4300000: Plane.003
     4300002: Cube.069
     4300004: Cube.068

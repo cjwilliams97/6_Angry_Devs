@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SL/Scenes/MainMenu.unity
     guid: af44778eb310b7f43916c28a62db4f94
-  - enabled: 0
+  - enabled: 1
     path: Assets/SL/Scenes/Lobby.unity
     guid: d3e6248bf568e634fb67a64e399378a0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: a21dff4af16f1684bb8c99867c4d02da
   - enabled: 0
@@ -23,19 +23,28 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/BF/Scenes/BrandonLevel.unity
     guid: f78bb010642e08f4caed41479ed3b3a6
-  - enabled: 1
+  - enabled: 0
     path: Assets/SL/Scenes/SLFailedTest.unity
     guid: 44de0aa325b05444e8fd1154dde1a2b8
-  - enabled: 1
+  - enabled: 0
     path: Assets/SL/Scenes/SLSucessTest.unity
     guid: e660256bb2d58914a8defb116a7f10ce
-  - enabled: 1
+  - enabled: 0
     path: Assets/JD/Scenes/JDTest.unity
     guid: 918b57ed132e8454fa233d8ddbdc9c29
-  - enabled: 1
+  - enabled: 0
     path: Assets/tst/TestScenes/BrandonHudTest.unity
     guid: 95c3c0e16aa934646ae2a7ee804c96fa
-  - enabled: 1
+  - enabled: 0
     path: Assets/LJ/Scenes/StressTest.unity
     guid: 362234cbdf4a74449b14cb38c55624c2
+  - enabled: 0
+    path: Assets/CW/Scenes/Connor_Test.unity
+    guid: d42fcaae723133247ab8d74ae44c7651
+  - enabled: 0
+    path: Assets/tst/JM/JubalTest.unity
+    guid: 762f51a110be9fa459d8485eec9a9a93
+  - enabled: 1
+    path: Assets/BF/Scenes/BFGameLevel.unity
+    guid: 2e1333c4f9b182648a3749b9dffad327
   m_configObjects: {}

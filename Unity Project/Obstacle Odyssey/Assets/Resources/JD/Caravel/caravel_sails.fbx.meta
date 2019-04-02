@@ -6,10 +6,23 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: Material
+    2100002: lightcream
+    2100004: emblem
     2300000: //RootNode
     3300000: //RootNode
     4300000: TextureAtlas_mergedObject.002
-  externalObjects: {}
+    4300002: Caravel.004
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: emblem
+    second: {fileID: 2100000, guid: bb1c2009a91a01d48bc8876a1648e82d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightcream
+    second: {fileID: 2100000, guid: 20d712ea5202938448660b4cf9dd8dab, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

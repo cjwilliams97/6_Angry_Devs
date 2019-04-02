@@ -27,6 +27,7 @@ public class PauseMenuControl : MonoBehaviour
     }
     void Exit_Clicked()
     {
+        Time.timeScale = 1.0f;
         Debug.Log("Loading MainMenu");
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
 
