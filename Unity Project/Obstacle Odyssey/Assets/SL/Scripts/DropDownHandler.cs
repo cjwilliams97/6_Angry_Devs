@@ -9,7 +9,7 @@ public class DropDownHandler : MonoBehaviour
     //THIS IS THE LIST OF ALL SELECTABLE MAPS
     //If you edit this list, it will break stuff unlesss you know what you are doing
     //each element in list is indexed from 0 starting at "Gamescene"
-    List<string> Maps = new List<string> { "1st Demo","Oasis"  };
+    List<string> Maps = new List<string> { "Oasis"  };
     private Dropdown drop;
     private Canvas SceneCanvas;
     public Scene DesiredScene;
@@ -33,12 +33,8 @@ public class DropDownHandler : MonoBehaviour
 
     void Update()
     {
+  
         if (drop.value == 0)
-        {
-            DesiredSceneString = "GameScene";
-            //Debug.Log("Desired Scene set to GameScene");
-        }
-        else if (drop.value == 1)
         {
             DesiredSceneString = "BFGameLevel";
             //Debug.Log("Desired Scene set to BFGameLevel");
