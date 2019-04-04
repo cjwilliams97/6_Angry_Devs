@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenuControl : MonoBehaviour
 {
     public Button Resume_btn, Reset_btn, Exit_btn;
-    public GameObject Menu;
+   
+    public GameObject Reference;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class PauseMenuControl : MonoBehaviour
 
     void Resume_Clicked()
     {
-       // rigid.GetComponent<PlayerPause>().ClosePause();
+       Reference.GetComponent<PlayerPause>().ClosePause();
     }
     void Restart_Clicked()
     {
@@ -29,7 +30,7 @@ public class PauseMenuControl : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         Debug.Log("Loading MainMenu");
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        SceneManager.LoadScene("Lobby", LoadSceneMode.Single);
 
     }
 }
