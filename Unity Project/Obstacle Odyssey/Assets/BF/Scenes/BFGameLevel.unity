@@ -514,6 +514,11 @@ PrefabInstance:
       propertyPath: _forcePoints.Array.data[1]._offsetPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_Constraints
@@ -1042,6 +1047,11 @@ PrefabInstance:
       propertyPath: _forcePoints.Array.data[1]._offsetPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_Constraints
@@ -1135,6 +1145,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
@@ -1315,6 +1330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
@@ -1792,6 +1812,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
@@ -2589,6 +2614,11 @@ PrefabInstance:
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_Constraints
@@ -2824,6 +2854,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
@@ -4928,6 +4963,11 @@ PrefabInstance:
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_Constraints
@@ -5027,6 +5067,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
@@ -5335,6 +5380,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
@@ -6000,6 +6050,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
@@ -7093,6 +7148,11 @@ PrefabInstance:
       propertyPath: _forcePoints.Array.data[1]._offsetPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_Constraints
@@ -7186,6 +7246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
@@ -7286,6 +7351,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
@@ -7864,6 +7934,11 @@ PrefabInstance:
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_Constraints
@@ -8194,6 +8269,11 @@ PrefabInstance:
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_Constraints
@@ -8492,6 +8572,11 @@ PrefabInstance:
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_Constraints
@@ -8690,6 +8775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[1]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
@@ -9979,6 +10069,11 @@ PrefabInstance:
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_Constraints
@@ -10630,6 +10725,11 @@ PrefabInstance:
       propertyPath: _forcePoints.Array.data[1]._offsetPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_Constraints
@@ -10667,7 +10767,6 @@ MonoBehaviour:
   HUD: {fileID: 515328231}
   NewHud: {fileID: 1006664936}
   NewTime: {fileID: 852426104}
-  IsFinished: 0
 --- !u!114 &1914173657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10979,6 +11078,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
@@ -11420,6 +11524,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a91d0ccbd232d479231cbfb53474c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2108209498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108209494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656b4b5d211f1f842a7b6346ad9444d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigid: {fileID: 0}
+  Ship: {fileID: 2108209494}
 --- !u!1 &2111680135
 GameObject:
   m_ObjectHideFlags: 0
@@ -11642,6 +11760,11 @@ PrefabInstance:
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_Constraints
@@ -11855,6 +11978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _forcePoints.Array.data[0]._offsetPosition.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7067171399989935771, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
