@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 /*
@@ -11,27 +12,91 @@ using UnityEngine;
 public class Caravel_Maker : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    private bool PlatingState = false;
+    private bool SailsState = false;
+    private bool LanternState = false;
+
     void Start()
     {
-        Debug.Log("Caravel maker here: trying stuff");
-        /*
-        //Using the wrapper method to instantiate whole caravel and all included attributes
-        CaravelInterface MahShip = new Caravel_Plating(new Caravel_Lantern(new PlainShip()));
-        Debug.Log("Description:" + MahShip.getDescription());
-        Debug.Log("Cost:" + MahShip.getCost());
-        */
-
-        //adding single components at a time
-        CaravelInterface Test = new PlainShip();
-        Test = new Caravel_Sails(Test);
-        Test = new Caravel_Plating(Test);
-        Test = new Caravel_Lantern(Test);
-
+        CaravelInterface Ship = new PlainShip();    //using decorator, basic concrete plain ship component
+        Debug.Log("Caravel maker here: reading from perks and setting components");
+        SetPerks();
+        SetComponents(Ship);
+        //float HP = ChangeHP(PlatingState);
+        return;
     }
 
-    // Update is called once per frame
-    void Update()
+    void SetComponents(CaravelInterface Ship)
     {
-        
+        if (PlatingState)
+        {
+            Ship = new Caravel_Plating(Ship);
+           // GetComponent<Health>().MaxHealthChange(150f);
+        }
+
+        if (SailsState)
+        {
+            Ship = new Caravel_Sails(Ship);
+        }
+
+        if (LanternState)
+        {
+            Ship = new Caravel_Lantern(Ship);
+        }
+
+        return;
     }
+
+    void SetPerks()
+    {
+        string fileName = "Perks.txt";
+        string path = Path.Combine(Application.persistentDataPath, fileName);   //persistant filepath for perk states
+
+        if (!File.Exists(path))
+        {
+            Debug.Log("Perks File does not exist");
+            return;
+        }
+        else
+        {
+            using (System.IO.StreamReader file = new System.IO.StreamReader(path))
+            {
+                Debug.Log("ファイルから読んでいます!");
+                Debug.Log(path);
+
+                string line = file.ReadLine();
+                if (line == "1")
+                {
+                    PlatingState = true;
+                }
+
+                line = file.ReadLine();
+                if (line == "1")
+                {
+                    SailsState = true;
+                }
+               
+                    line = file.ReadLine();
+                if (line == "1")
+                {
+                    LanternState = true;
+                }
+            }
+        }
+        return;
+    }
+    /*
+    float ChangeHP(bool state)
+    {
+        if(state)
+        {
+            return 100f + 50f;
+        }
+        else
+        {
+            return 100f;
+        }
+    }
+    */
 }
