@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -132,7 +133,9 @@ public class ButtonManager : MonoBehaviour
             else
                 file.WriteLine("0");
         }
-            return;
+
+        SceneManager.LoadScene("Lobby", LoadSceneMode.Single);  //load back to the main menu
+        return;
     }
 
     //finds perk toggles respective gameobjects

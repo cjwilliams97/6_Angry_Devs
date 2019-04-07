@@ -6,11 +6,11 @@ using UnityEngine;
 public class LoseCondition : MonoBehaviour
 {
     public Rigidbody rigid;
-    
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
+
         
         rigid.GetComponent<BoatProbes>()._forceMultiplier = 16.0f;
 
