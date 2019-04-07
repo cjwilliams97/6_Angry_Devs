@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WhaleCollision : MonoBehaviour
+public class WhaleCollision : Collision
 {
     // bind audio
     AudioHandler audioHandler;
-    void Start() {
+    public Health health; // needed to call script later
+    private float damage;
+
+    public override void Start()
+    {
+        base.Start();
+        damage = 50;
         audioHandler = AudioHandler.instance;
     }
 
-    private float damage = 50;
-
-    private void OnTriggerEnter(Collider other)
+    public override void OnTriggerEnter(Collider other)
     {
         GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage);
         audioHandler.PlayAudio("orca impact");
-        //Destroy(gameObject);
     }
 }
 
