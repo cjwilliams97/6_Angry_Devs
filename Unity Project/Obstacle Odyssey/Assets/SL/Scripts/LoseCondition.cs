@@ -6,12 +6,12 @@ using UnityEngine;
 public class LoseCondition : MonoBehaviour
 {
     public Rigidbody rigid;
-    public GameObject Ship;
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
-        Ship = GameObject.Find("caravel");
+
+        
         rigid.GetComponent<BoatProbes>()._forceMultiplier = 16.0f;
 
     }
@@ -23,7 +23,6 @@ public class LoseCondition : MonoBehaviour
         if (Input.GetKey(KeyCode.T)) //test for health == 0
         {
             SinkShip();
-            
         }
         
     }
