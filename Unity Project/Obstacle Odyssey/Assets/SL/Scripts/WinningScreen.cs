@@ -12,7 +12,7 @@ public class WinningScreen : MonoBehaviour
     public GameObject HUD;
     public GameObject NewHud;
     public Text NewTime;
-    public bool IsFinished = false;
+    public static bool IsFinished = false;
     private KeyCode Escape = KeyCode.Escape;
 
     private void Awake()
