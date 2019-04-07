@@ -20,7 +20,7 @@ public class BoatProbes : MonoBehaviour, IBoat
     [SerializeField]
     float _forceHeightOffset = 0f;
     [SerializeField]
-    float _forceMultiplier = 10f;
+    public float _forceMultiplier = 1.0f;
     [SerializeField]
     float _minSpatialLength = 12f;
     [SerializeField, Range(0, 1)]
@@ -42,7 +42,7 @@ public class BoatProbes : MonoBehaviour, IBoat
     [SerializeField, FormerlySerializedAs("TurnPower")]
     float _turnPower = 0.5f;
     [SerializeField]
-    bool _playerControlled = true;
+    public bool _playerControlled = true;
     [SerializeField]
     float _engineBias = 0f;
     [SerializeField]
