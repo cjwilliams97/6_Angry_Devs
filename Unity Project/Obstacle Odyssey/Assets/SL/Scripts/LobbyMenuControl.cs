@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LobbyMenuControl : MonoBehaviour
 {
-    public Button Play_btn, Exit_btn;
+    public Button Play_btn, Exit_btn ,Perks_btn;
     public Dropdown drop;
     public string DesiredMap;
     void Start()
@@ -14,6 +14,7 @@ public class LobbyMenuControl : MonoBehaviour
         drop = GetComponent<Dropdown>();
         Play_btn.onClick.AddListener(Play_Clicked);
         Exit_btn.onClick.AddListener(Exit_Clicked);
+        Perks_btn.onClick.AddListener(Perks_Clicked);
         //Time.fixedDeltaTime = 1.0f;
         //Time.timeScale = 1.0f;
     }
@@ -28,6 +29,11 @@ public class LobbyMenuControl : MonoBehaviour
         Debug.Log("Loading");
         SceneManager.LoadScene(DesiredMap, LoadSceneMode.Single);
         
+    }
+    void Perks_Clicked()
+    {
+        Debug.Log("Loading Perks");
+        SceneManager.LoadScene("Perks", LoadSceneMode.Single);
     }
     void Exit_Clicked()
     {
