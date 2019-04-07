@@ -22,8 +22,7 @@ public class Caravel_Maker : MonoBehaviour
         CaravelInterface Ship = new PlainShip();    //using decorator, basic concrete plain ship component
         Debug.Log("Caravel maker here: reading from perks and setting components");
         SetPerks();
-        SetComponents(Ship);
-        //float HP = ChangeHP(PlatingState);
+        SetComponents(Ship); 
         return;
     }
 
@@ -55,11 +54,12 @@ public class Caravel_Maker : MonoBehaviour
 
         if (!File.Exists(path))
         {
-            Debug.Log("Perks File does not exist");
+            Debug.Log("Perks File does not exist"); //no file to read from
             return;
         }
         else
         {
+            //read lines and set respective PerkStates
             using (System.IO.StreamReader file = new System.IO.StreamReader(path))
             {
                 Debug.Log("ファイルから読んでいます!");
@@ -86,17 +86,4 @@ public class Caravel_Maker : MonoBehaviour
         }
         return;
     }
-    /*
-    float ChangeHP(bool state)
-    {
-        if(state)
-        {
-            return 100f + 50f;
-        }
-        else
-        {
-            return 100f;
-        }
-    }
-    */
 }
