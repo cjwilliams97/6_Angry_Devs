@@ -14,6 +14,8 @@ public class LoseCondition : MonoBehaviour
     public GameObject Text;
     public GameObject TimerHudText;
     public GameObject TimerHudBackground;
+    public GameObject RearMastFire;
+    public GameObject FrontMastFire;
     private KeyCode Escape = KeyCode.Escape;
     public static bool IsFailed = false;
     
@@ -71,6 +73,9 @@ public class LoseCondition : MonoBehaviour
         Text.SetActive(true);
         TimerHudBackground.SetActive(false);
         TimerHudText.SetActive(false);
+        FrontMastFire.SetActive(true);
+        RearMastFire.SetActive(true);
+        
         IsFailed = true;
         return true ;
     }
