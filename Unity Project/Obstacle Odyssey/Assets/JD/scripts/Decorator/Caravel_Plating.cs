@@ -17,6 +17,7 @@ public class Caravel_Plating : ShipDecorator
     {
          public void AddPlating()
         {
+            PARENT = GameObject.Find("Caravel");
             Debug.Log("Instantiating caravel attribute");
             Attribute = Instantiate(Resources.Load("JD/Caravel/caravel_plating", typeof(GameObject)), PARENT.transform.position, PARENT.transform.rotation) as GameObject;
             Attribute.transform.localScale = PARENT.transform.lossyScale;
