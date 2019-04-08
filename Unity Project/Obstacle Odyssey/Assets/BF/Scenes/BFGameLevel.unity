@@ -1825,6 +1825,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0422b9d1287f3194e908f8a7f505855a, type: 3}
+--- !u!1 &276962436 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6457207390771229417, guid: 5fe6a548c2ad3cf4a91daee925b6b91c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1377005974}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &287704530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6954,7 +6960,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1377005974}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1747073213}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -10091,6 +10097,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0422b9d1287f3194e908f8a7f505855a, type: 3}
+--- !u!1 &1747073213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6457207389396356594, guid: 5fe6a548c2ad3cf4a91daee925b6b91c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1377005974}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1768461992
 GameObject:
   m_ObjectHideFlags: 0
@@ -11402,11 +11414,11 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 120
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Press 'ESC' to Exit
 --- !u!222 &2033037291
@@ -11628,6 +11640,8 @@ MonoBehaviour:
   rigid: {fileID: 0}
   reference: {fileID: 1914173652}
   Text: {fileID: 1887048657}
+  TimerHudText: {fileID: 1747073213}
+  TimerHudBackground: {fileID: 276962436}
 --- !u!1 &2111680135
 GameObject:
   m_ObjectHideFlags: 0

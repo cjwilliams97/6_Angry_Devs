@@ -12,6 +12,8 @@ public class LoseCondition : MonoBehaviour
     private bool FirstFrame = true;
     private IEnumerator coroutine;
     public GameObject Text;
+    public GameObject TimerHudText;
+    public GameObject TimerHudBackground;
     private KeyCode Escape = KeyCode.Escape;
     public static bool IsFailed = false;
     
@@ -23,12 +25,14 @@ public class LoseCondition : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         rigid.GetComponent<BoatProbes>()._forceMultiplier = 16.0f;
         Text.SetActive(false);
+        
 
     }
 
     private void Awake()
     {
         IsFailed = false;
+
     }
 
     void LateUpdate()
@@ -36,16 +40,16 @@ public class LoseCondition : MonoBehaviour
         if (FirstFrame == true)
         {
             StartCoroutine(coroutine);
-            Debug.Log("Coroutine Started");
+            //Debug.Log("Coroutine Started");
         }
 
         if (FirstFrame == false) 
         {
             health = reference.GetComponent<Health>().ReturnHealth();
-            Debug.Log("Returned health is :" + health);
+            //Debug.Log("Returned health is :" + health);
             if (health <= 0) //test for health <= 0
             {
-                Debug.Log("Player has lost");
+                //Debug.Log("Player has lost");
                 SinkShip();
             }
         }
@@ -61,10 +65,12 @@ public class LoseCondition : MonoBehaviour
     }
     public bool SinkShip()
     {
-        Debug.Log("Sinking Ship");
+       // Debug.Log("Sinking Ship");
         rigid.GetComponent<BoatProbes>()._forceMultiplier = .85f;
         rigid.GetComponent<BoatProbes>()._playerControlled = false;
         Text.SetActive(true);
+        TimerHudBackground.SetActive(false);
+        TimerHudText.SetActive(false);
         IsFailed = true;
         return true ;
     }
