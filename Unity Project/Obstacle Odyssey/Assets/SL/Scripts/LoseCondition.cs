@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class LoseCondition : MonoBehaviour
@@ -10,17 +11,26 @@ public class LoseCondition : MonoBehaviour
     public GameObject reference;
     private bool FirstFrame = true;
     private IEnumerator coroutine;
-    // Start is called before the first frame update
+    public GameObject Text;
+    private KeyCode Escape = KeyCode.Escape;
+    public static bool IsFailed = false;
+    
+
     void Start()
     {
         FirstFrame = true;
         coroutine = Wait(2.0f);
         rigid = GetComponent<Rigidbody>();
         rigid.GetComponent<BoatProbes>()._forceMultiplier = 16.0f;
+        Text.SetActive(false);
 
     }
 
-    // Update is called once per frame
+    private void Awake()
+    {
+        IsFailed = false;
+    }
+
     void LateUpdate()
     {
         if (FirstFrame == true)
@@ -39,6 +49,13 @@ public class LoseCondition : MonoBehaviour
                 SinkShip();
             }
         }
+        if (Input.GetKey(Escape))
+        {
+            if(IsFailed == true)
+            {
+                SceneManager.LoadScene("Lobby", LoadSceneMode.Single);
+            }
+        }
 
         
     }
@@ -47,6 +64,8 @@ public class LoseCondition : MonoBehaviour
         Debug.Log("Sinking Ship");
         rigid.GetComponent<BoatProbes>()._forceMultiplier = .85f;
         rigid.GetComponent<BoatProbes>()._playerControlled = false;
+        Text.SetActive(true);
+        IsFailed = true;
         return true ;
     }
     private IEnumerator Wait(float time)
