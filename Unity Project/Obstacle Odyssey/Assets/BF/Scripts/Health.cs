@@ -23,10 +23,12 @@ public class Health : MonoBehaviour
             Debug.Log("made it here");
             healthStart = 100;
             maxHealth = 100;
+            updatedHealth = maxHealth;
         }
         else
         {
             healthStart = maxHealth;
+            updatedHealth = maxHealth;
         }
 
         oldHealth = healthStart; // sets old health to starting health

@@ -16,7 +16,7 @@ public class PlayerPause : MonoBehaviour
 
     void LateUpdate()
     {
-        if (Input.GetKeyDown(Escape) && WinningScreen.IsFinished == false)
+        if (Input.GetKeyDown(Escape) && WinningScreen.IsFinished == false && LoseCondition.IsFailed == false)
         {
             if (Paused == false)
             {
