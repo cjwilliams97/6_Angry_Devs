@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿
+/* Containts the Listeners, and scene changer for the Lobby Scene */
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,31 +19,29 @@ public class LobbyMenuControl : MonoBehaviour
         Play_btn.onClick.AddListener(Play_Clicked);
         Exit_btn.onClick.AddListener(Exit_Clicked);
         Perks_btn.onClick.AddListener(Perks_Clicked);
-        //Time.fixedDeltaTime = 1.0f;
-        //Time.timeScale = 1.0f;
     }
 
+    /* Constnantly Updates the Dropdown menu to the selected map every frame */
     void Update()
     {
-        
         DesiredMap = GameObject.Find("Dropdown").GetComponent<DropDownHandler>().RequestMap();
     }
+    /* Loads the Chosen Map On clicking the play button */
     void Play_Clicked()
     {
-        Debug.Log("Loading");
-        SceneManager.LoadScene(DesiredMap, LoadSceneMode.Single);
-        
+        //Debug.Log("Loading");
+        SceneManager.LoadScene(DesiredMap, LoadSceneMode.Single); 
     }
+    /* Loads the Perks Scene When Customization button is clicked */
     void Perks_Clicked()
     {
-        Debug.Log("Loading Perks");
+        //Debug.Log("Loading Perks");
         SceneManager.LoadScene("Perks", LoadSceneMode.Single);
     }
+    /* Loads the Main Main Menu When exit is clicked in lobby */
     void Exit_Clicked()
     {
-        Debug.Log("Loading Main Menu");
+        //Debug.Log("Loading Main Menu");
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
-        
-
     }
 }
