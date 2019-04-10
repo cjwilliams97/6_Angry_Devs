@@ -2,9 +2,8 @@
 			
 			Obstacle Odyssey Readme:
 
-
+############################################################################
 Table of Contents:
-
 	1)Executable Download
 	2)Build Instructions
 	
@@ -24,6 +23,25 @@ Table of Contents:
 		
 2)Build Instructions
 	If you want to build and run the Executable yourself. Follow these instrucitons:
+	
+	1)Navigate to https://github.com/cawndog6/6_Angry_Devs
+	2)Download Project file zip with the 'Clone or Download' button
+	3)Unzip to the desired location
+	4)Open the Obstacle Odyssey project folder in Unity
+	5)To build the project executable
+		5a)Select File->Build Settings
+		5b)Make sure the following scenes are selected
+			SL/Scenes/MainMenu
+			SL/Scenes/Lobby
+			Scenes/GameScene
+			BF/Scenes/BFGameLevel
+			JD/Scenes/Perks
+		5c)Select the desired platform.
+		5d)Select build and choose the desired output.
+	6)Navigate to location built
+	7)Run 'Obstacle Odyssey.exe'
+		
+############################################################################
 	
 	1)Navigate to https://github.com/cawndog6/6_Angry_Devs
 	2)Download Project file zip with the 'Clone or Download' button
