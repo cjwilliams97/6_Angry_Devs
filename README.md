@@ -4,12 +4,16 @@
 
 ############################################################################
 Table of Contents:
+
 	1)Executable Download
+	
 	2)Build Instructions
+	
 	
 ############################################################################
 
 1)Executable Download
+
 	Obstacle Odyssey was built for the intention of running on a Windows 10 
 	Operating System. If you simply wish to download the executable
 	follow these instructions:
@@ -22,6 +26,7 @@ Table of Contents:
 ############################################################################
 		
 2)Build Instructions
+
 	If you want to build and run the Executable yourself. Follow these instrucitons:
 	
 	1)Navigate to https://github.com/cawndog6/6_Angry_Devs
