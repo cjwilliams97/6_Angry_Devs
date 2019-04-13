@@ -1,1 +1,0 @@
-# connor's assets
