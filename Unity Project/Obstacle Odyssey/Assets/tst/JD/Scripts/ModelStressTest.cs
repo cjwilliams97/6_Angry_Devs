@@ -4,6 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/*
+ *  Test Plan:
+ *  Monitor FPS and the impact of instantiations of many models and instances of smoke generation
+ *  For this test, using the whale.fbx  as a placeholder model to instantiate 1000s of times
+ *  Using a defualt smoke generator prefab as a placeholder to instantiate 20 instance of smoke consecutive smoke generation
+ *  
+ *  Cases:
+ *      Anything above 30fps is considered good and will not log any warnings
+ *      If fps is below 30fps(but above 15), still considered good but will log fact that state is under 30fps
+ *      If fps below 15fps, considered dangerous, close to failing, displays warning color and logs state
+ *      If fps below 5fps, considered failure state. Logs failure and sets global bools indicating failure and exit control flow.
+ *      Any other state except for below 5fps is considered a success and logged as such.
+ */
+
+
 public class ModelStressTest : MonoBehaviour
 {
     GameObject Whale;
@@ -32,26 +47,31 @@ public class ModelStressTest : MonoBehaviour
     private IEnumerator DoLast()
     {
         while(inFirst || inSecond)
+        {
             yield return new WaitForSeconds(0.1f);
-
+        }
 
         yield return new WaitForSeconds(5.0f);
         Debug.Log("Tests Complete");
 
         if (Failed)
+        {
             Debug.Log(": FAILURE");
+        }
         else
+        {
             Debug.Log(": SUCCESS");
+        }
 
         //Tests are complete, load back to the main menu scene.
         SceneManager.LoadScene("Connor_Test", LoadSceneMode.Single);
-        yield break;
+        yield break;    //unreachable by design, next scene already loaded
     }
 
     //smoke stress test wrapper function
     void StartSmokeTest(int amount) 
     {
-        StartCoroutine(SmokeTest(amount));
+        StartCoroutine(SmokeTest(amount));  
         return;
     }
 
