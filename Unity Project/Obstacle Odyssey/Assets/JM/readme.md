@@ -1,1 +1,0 @@
-Jubal's asset subdir
