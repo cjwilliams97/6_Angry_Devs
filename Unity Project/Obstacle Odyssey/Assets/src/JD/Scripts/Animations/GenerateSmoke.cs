@@ -14,6 +14,7 @@ public class GenerateSmoke : MonoBehaviour
     // Start is called before the first frame update
 
     private GameObject[] Particles;
+    public GameObject PARENT;
     private float[] Speeds;
     private float[] Scales;
     private Texture Smoke_texture1;
@@ -21,24 +22,25 @@ public class GenerateSmoke : MonoBehaviour
    
     void Start()
     {
-        SmokeySmoke();
+        SmokeySmokeRepeating();
         return;
     }
 
     public void SmokeySmoke()
     {
+        Debug.Log("SmokeySmoke running");
         int amount = 150;   //number of particles to be spawned
-        float range = 1f; //distance from origin when generating particles
-        float speed = 3 * 0.1f; //upper limit for rising speed
-        float ScaleFactor = 1f; //affects how quickly things shrink (high number = faster shrinking)
-        float lifetime = 1f;    //upper limit of how long a particle can live for 
-        float ThreshHold = .05f;   //minimum size a particle can be before it get auto destroyed
+        float range = 2f; //distance from origin when generating particles
+        float speed = 1.5f * 0.1f; //upper limit for rising speed
+        float ScaleFactor = 2f; //affects how quickly things shrink (high number = faster shrinking)
+        float lifetime = 5f;    //upper limit of how long a particle can live for 
+        float ThreshHold = .1f;   //minimum size a particle can be before it get auto destroyed
         SmokeySmoke(amount, range, speed, ScaleFactor, lifetime, ThreshHold);
     }
 
     private void SmokeySmokeRepeating()
     {
-        InvokeRepeating("SmokeySmoke", 2.0f, 3.5f);
+        InvokeRepeating("SmokeySmoke", 1.0f, 4f);
         return;
     }
 
@@ -52,7 +54,7 @@ public class GenerateSmoke : MonoBehaviour
         Scales = new float[amount];
         for (int i = 0; i < amount; i++)
         {
-            Speeds[i] = Random.Range(speed / 16, speed);
+            Speeds[i] = Random.Range(speed / 32, speed / 2);
             Scales[i] = Random.Range(ScaleFactor / 2, ScaleFactor);
         }
 
@@ -74,11 +76,38 @@ public class GenerateSmoke : MonoBehaviour
             //generates an equal distribution of medium and smoke particles
             if(i % 2 == 0)
             {
-              Particles[i] = Instantiate(Resources.Load("JD/Smoke/smoke_medium", typeof(GameObject)), transform.position, this.transform.rotation, this.transform) as GameObject;
+                try
+                {
+                  Particles[i] = Instantiate(Resources.Load("JD/Smoke/smoke_medium", typeof(GameObject)), 
+                      PARENT.transform.position,
+                      PARENT.transform.rotation,
+                      PARENT.transform) as GameObject;
+                }
+                catch
+                {
+                    Particles[i].transform.position = PARENT.transform.position;
+                    Particles[i].transform.rotation = PARENT.transform.rotation;
+                    Particles[i].transform.SetParent(PARENT.transform);
+                    Debug.Log("Instantiation of particle failed");
+                }
             }
             else
             {
-                Particles[i] = Instantiate(Resources.Load("JD/Smoke/smoke_small", typeof(GameObject)), transform.position, this.transform.rotation, this.transform) as GameObject;
+                try
+                {
+                    Particles[i] = Instantiate(Resources.Load("JD/Smoke/smoke_small", typeof(GameObject)),
+                        PARENT.transform.position,
+                        PARENT.transform.rotation,
+                        PARENT.transform) as GameObject;
+                }
+                catch
+                {
+                    Particles[i] = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                    Particles[i].transform.position = PARENT.transform.position;
+                    Particles[i].transform.rotation = PARENT.transform.rotation;
+                    Particles[i].transform.SetParent(PARENT.transform);
+                    Debug.Log("Instantiation of particle failed");
+                }
             }
  
             //assigns textures half and half to particles
@@ -92,16 +121,11 @@ public class GenerateSmoke : MonoBehaviour
                 Particles[i].gameObject.GetComponent<Renderer>().material.mainTexture = Smoke_texture2;
             }
 
-            //sets particles position to a random place within the range
-            Particles[i].transform.position = this.transform.position;
-            Particles[i].transform.position -= new Vector3(Random.Range(transform.position.x - range, transform.position.x + range), transform.position.y, Random.Range(transform.position.z - range, transform.position.z + range));
-
-            //sets a random scale factor for the particles to decrease by
-            Particles[i].transform.localScale = Vector3.one * Scales[i] * 100;
-
+           
             time += Time.deltaTime;
             yield return null;
         }
+        yield break;
     }
 
     private IEnumerator Rise(int amount, float range, float speed, float ScaleFactor, float lifetime, float ThreshHold)
@@ -112,7 +136,7 @@ public class GenerateSmoke : MonoBehaviour
             yield break;
         }
           
-        for (; ;)
+        while (time <= lifetime)
         {
             time += Time.deltaTime;
             for (int i = 0; i < amount; i++)
@@ -120,18 +144,19 @@ public class GenerateSmoke : MonoBehaviour
                 try
                 {
                     //rise particle by the generated random speed about  
-                    Particles[i].transform.Translate(0, Speeds[i], 0);
+                    Particles[i].transform.Translate(Speeds[i % 10], Speeds[i], Speeds[i % 10]);
                      //decrease scale by generated scale amount
-                     Particles[i].transform.localScale -= new Vector3(Scales[i], Scales[i], Scales[i]);
+                     Particles[i].transform.localScale += new Vector3(-Scales[i], -Scales[i], -Scales[i]);
                     //if particle size is ever smaller than threshold destroy the object
                     if (Particles[i].transform.localScale.x <= ThreshHold)
                         Destroy(Particles[i]);
                 }
                 catch
-                { }
+                {  }
             }
             yield return null;
         }
+        yield break;
     }
 
     private IEnumerator Kill(int amount, float range, float speed, float ScaleFactor, float lifetime, float ThreshHold)
@@ -153,5 +178,6 @@ public class GenerateSmoke : MonoBehaviour
             Destroy(particle);
             yield return null;
         }
+        yield break;
     }
 }

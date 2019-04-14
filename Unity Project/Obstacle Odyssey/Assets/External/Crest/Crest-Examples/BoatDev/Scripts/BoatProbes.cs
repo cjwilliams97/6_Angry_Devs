@@ -38,7 +38,7 @@ public class BoatProbes : MonoBehaviour, IBoat
     [Header("Control")]
 
     [SerializeField, FormerlySerializedAs("EnginePower")]
-    public float _enginePower = 7;
+    float _enginePower = 7;
     [SerializeField, FormerlySerializedAs("TurnPower")]
     float _turnPower = 0.5f;
     [SerializeField]
@@ -47,7 +47,6 @@ public class BoatProbes : MonoBehaviour, IBoat
     float _engineBias = 0f;
     [SerializeField]
     float _turnBias = 0f;
-
 
     private const float WATER_DENSITY = 1000;
 
