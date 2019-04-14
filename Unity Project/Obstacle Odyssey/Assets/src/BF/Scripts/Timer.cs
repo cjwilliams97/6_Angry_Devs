@@ -5,6 +5,23 @@ using UnityEngine.UI; // allows text manipulation
 
 public class Timer : MonoBehaviour
 {
+    // the following 16 lines act as a singleton pattern to ensure that there is only 1 instance of this class
+    public static Timer Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null) // if nothing is stored in Instance property
+        {
+            Instance = this; // set to contain this particular instance
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else
+        {
+            Destroy(gameObject); // otherwise destroys duplicate instances and gameObjects
+        }
+    }
+
     public Text timerText; // creates the Text object which is attached to the timer text in the HUD canvas
     private float centisecondCounter = 0f; // creates/initializes a centisecond counter (1/100th of a second)
     private float secondCounter = 0f; // creates/initializes a second counter

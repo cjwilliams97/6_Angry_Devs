@@ -39,7 +39,7 @@ public class PlayerPause : MonoBehaviour
     public void OpenPause()
     {
         Paused = true;
-        GetComponent<Timer>().PausedGame();
+        Timer.Instance.PausedGame(); // calls method through singleton implementation
         Time.timeScale = 0.0f;
         Debug.Log("Escape Initiated");
         GetComponent<PauseCanvasControl>().EnablePauseCanvas();
@@ -48,7 +48,7 @@ public class PlayerPause : MonoBehaviour
     public void ClosePause()
     {
         Paused = false;
-        GetComponent<Timer>().ResumedGame();
+        Timer.Instance.ResumedGame(); // calls method through singleton implementation
         Time.timeScale = 1.0f;
         Debug.Log("Escape Closed");
         GetComponent<PauseCanvasControl>().DisablePauseCanvas();

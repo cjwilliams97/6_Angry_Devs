@@ -20,7 +20,7 @@ public class LoseCondition : MonoBehaviour
     public GameObject FrontMastFire;    //Fire Elements for each mast
     private KeyCode Escape = KeyCode.Escape;
     public static bool IsFailed = false;
-    
+
 
     void Start()
     {
@@ -29,7 +29,7 @@ public class LoseCondition : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         rigid.GetComponent<BoatProbes>()._forceMultiplier = 16.0f;
         Text.SetActive(false);
-        
+
 
     }
 
@@ -48,11 +48,11 @@ public class LoseCondition : MonoBehaviour
             //Debug.Log("Coroutine Started");
         }
         /* General Execution of script */
-        if (FirstFrame == false) 
+        if (FirstFrame == false)
         {
             health = reference.GetComponent<Health>().ReturnHealth();
             /* Checks for health being <= 0, starts player "death" if true */
-            if (health <= 0) 
+            if (health <= 0)
             {
                 //Debug.Log("Player has lost");
                 SinkShip();
@@ -61,13 +61,13 @@ public class LoseCondition : MonoBehaviour
         /* If Flag for failed game is thrown, on exit unload to lobby */
         if (Input.GetKey(Escape))
         {
-            if(IsFailed == true)
+            if (IsFailed == true)
             {
                 SceneManager.LoadScene("Lobby", LoadSceneMode.Single);
             }
         }
 
-        
+
     }
 
     /* Changes the physics properties to simulate sinking */
@@ -75,7 +75,7 @@ public class LoseCondition : MonoBehaviour
     /* Finally sets a IsFailed flag to true */
     public bool SinkShip()
     {
-       // Debug.Log("Sinking Ship");
+        // Debug.Log("Sinking Ship");
         rigid.GetComponent<BoatProbes>()._forceMultiplier = .85f;
         rigid.GetComponent<BoatProbes>()._playerControlled = false;
         Text.SetActive(true);
@@ -83,9 +83,9 @@ public class LoseCondition : MonoBehaviour
         TimerHudText.SetActive(false);
         FrontMastFire.SetActive(true);
         RearMastFire.SetActive(true);
-        
+
         IsFailed = true;
-        return true ;
+        return true;
     }
     /* Prevents Dieing in first 2 seconds of game, allows setup of other objects first */
     private IEnumerator Wait(float time)
