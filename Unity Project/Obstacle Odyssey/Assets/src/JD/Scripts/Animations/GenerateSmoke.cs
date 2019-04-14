@@ -85,6 +85,9 @@ public class GenerateSmoke : MonoBehaviour
                 }
                 catch
                 {
+                    Particles[i].transform.position = PARENT.transform.position;
+                    Particles[i].transform.rotation = PARENT.transform.rotation;
+                    Particles[i].transform.SetParent(PARENT.transform);
                     Debug.Log("Instantiation of particle failed");
                 }
             }
@@ -99,6 +102,10 @@ public class GenerateSmoke : MonoBehaviour
                 }
                 catch
                 {
+                    Particles[i] = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                    Particles[i].transform.position = PARENT.transform.position;
+                    Particles[i].transform.rotation = PARENT.transform.rotation;
+                    Particles[i].transform.SetParent(PARENT.transform);
                     Debug.Log("Instantiation of particle failed");
                 }
             }

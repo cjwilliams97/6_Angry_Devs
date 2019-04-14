@@ -20,7 +20,6 @@ public class Caravel_Maker : MonoBehaviour
         InitializePerkListItems();
         InitilizeStates();
         SetComponents(Ship);
-        
         return;
     }
 
@@ -36,23 +35,34 @@ public class Caravel_Maker : MonoBehaviour
         return;
     }
 
-    //Attributes and their corresponding decorator functions
-    void AddAttribute(Perk p)
+    /*
+    //Currently Redacted, changing functionality of ship adds unfoseen issues, WIP
+    void AddFunctionality()
+    {
+        foreach (Perk p in PerkList)
+        {
+            if (p.state)
+            {
+                AddFunction(p);
+            }
+        }
+        return;
+    }
+
+    void AddFunction(Perk p)
     {
         switch (p.ToggleName)
         {
             case "PlatingToggle":
                 Debug.Log("Adding bonus HP");
-                Ship = new Caravel_Plating(Ship);
-                ChangeShipHP();
+                GetComponent<Health>().MaxHealthChange(150f);
                 break;
             case "SailsToggle":
                 Debug.Log("Increasing Engine Power");
-                Ship = new Caravel_Sails(Ship);
-                IncreaseEnginePower();
+                //
                 break;
             case "LanternToggle":
-                Ship = new Caravel_Lantern(Ship);
+                //
                 break;
             default:
                 Debug.Log("Unknown perk request");
@@ -60,17 +70,28 @@ public class Caravel_Maker : MonoBehaviour
         }
         return;
     }
-
-    void IncreaseEnginePower()
+    */
+    //Attributes and their corresponding decorator functions
+    void AddAttribute(Perk p)
     {
-        //GameObject ship = GameObject.Find("caravel");
-        //WIP
-        return;
-    }
-
-    void ChangeShipHP()
-    {
-        GetComponent<Health>().MaxHealthChange(150f);
+        switch (p.ToggleName)
+        {
+            case "PlatingToggle":
+                Debug.Log("CM: Adding Plating");
+                Ship = new Caravel_Plating(Ship);
+                break;
+            case "SailsToggle":
+                Debug.Log("CM: Adding Sails");
+                Ship = new Caravel_Sails(Ship);
+                break;
+            case "LanternToggle":
+                Debug.Log("CM: Adding Lantern");
+                Ship = new Caravel_Lantern(Ship);
+                break;
+            default:
+                Debug.Log("Unknown perk request");
+                break;
+        }
         return;
     }
 
@@ -125,17 +146,13 @@ public class Caravel_Maker : MonoBehaviour
             {
                 Debug.Log("Reading states from Perks file。");
                 Debug.Log(path);
-                string line;
+                string line = "";
                 int i = 0;
                 while ((line = file.ReadLine()) != null)
                 {
                     if (line == "1")
                     {
                         PerkList[i].state = true;
-                    }
-                    else
-                    {
-                        PerkList[i].state = false;
                     }
                     i++;
                 }
