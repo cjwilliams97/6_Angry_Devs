@@ -9,6 +9,7 @@ public class Audio
     public string fileName;
     public AudioClip clip;
 
+    // allow changing of volume, looping, and playing on awake
     public float volume;
     public bool loop = false;
     public bool playOnAwake = false;
@@ -34,11 +35,12 @@ public class AudioHandler : MonoBehaviour
 {
     public static AudioHandler instance;
 
-    [SerializeField]
     // array that holds the audio files
+    [SerializeField]
     new Audio[] audio = null;
 
-    // ensures a single instance
+    // ensures a single instance on the bound object
+    // SINGLETON PATTERN
     void Awake()
     {
         if (instance == null)
