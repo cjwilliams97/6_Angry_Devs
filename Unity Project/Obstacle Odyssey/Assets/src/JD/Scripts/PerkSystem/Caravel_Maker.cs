@@ -36,8 +36,6 @@ public class Caravel_Maker : MonoBehaviour
         return;
     }
 
-    
-
     //Attributes and their corresponding decorator functions
     void AddAttribute(Perk p)
     {
@@ -66,7 +64,8 @@ public class Caravel_Maker : MonoBehaviour
     void IncreaseEnginePower()
     {
         //GameObject ship = GameObject.Find("caravel");
-        GetComponent<BoatProbes>()._enginePower = 16f;
+        //WIP
+        return;
     }
 
     void ChangeShipHP()
