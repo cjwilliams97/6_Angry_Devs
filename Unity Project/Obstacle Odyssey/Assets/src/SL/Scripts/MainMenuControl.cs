@@ -18,8 +18,11 @@ public class MainMenuControl : MonoBehaviour
         Test_btn.onClick.AddListener(Test_Clicked);
         Start_btn.onClick.AddListener(Play_Clicked);
         Exit_btn.onClick.AddListener(Exit_Clicked);
+        
     }
     /* Proceedes to the lobby scene if Start button i clicked from main menu */
+    /* This is where you will change the Scene Name of what you want to direct to,
+     * "Lobby" is the current next scene in this scenario */
     void Play_Clicked()
     {
         SceneManager.LoadScene("Lobby", LoadSceneMode.Single);
@@ -33,6 +36,6 @@ public class MainMenuControl : MonoBehaviour
     /* This button IF ENABLED, would start the Testing conditions */
     void Test_Clicked()
     {
-        SceneManager.LoadScene("BrandonHudTest", LoadSceneMode.Single);
+        //SceneManager.LoadScene("", LoadSceneMode.Single);
     }
 }
