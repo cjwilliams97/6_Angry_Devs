@@ -16,11 +16,8 @@ public class Health : MonoBehaviour
     // this will initialize the health hud to the max health value
     void Start()
     {
-        Debug.Log("made it here-1");
         if (!accessed)
         {
-            
-            Debug.Log("made it here");
             healthStart = 100;
             maxHealth = 100;
             updatedHealth = maxHealth;
@@ -32,16 +29,13 @@ public class Health : MonoBehaviour
         }
 
         oldHealth = healthStart; // sets old health to starting health
-        Debug.Log("value of health = " + healthStart);
         string newHealth = healthStart.ToString(); // converts the float values to a string
-        Debug.Log(newHealth + "jfdkslj");
         healthText.text = "Health: " + newHealth + " / " + maxHealth; // alters the text that is displayed to the screen
     }
 
     // this can be called to decrease health when damage is applied from obstacle
     public virtual void HealthChangeDamage(float healthChange)
     {
-        Debug.Log("made it here-3");
         if (flag == false)
         {
             updatedHealth = oldHealth - healthChange; // figures out new health value
