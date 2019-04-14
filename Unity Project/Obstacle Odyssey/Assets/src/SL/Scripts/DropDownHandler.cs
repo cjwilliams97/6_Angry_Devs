@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement;
 
 public class DropDownHandler : MonoBehaviour
 {
-    List<string> Maps = new List<string> { "Oasis"  };
+    List<string> Maps = new List<string> { "Oasis","Spooki nights"  };
     private Dropdown drop;
     private Canvas SceneCanvas;
     public Scene DesiredScene;
@@ -36,6 +36,10 @@ public class DropDownHandler : MonoBehaviour
         {
             DesiredSceneString = "BFGameLevel";
             //Debug.Log("Desired Scene set to BFGameLevel");
+        }
+        if(drop.value == 1)
+        {
+            DesiredSceneString = "JDLevel";
         }
 
 
