@@ -25,7 +25,7 @@ public class Collision : MonoBehaviour
         audioHandler = AudioHandler.instance; // creates instance of audio handler
         damage = 25; // defaults to 25 damage
         active = true;
-        Debug.Log("Initialized Collision");
+        //Debug.Log("Initialized Collision");
     }
 
     // This method will initialize a collision to a standard collision that could be overriden

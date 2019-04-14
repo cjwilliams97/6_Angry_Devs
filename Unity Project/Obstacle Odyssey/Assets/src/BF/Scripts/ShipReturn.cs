@@ -16,7 +16,7 @@ namespace StatePattern
 
         void Update()
         {
-            Debug.Log("1 - Made it to Update number: " + counter);
+            //Debug.Log("1 - Made it to Update number: " + counter);
             counter--;
 
             if (counter > 0)
@@ -41,7 +41,7 @@ namespace StatePattern
 
         public virtual void UpdateBoat()
         {
-            Debug.Log("1 - Made it to UpdateBoat");
+            //Debug.Log("1 - Made it to UpdateBoat");
             float valueX = this.gameObject.transform.position.x;
             float valueY = this.gameObject.transform.position.y;
             float valueZ = this.gameObject.transform.position.z;
@@ -52,14 +52,14 @@ namespace StatePattern
                     if (valueX >= 2 || valueY >= 5.5 || valueZ >= 2 || valueX <= -2 
                         || valueY <= 3.5 || valueZ <= -2)
                     {
-                        Debug.Log("1 - Made it to case BoatPosition.Offset first if");
+                        //Debug.Log("1 - Made it to case BoatPosition.Offset first if");
                         initialLocationMode = BoatPosition.Offset; 
                     }
 
                     else if(valueX <= 2 || valueY <= 5.5 || valueZ <= 2 || valueX >= -2
                         || valueY >= 3.5 || valueZ >= -2)
                     {
-                        Debug.Log("1 - Made it to case BoatPosition.Offset else if");
+                        //Debug.Log("1 - Made it to case BoatPosition.Offset else if");
                         initialLocationMode = BoatPosition.Standard;
                     }
 
@@ -69,7 +69,7 @@ namespace StatePattern
                     if (valueX <= 2 || valueY <= 5.5 || valueZ <= 2 || valueX >= -2
                         || valueY >= 3.5 || valueZ >= -2)
                     {
-                        Debug.Log("1 - Made it to case BoatPosition.Standard if");
+                        //Debug.Log("1 - Made it to case BoatPosition.Standard if");
                         initialLocationMode = BoatPosition.Standard;
                     }
 
@@ -82,17 +82,17 @@ namespace StatePattern
 
         protected void DoAction(BoatPosition location)
         {
-            Debug.Log("2 - Made it to DoAction");
+            //Debug.Log("2 - Made it to DoAction");
             switch (location)
             {
                 case BoatPosition.Standard:
-                    Debug.Log("2 - Made it to case BoatPosition.Standard:");
+                    //Debug.Log("2 - Made it to case BoatPosition.Standard:");
                     // do nothing
                     break;
 
                 case BoatPosition.Offset:
                     // move ship back to original
-                    Debug.Log("2 - Made it to case BoatPosition.offset: ");
+                    //Debug.Log("2 - Made it to case BoatPosition.offset: ");
                     transform.position = new Vector3(0f, 4.5f, 0f);
                     break;
             }

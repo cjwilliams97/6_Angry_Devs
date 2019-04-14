@@ -81,6 +81,7 @@ public class Health : MonoBehaviour
         if (newMax > 100)
         {
             maxHealth = newMax;
+            Debug.Log("New Health Total: " + newMax);
         }
 
         else maxHealth = 100;
