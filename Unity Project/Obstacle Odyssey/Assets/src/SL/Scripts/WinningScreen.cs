@@ -41,7 +41,7 @@ public class WinningScreen : MonoBehaviour
         Old_Camera.SetActive(false);
         HUD.SetActive(false);
         NewHud.SetActive(true);
-        NewTime.text = GetComponent<Timer>().GetTime();
+        NewTime.text = Timer.Instance.GetTime(); // calls method through singleton implementation
         IsFinished = true;
         
     }

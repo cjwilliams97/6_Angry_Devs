@@ -22,8 +22,8 @@ public class TimerTestScript : MonoBehaviour
     private bool flag2 = false;
     private bool flag3 = false;
     private bool flag4 = false;
-    private bool passed2 = false;
-    private bool passed3 = false;
+    //private bool passed2 = false;
+    //private bool passed3 = false;
     private float countdown = 4;
     private IEnumerator coroutine;
 
@@ -36,8 +36,8 @@ public class TimerTestScript : MonoBehaviour
         paused = false; // ensures paused starts as false
         flag = false; // ensures flag starts as false
         flag2 = false;
-        passed2 = false;
-        passed3 = false;
+        //passed2 = false;
+        //passed3 = false;
         test2Text.text = "Test 2 - Timer Stops at High Values - Pending";
         test3Text.text = "Test 3 - Timer Stops When Chest Hit - Pending";
         countdown = 4;
@@ -83,7 +83,7 @@ public class TimerTestScript : MonoBehaviour
                 timerText.color = Color.red;
                 timerText.text = "You Took Too Long!!";
                 test2Text.color = Color.green;
-                passed2 = true;
+                //passed2 = true;
                 test2Text.text = "Test 2 - Timer Stops at High Values - Passed";
                 if(flag4 == false)
                 {
@@ -184,7 +184,7 @@ public class TimerTestScript : MonoBehaviour
         finished1 = true; // sets the game finished to true
         timerText.color = Color.red;  // sets the time display to red to indicate a finishing time
         test3Text.color = Color.green;
-        passed3 = true;
+        //passed3 = true;
         //flag2 = true;
         test3Text.text = "Test 3 - Timer Stops When Chest Hit - Passed";
     }
