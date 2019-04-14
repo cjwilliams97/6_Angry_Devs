@@ -1,7 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ * Currently Legacy code:
+ * The caravel_animation code allows for the attached gameobject to sway back and forth
+ * inheriting the superclasses sway function. Currently not in live game due to physics
+ * engine changes
+ */
+  
 public class caravel_animation : BasicAnimation
 {
     private void Start()

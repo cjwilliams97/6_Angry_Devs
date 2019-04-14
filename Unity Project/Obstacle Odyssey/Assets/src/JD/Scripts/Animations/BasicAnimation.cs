@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ * The following file is a Basic Animation class containing animation(s) that are frequently
+ * used by its subclasses.
+ */ 
 public class BasicAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     protected Vector3[] RandomIncrements = new Vector3[10];
     protected int cycle = 0;
@@ -17,7 +15,7 @@ public class BasicAnimation : MonoBehaviour
         if (state)
         {
             float time = 0;
-            for (; ; )
+            for ( ; ; )
             {
                 while (time < turnTime)
                 {

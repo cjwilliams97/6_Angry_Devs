@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ * The barrel_animation subclass can be attached to an object to give it the appreance
+ * of it rocking side to side while bobbing up and down
+ */ 
 public class barrel_animation : MonoBehaviour
 {
     public float speed;   //turning speed 
