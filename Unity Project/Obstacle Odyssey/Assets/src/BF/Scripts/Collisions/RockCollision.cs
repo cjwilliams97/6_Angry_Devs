@@ -18,8 +18,12 @@ public class RockCollision : Collision
     // ovverides method to form to rock collisions
     public override void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage); // calls damage script
-        audioHandler.PlayAudio("rock impact"); // calls audio script to play rock sounds
+        if (active)
+        {
+            GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage); // calls damage script
+            audioHandler.PlayAudio("rock impact"); // calls audio script to play rock sounds
+            base.StartCoroutine("DisableScript"); // disables script for 3 seconds to avoid rapid collisions
+        }
     }
 }
 
