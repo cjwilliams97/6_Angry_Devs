@@ -56,7 +56,7 @@ public class CoinSystem : MonoBehaviour
     }
 
     // read current coin amount and return it
-    int readFromWallet()
+    public int readFromWallet()
     {
         int amount = 0;
         string path = Path.Combine(Application.persistentDataPath, fileName);
