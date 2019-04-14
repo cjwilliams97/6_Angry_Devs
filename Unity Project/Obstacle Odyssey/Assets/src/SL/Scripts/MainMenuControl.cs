@@ -11,6 +11,22 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuControl : MonoBehaviour
 {
+    public static MainMenuControl Instance { get; private set; }
+
+    /* Singlton Pattern, only allows for one instance of MainMenu Gameobject */
+    private void Awake()
+    {
+        if(Instance == null) //If class isnt instantiate
+        {
+            Instance = this;    //set Instance != NULL
+            DontDestroyOnLoad(gameObject); //dont destroy the onbject on load
+        }
+        else
+        {
+            Destroy(gameObject); //gameobject already exits, destroy any new 
+                                // gameobject
+        }
+    }
     public Button Start_btn, Setting_Btn, Exit_btn, Test_btn;
 
     void Start()
@@ -25,11 +41,13 @@ public class MainMenuControl : MonoBehaviour
      * "Lobby" is the current next scene in this scenario */
     void Play_Clicked()
     {
+        Destroy(gameObject);
         SceneManager.LoadScene("Lobby", LoadSceneMode.Single);
     }
     /* Exits the application if exit is clicked from main menu */
     void Exit_Clicked()
     {
+        Destroy(gameObject);
         Application.Quit();
 
     }
