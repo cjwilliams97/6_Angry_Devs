@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * The chest Animation subclass allows for the attached gameobject to rotate and bob up and down
+ */ 
 public class ChestAnimation : BasicAnimation
 {
     private float speed = 10f;

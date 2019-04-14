@@ -1,6 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*
+ * The generateSmoke class allows for the attached gameobjet to generate a smoke particle system
+ * The smoke particles are fbx models and textures stored under the Resources folder to allow
+ * for the usage of the Resources.Load function. Smoke can also be generated on an interval
+ * using the repeating version of the smoke generating function.
+ */ 
+
 
 public class GenerateSmoke : MonoBehaviour
 {
@@ -59,20 +66,31 @@ public class GenerateSmoke : MonoBehaviour
     {
         float time = 0;
         if (time >= lifetime * 2)
+        {
             yield break;
+        }
         for (int i = 0; i < amount; i++)
         {
             //generates an equal distribution of medium and smoke particles
             if(i % 2 == 0)
+            {
               Particles[i] = Instantiate(Resources.Load("JD/Smoke/smoke_medium", typeof(GameObject)), transform.position, this.transform.rotation, this.transform) as GameObject;
+            }
             else
+            {
                 Particles[i] = Instantiate(Resources.Load("JD/Smoke/smoke_small", typeof(GameObject)), transform.position, this.transform.rotation, this.transform) as GameObject;
+            }
  
             //assigns textures half and half to particles
             if (i % 2 == 0)
+            {
                 Particles[i].gameObject.GetComponent<Renderer>().material.mainTexture = Smoke_texture1;
+            }
+               
             else
+            {
                 Particles[i].gameObject.GetComponent<Renderer>().material.mainTexture = Smoke_texture2;
+            }
 
             //sets particles position to a random place within the range
             Particles[i].transform.position = this.transform.position;
@@ -90,7 +108,10 @@ public class GenerateSmoke : MonoBehaviour
     {
         float time = 0;
         if (time >= lifetime * 2)
+        {
             yield break;
+        }
+          
         for (; ;)
         {
             time += Time.deltaTime;
@@ -117,7 +138,10 @@ public class GenerateSmoke : MonoBehaviour
     {
         float time = 0;
         if (time >= lifetime * 2)
+        {
             yield break;
+        }
+           
         while (time <= lifetime)
         {
             time += Time.deltaTime;
