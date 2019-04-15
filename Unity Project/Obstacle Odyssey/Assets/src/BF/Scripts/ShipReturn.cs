@@ -49,15 +49,15 @@ namespace StatePattern
             switch (initialLocationMode)
             {
                 case BoatPosition.Offset:
-                    if (valueX >= 2 || valueY >= 5.5 || valueZ >= 2 || valueX <= -2 
+                    if (valueX >= 2 || valueY >= 5.5 || valueZ >= 2 || valueX <= -2
                         || valueY <= 3.5 || valueZ <= -2)
                     {
                         //Debug.Log("1 - Made it to case BoatPosition.Offset first if");
                         initialLocationMode = BoatPosition.Offset; 
                     }
 
-                    else if(valueX <= 2 || valueY <= 5.5 || valueZ <= 2 || valueX >= -2
-                        || valueY >= 3.5 || valueZ >= -2)
+                    else if (valueX <= 2 && valueY <= 5.5 && valueZ <= 2 && valueX >= -2
+                        && valueY >= 3.5 && valueZ >= -2)
                     {
                         //Debug.Log("1 - Made it to case BoatPosition.Offset else if");
                         initialLocationMode = BoatPosition.Standard;
@@ -66,8 +66,8 @@ namespace StatePattern
                     break;
 
                 case BoatPosition.Standard:
-                    if (valueX <= 2 || valueY <= 5.5 || valueZ <= 2 || valueX >= -2
-                        || valueY >= 3.5 || valueZ >= -2)
+                    if (valueX <= 2 && valueY <= 5.5 && valueZ <= 2 && valueX >= -2
+                        && valueY >= 3.5 && valueZ >= -2)
                     {
                         //Debug.Log("1 - Made it to case BoatPosition.Standard if");
                         initialLocationMode = BoatPosition.Standard;
