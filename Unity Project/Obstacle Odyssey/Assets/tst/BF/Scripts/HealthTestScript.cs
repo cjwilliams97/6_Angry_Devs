@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/* Brandon Foss
+ * This script will run a stress test on the health scrip to have it hit 4000 barrels
+ * that will each do 1 damage. The ship is at 400 health so it works if it hits all 
+ * barrels and fails otherwise indicating bad physics detection at high numbers.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

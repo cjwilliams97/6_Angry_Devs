@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/* Brandon Foss
+ * This script runs the timer hud display to count upwards
+ * showing centiseconds, seconds, and minutes on the hud. Other scripts
+ * call it when the game is paused or unpaused. It is also used to retreive the time
+ * for winning menu displays.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // allows text manipulation
@@ -157,6 +164,7 @@ public class Timer : MonoBehaviour
         paused = false; // sets paused to false
     }
 
+    // this will allow someone to retrieve the current time
     public string GetTime()
     {
         return minuteString + ":" + secondString + ":" + centisecondString;

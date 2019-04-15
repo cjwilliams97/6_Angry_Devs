@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/* Brandon Foss
+ * This script will run a stress test for the timer that will ensure
+ * that the timer ends when making contact with the ending chest
+ * and that it doesn't display more than the boundaries of the hud display
+ * at high numbers
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // allows text manipulation
