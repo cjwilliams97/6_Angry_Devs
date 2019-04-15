@@ -10,6 +10,22 @@ using UnityEngine.SceneManagement;
 
 public class LobbyMenuControl : MonoBehaviour
 {
+    public static LobbyMenuControl Instance { get; private set; }
+
+    /* Singlton Pattern, only allows for one instance of LobbyMenu Gameobject */
+    private void Awake()
+    {
+        if (Instance == null) //If class isnt instantiate
+        {
+            Instance = this;    //set Instance != NULL
+            DontDestroyOnLoad(gameObject); //dont destroy the onbject on load
+        }
+        else
+        {
+            Destroy(gameObject); //gameobject already exits, destroy any new 
+                                 // gameobject
+        }
+    }
     public Button Play_btn, Exit_btn ,Perks_btn;
     public Dropdown drop;
     public string DesiredMap;
@@ -30,18 +46,24 @@ public class LobbyMenuControl : MonoBehaviour
     void Play_Clicked()
     {
         //Debug.Log("Loading");
-        SceneManager.LoadScene(DesiredMap, LoadSceneMode.Single); 
+        Destroy(gameObject);
+        SceneManager.LoadScene(DesiredMap, LoadSceneMode.Single);
+        
     }
     /* Loads the Perks Scene When Customization button is clicked */
     void Perks_Clicked()
     {
         //Debug.Log("Loading Perks");
+        Destroy(gameObject);
         SceneManager.LoadScene("Perks", LoadSceneMode.Single);
+        
     }
     /* Loads the Main Main Menu When exit is clicked in lobby */
     void Exit_Clicked()
     {
         //Debug.Log("Loading Main Menu");
+        Destroy(gameObject);
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        
     }
 }

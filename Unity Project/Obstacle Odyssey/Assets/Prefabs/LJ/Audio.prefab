@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8306780616961896579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8306780616961896577}
+  - component: {fileID: 8306780616961896576}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8306780616961896577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8306780616961896579}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8306780616961896576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8306780616961896579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48cac34dcbfc72b44b291450d7ecef73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio:
+  - fileName: high Cs
+    clip: {fileID: 8300000, guid: 858865dd146fc2e4e9156fb85ccbeade, type: 3}
+    volume: 0.5
+    loop: 1
+    playOnAwake: 0
+  - fileName: ocean
+    clip: {fileID: 8300000, guid: 21f6b1b904af34349b5a0061bbab8048, type: 3}
+    volume: 0.6
+    loop: 1
+    playOnAwake: 0
+  - fileName: barrel impact
+    clip: {fileID: 8300000, guid: f36bda8d93076734e842ac0c08e29eac, type: 3}
+    volume: 0.6
+    loop: 0
+    playOnAwake: 0
+  - fileName: rock impact
+    clip: {fileID: 8300000, guid: 19f318f86f8c92e4d834218bfc42dd9c, type: 3}
+    volume: 0.4
+    loop: 0
+    playOnAwake: 0
+  - fileName: orca impact
+    clip: {fileID: 8300000, guid: a7724f28876d4cd4dac24c0853a6fabf, type: 3}
+    volume: 0.3
+    loop: 0
+    playOnAwake: 0
+  - fileName: coin pickup
+    clip: {fileID: 8300000, guid: cd834468d43b7fb439587d9de571b373, type: 3}
+    volume: 0.5
+    loop: 0
+    playOnAwake: 0
+  - fileName: cannon shot
+    clip: {fileID: 8300000, guid: 73f811f71f89d124a976be11734524ea, type: 3}
+    volume: 0.5
+    loop: 0
+    playOnAwake: 0

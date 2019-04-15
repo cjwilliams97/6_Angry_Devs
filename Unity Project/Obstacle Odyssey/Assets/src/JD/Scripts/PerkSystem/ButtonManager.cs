@@ -317,7 +317,7 @@ public class ButtonManager : MonoBehaviour
             {
                 Debug.Log("Reading states from Perks file。");
                 Debug.Log(path);
-                string line;
+                string line = "";
                 int i = 0;
                 while ((line = file.ReadLine()) != null)
                 {
