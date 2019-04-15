@@ -29,6 +29,12 @@ public class Audio
     {
         source.Play();
     }
+
+    // returns true if the source is playing
+    public bool isPlaying()
+    {
+        return source.isPlaying;
+    }
 }
 
 public class AudioHandler : MonoBehaviour
@@ -52,7 +58,7 @@ public class AudioHandler : MonoBehaviour
     void Start()
     {
         // loop through the audio array and bind it to its respective objects
-        for (int i = 0; i < audio.Length; i++) 
+        for (int i = 0; i < audio.Length; i++)
         {
             GameObject bindAudio = new GameObject("Sound_"+i+"_"+audio[i].fileName);
             bindAudio.transform.SetParent(this.transform);
@@ -64,6 +70,7 @@ public class AudioHandler : MonoBehaviour
         PlayAudio("ocean");
     }
 
+    // play audio based on name
     public void PlayAudio(string name)
     {
         // loop through audio array
@@ -78,11 +85,17 @@ public class AudioHandler : MonoBehaviour
         }
     }
 
-    // play the clip at specified index
+    // play audio based on index
     public void TestAudio(int i)
     {
         audio[i].Play();
         return;
+    }
+
+    // returns true if the file is playing
+    public bool checkPlaying(int i)
+    {
+        return audio[i].isPlaying();
     }
 
     // returns the audio array size

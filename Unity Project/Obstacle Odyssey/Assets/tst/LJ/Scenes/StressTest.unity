@@ -545,7 +545,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1205694448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb92ad84502a6044195ba1ed6fc6145e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c04acdc5862b0d42bb5395b64175b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: {fileID: 886996850}
@@ -659,11 +659,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8737228311192580846, guid: 2eadb5d448177344286d0fe8ff132db8,
-        type: 3}
-      propertyPath: m_Name
-      value: Audio
-      objectReference: {fileID: 0}
     - target: {fileID: 8737228311192580844, guid: 2eadb5d448177344286d0fe8ff132db8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -808,6 +803,11 @@ PrefabInstance:
         type: 3}
       propertyPath: audio.Array.data[5].volume
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737228311192580846, guid: 2eadb5d448177344286d0fe8ff132db8,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio
       objectReference: {fileID: 0}
     - target: {fileID: 1955493916722935497, guid: 2eadb5d448177344286d0fe8ff132db8,
         type: 3}
