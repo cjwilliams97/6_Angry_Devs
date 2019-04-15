@@ -64,7 +64,7 @@ public class ModelStressTest : MonoBehaviour
         }
 
         //Tests are complete, load back to the main menu scene.
-        SceneManager.LoadScene("Connor_Test", LoadSceneMode.Single);
+        SceneManager.LoadScene("Lobby", LoadSceneMode.Single);
         yield break;    //unreachable by design, next scene already loaded
     }
 
