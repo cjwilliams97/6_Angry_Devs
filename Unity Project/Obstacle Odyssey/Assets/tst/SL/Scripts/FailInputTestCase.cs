@@ -27,7 +27,7 @@ public class FailInputTestCase : MonoBehaviour
         CoroutineStarted = false;
         framecount = 0;
         
-        TimeVal = .5f;
+        TimeVal = .25f;
         TimeBetween.text = "0.000";
         Condition.text = "Yes";
         Condition.color = Color.green;
