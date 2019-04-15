@@ -2327,15 +2327,60 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6182636
       objectReference: {fileID: 0}
+    - target: {fileID: 6270220779382907964, guid: 7e463711d8cd4ea4a9aa1c5636067599,
+        type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270220779382907964, guid: 7e463711d8cd4ea4a9aa1c5636067599,
+        type: 3}
+      propertyPath: m_OverridePixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270220779382907967, guid: 7e463711d8cd4ea4a9aa1c5636067599,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6270220779244913375, guid: 7e463711d8cd4ea4a9aa1c5636067599,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 580
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 6270220779244913375, guid: 7e463711d8cd4ea4a9aa1c5636067599,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 263
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270220779244913375, guid: 7e463711d8cd4ea4a9aa1c5636067599,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.8465534
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270220779244913375, guid: 7e463711d8cd4ea4a9aa1c5636067599,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -18.73999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270220779244913375, guid: 7e463711d8cd4ea4a9aa1c5636067599,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.98585534
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270220779244913375, guid: 7e463711d8cd4ea4a9aa1c5636067599,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.8191808
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270220779244913375, guid: 7e463711d8cd4ea4a9aa1c5636067599,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 89.79999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270220779244913375, guid: 7e463711d8cd4ea4a9aa1c5636067599,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.89837754
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e463711d8cd4ea4a9aa1c5636067599, type: 3}
