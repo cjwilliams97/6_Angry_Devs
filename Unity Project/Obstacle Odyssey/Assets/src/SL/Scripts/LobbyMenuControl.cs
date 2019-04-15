@@ -12,7 +12,7 @@ public class LobbyMenuControl : MonoBehaviour
 {
     public static LobbyMenuControl Instance { get; private set; }
 
-    /* Singlton Pattern, only allows for one instance of MainMenu Gameobject */
+    /* Singlton Pattern, only allows for one instance of LobbyMenu Gameobject */
     private void Awake()
     {
         if (Instance == null) //If class isnt instantiate
