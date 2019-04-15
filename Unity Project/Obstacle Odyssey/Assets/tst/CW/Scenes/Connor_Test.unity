@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barrel: {fileID: 1573072706}
-  spawnTime: 3
+  spawnTime: 0.2
   spawnPoints:
   - {fileID: 1584890680}
   - {fileID: 276340347}
@@ -1446,6 +1446,26 @@ PrefabInstance:
     - target: {fileID: 1247074846490827500, guid: 0422b9d1287f3194e908f8a7f505855a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _dragInWaterUp
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _dragInWaterRight
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935768, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: _dragInWaterForward
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171399989935769, guid: 0422b9d1287f3194e908f8a7f505855a,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
