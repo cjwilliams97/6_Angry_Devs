@@ -24,39 +24,41 @@ public class AudioStressTest : MonoBehaviour
     private IEnumerator AudioTester()
     {
         bool done = false;
-        bool failure = false;
-        float seconds = 2;
+        float seconds = 1;
         int amt = audioHandler.AudioAmount();
         int count = 0;
 
-        while(!done)
+        while (!done)
         {
             // loop through the audio array
-            for(int i = 0; i < amt; i++)
+            for (int i = 0; i < amt; i++)
             {
-                // play the next file in the array
-                audioHandler.TestAudio(i);
+                // set the UI
                 audioName.text = "Audio file: " + audioHandler.CurrPlaying(i);
-                audioAmount.text = "Files played without failure: " + count++;
+
+                // play the next file
+                audioHandler.TestAudio(i);
+            
+                // failure case
+                if (!audioHandler.checkPlaying(i))
+                {
+                    audioStatus.color = Color.red;
+                    audioStatus.text = "Test Status: Failure";
+                    done = true;   
+                }
+                else
+                    audioAmount.text = "Files played without failure: " + count++;
+
+                // success case
+                if (count == 200)
+                {
+                    audioStatus.color = Color.green;
+                    audioStatus.text = "Test Status: Success";
+                    done = true;       
+                }
 
                 // wait to play next clip
                 yield return new WaitForSeconds(seconds);
-                if(count > 300)
-                {
-                    // success case
-                    if(!failure)
-                    {
-                        audioStatus.color = Color.green;
-                        audioStatus.text = "Test Status: Success";
-                    }
-                    // failure case
-                    else
-                    {
-                        audioStatus.color = Color.red;
-                        audioStatus.text = "Test Status: Failure";
-                    }
-                    done = true;
-                }
             }
             // cut the wait time in half
             seconds = seconds/2;
@@ -67,6 +69,6 @@ public class AudioStressTest : MonoBehaviour
     private IEnumerator WaitAndChangeScene(float time)
     {
         yield return new WaitForSeconds(time);
-        SceneManager.LoadScene("JubalTest", LoadSceneMode.Single);
+        SceneManager.LoadScene("Lobby", LoadSceneMode.Single);
     }
 }
