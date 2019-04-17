@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/* Brandon Foss
+ * This script will track the health of the caravel and any changes to it.
+ * It displays the current health to the hud display and has functions that
+ * can be used to access health values.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
