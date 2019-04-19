@@ -5,27 +5,51 @@ using UnityEngine.UI;
 
 public class JMStressTest : MonoBehaviour
 {
+    //Implementing Prototype Pattern
+    abstract class WhalePrototype // Interface for Prototype
+    {
+        public abstract WhalePrototype Clone();
+    }
+    //Create a subclass with speed as variable
+    class Whale: WhalePrototype
+    {
+        
+        private float speed = .25f; // Initial speed of whale
+        //Method, for changing whale values
+        public Whale(float Speed)
+        {
+            speed = Speed; //Change speed to desired value
+        }
+        // method, for cloning whale with new speed
+        public override WhalePrototype Clone()
+        {
+            System.Console.WriteLine("Cloning Whale with new Speed");
+            return MemberwiseClone() as WhalePrototype;
+        }
+    }
+    
+
     //Declarations
-    //private IEnumerator coroutine;
     public Text speedText;
-    public float count = 0;
-    public float i = .025f;
+    public float count = 0; //Initialize how many boats are sunk to 0
+    public float SpeedInc = .025f; // speed at which the whales increase
     public float delta = 50.5f;
-    public float speed = .25f;
+    public float speed = .25f;  // Initial speed of whale
     private Vector3 startPos;
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(coroutine);
+        //Initialize startPos, and the text for showing whale speed
         startPos = transform.position;
         speedText.text = "Whale Speed: " + speed.ToString();
-        //countText.text = "Number of Boats Sunk: " + count.ToString();
+        
     }
     
     // Update is called once per frame
     void Update()
     {
-        speed += i * Time.deltaTime;
+        // Increases whale speed and updates the text showng speed
+        speed += SpeedInc * Time.deltaTime;
         speedText.text = "Whale Speed: " + speed.ToString();
         Vector3 v = startPos;
         v.z += delta * Mathf.Sin(Time.time * speed);
