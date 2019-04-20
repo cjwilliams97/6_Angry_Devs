@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
+// class to handle coin pickup and wallet storage
 public class CoinSystem : MonoBehaviour
 {
-    AudioHandler audioHandler;
+    SFXHandler sfxHandler;
 
     public int coinValue;
     string line;
@@ -14,11 +15,11 @@ public class CoinSystem : MonoBehaviour
     void Start()
     {
         // bind audio
-        audioHandler = AudioHandler.instance;
+        sfxHandler = SFXHandler.instance;
 
         string path = Path.Combine(Application.persistentDataPath, fileName);
 
-        // check to see if wallet file exists
+        // create a wallet file if one doesn't already exist
         if (!File.Exists(path))
         {
             Debug.Log("Creating wallet file\n");
@@ -30,7 +31,7 @@ public class CoinSystem : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // play pickup sound
-        audioHandler.PlayAudio("coin pickup");
+        sfxHandler.PlayAudio("coin pickup");
 
         // add amount to persistent wallet
         writeToWallet();
@@ -47,11 +48,13 @@ public class CoinSystem : MonoBehaviour
         // read in the old amount and add new amount
         int amount = readFromWallet();
         amount += coinValue;
+        Debug.Log("Wallet: " + amount); 
 
         // write in new amount
         StreamWriter file = new StreamWriter(path);
         file.WriteLine(amount.ToString());
 
+        // close the file
         file.Close();
     }
 
@@ -71,7 +74,9 @@ public class CoinSystem : MonoBehaviour
         else
             amount = 0;
 
+        // close the file
         file.Close();
+
         return amount;
     }
 }

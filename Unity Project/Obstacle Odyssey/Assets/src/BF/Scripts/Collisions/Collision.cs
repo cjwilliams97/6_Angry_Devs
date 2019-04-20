@@ -10,7 +10,7 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour
 {
-    public AudioHandler audioHandler; // bind audio
+    public SFXHandler sfxHandler; // bind audio
     public float damage; // intitializes a damage value to be inherited and changed
     public bool active;
 
@@ -22,7 +22,7 @@ public class Collision : MonoBehaviour
 
     public void DoInitialization()
     {
-        audioHandler = AudioHandler.instance; // creates instance of audio handler
+        sfxHandler = SFXHandler.instance; // creates instance of audio handler
         damage = 25; // defaults to 25 damage
         active = true;
         //Debug.Log("Initialized Collision");
@@ -34,7 +34,7 @@ public class Collision : MonoBehaviour
         if (active)
         {
             GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage); // calls damage script
-            audioHandler.PlayAudio("barrel impact"); // calls audio script to play barrel sounds
+            sfxHandler.PlayAudio("barrel impact"); // calls audio script to play barrel sounds
             Destroy(gameObject); // removes the game object
             StartCoroutine("DisableScript"); // disables script for 3 seconds to avoid rapid collisions
         }

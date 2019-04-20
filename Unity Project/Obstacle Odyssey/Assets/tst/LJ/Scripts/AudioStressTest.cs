@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class AudioStressTest : MonoBehaviour
 {
     // bind audio
-    AudioHandler audioHandler;
+    TestAudioHandler audioHandler;
     public Text audioName;
     public Text audioAmount;
     public Text audioStatus;
@@ -16,7 +16,7 @@ public class AudioStressTest : MonoBehaviour
 
     void Start()
     {
-        audioHandler = AudioHandler.instance;
+        audioHandler = TestAudioHandler.instance;
         StartCoroutine(AudioTester());
         coroutine = WaitAndChangeScene(5.0f);
     }
@@ -45,16 +45,18 @@ public class AudioStressTest : MonoBehaviour
                     audioStatus.color = Color.red;
                     audioStatus.text = "Test Status: Failure";
                     done = true;   
+                    break;
                 }
                 else
                     audioAmount.text = "Files played without failure: " + count++;
 
                 // success case
-                if (count == 200)
+                if (count > 200)
                 {
                     audioStatus.color = Color.green;
                     audioStatus.text = "Test Status: Success";
-                    done = true;       
+                    done = true;
+                    break;    
                 }
 
                 // wait to play next clip
@@ -66,6 +68,7 @@ public class AudioStressTest : MonoBehaviour
         StartCoroutine(coroutine);
     }
 
+    // stress test end, return to scene
     private IEnumerator WaitAndChangeScene(float time)
     {
         yield return new WaitForSeconds(time);
