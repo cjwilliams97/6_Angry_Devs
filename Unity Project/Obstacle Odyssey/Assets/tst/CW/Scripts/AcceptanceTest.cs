@@ -57,7 +57,7 @@ public class AcceptanceTest : MonoBehaviour
             display_text.text = "Test Status: Failed";
             if (!TestFinished)
             {
-                
+                NumBarrelsAtFailure = BarrelManager.barrel_count;
                 TestFinished = true;
                 StartCoroutine("DisplayStats");
 
