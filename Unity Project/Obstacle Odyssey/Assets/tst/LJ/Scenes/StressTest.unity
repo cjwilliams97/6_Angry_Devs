@@ -551,6 +551,29 @@ MonoBehaviour:
   audioName: {fileID: 886996850}
   audioAmount: {fileID: 1004848467}
   audioStatus: {fileID: 1402999547}
+--- !u!114 &1205694450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205694448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f878a5133a6fa7140b5b9415ec6d33c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio:
+  - fileName: barrel impact
+    clip: {fileID: 8300000, guid: f36bda8d93076734e842ac0c08e29eac, type: 3}
+    volume: 0.5
+    loop: 0
+    pitch: 1
+  - fileName: cannon shot
+    clip: {fileID: 8300000, guid: 73f811f71f89d124a976be11734524ea, type: 3}
+    volume: 0.5
+    loop: 0
+    pitch: 1
 --- !u!1 &1227318491
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +682,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8737228311192580846, guid: 2eadb5d448177344286d0fe8ff132db8,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio
+      objectReference: {fileID: 0}
     - target: {fileID: 8737228311192580844, guid: 2eadb5d448177344286d0fe8ff132db8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -829,11 +857,6 @@ PrefabInstance:
       propertyPath: audio.Array.data[6].volume
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8737228311192580846, guid: 2eadb5d448177344286d0fe8ff132db8,
-        type: 3}
-      propertyPath: m_Name
-      value: Audio
-      objectReference: {fileID: 0}
     - target: {fileID: 1955493916722935497, guid: 2eadb5d448177344286d0fe8ff132db8,
         type: 3}
       propertyPath: audioName
@@ -851,6 +874,7 @@ PrefabInstance:
       objectReference: {fileID: 1402999547}
     m_RemovedComponents:
     - {fileID: 1955493916722935497, guid: 2eadb5d448177344286d0fe8ff132db8, type: 3}
+    - {fileID: 8737228311192580845, guid: 2eadb5d448177344286d0fe8ff132db8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2eadb5d448177344286d0fe8ff132db8, type: 3}
 --- !u!1 &1402999545
 GameObject:
