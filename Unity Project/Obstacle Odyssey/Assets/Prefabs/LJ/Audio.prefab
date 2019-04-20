@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3358186483917941255}
   - component: {fileID: 6330497620662768934}
-  - component: {fileID: 6330497620662768935}
   - component: {fileID: 6330497620662768932}
+  - component: {fileID: 4410383873056448464}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -51,7 +51,25 @@ MonoBehaviour:
     volume: 0.6
     loop: 1
     pitch: 1
---- !u!114 &6330497620662768935
+--- !u!114 &6330497620662768932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358186483917941253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662365c4b75a9e1429539f536a4ef78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio:
+  - fileName: ocean waves
+    clip: {fileID: 8300000, guid: 21f6b1b904af34349b5a0061bbab8048, type: 3}
+    volume: 0.7
+    loop: 0
+    pitch: 1
+--- !u!114 &4410383873056448464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,23 +100,5 @@ MonoBehaviour:
   - fileName: barrel impact
     clip: {fileID: 8300000, guid: f36bda8d93076734e842ac0c08e29eac, type: 3}
     volume: 0.5
-    loop: 0
-    pitch: 1
---- !u!114 &6330497620662768932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3358186483917941253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 662365c4b75a9e1429539f536a4ef78c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio:
-  - fileName: ocean waves
-    clip: {fileID: 8300000, guid: 21f6b1b904af34349b5a0061bbab8048, type: 3}
-    volume: 0.7
     loop: 0
     pitch: 1

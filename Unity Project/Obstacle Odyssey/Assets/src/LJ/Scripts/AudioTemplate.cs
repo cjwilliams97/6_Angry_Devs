@@ -11,8 +11,8 @@ public class Audio
     public string fileName;
     public AudioClip clip;
     public float volume;
-    public bool loop;
-    public float pitch;
+    public bool loop = false;
+    public float pitch = 1.0F;
 
     // set the source of the audio
     public void SetSource(AudioSource aSource)
@@ -40,9 +40,7 @@ public class Audio
 // abstract class to handle audio
 // TEMPLATE PATTERN
 public abstract class AudioTemplate : MonoBehaviour
-{
-    //Audio[] audio = null;
-    
+{ 
     public void GenericAudio(string name)
     {
         PlayAudio(name);
@@ -51,8 +49,8 @@ public abstract class AudioTemplate : MonoBehaviour
     // template loop is off
     public virtual void LoopAudio(int index)
     {
-       // if (audio[index].loop)
-          //  audio[index].loop = false;
+        /*if (audio[index].loop)
+            audio[index].loop = false;*/
     }
 
     // template pitch is unchanged
@@ -64,7 +62,7 @@ public abstract class AudioTemplate : MonoBehaviour
     // template audio playing
     public virtual void PlayAudio(string name)
     {
-       /* for (int i = 0; i < audio.Length; i++)
+        /*for (int i = 0; i < audio.Length; i++)
         {
             // find matching audio file and apply template
             if (name == audio[i].fileName)
