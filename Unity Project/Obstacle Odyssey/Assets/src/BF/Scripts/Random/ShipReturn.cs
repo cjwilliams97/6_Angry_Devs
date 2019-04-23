@@ -46,7 +46,7 @@ namespace StatePattern
         // changes the boats state based on position of it
         public virtual void UpdateBoat()
         {
-            Debug.Log("1 - Made it to UpdateBoat");
+            //Debug.Log("1 - Made it to UpdateBoat");
             float valueX = this.gameObject.transform.position.x; // obatins ship x, y, z coordinates
             float valueY = this.gameObject.transform.position.y;
             float valueZ = this.gameObject.transform.position.z;
