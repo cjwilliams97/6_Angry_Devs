@@ -13,27 +13,24 @@ namespace StatePattern
     public class ShipReturn : MonoBehaviour
     {
         int counter; // will be used to run update 20 times
+        bool flag; // will only run coroutine once
 
         void Start() // consider awake instead
         {
-            UpdateBoat();
-            counter = 20;
+            UpdateBoat(); // runs initial update
+            flag = false;
         }
 
         // runs update 20 times and continues to update boat based on state
-        void Update()
+        void FixedUpdate()
         {
-            //Debug.Log("1 - Made it to Update number: " + counter);
-            counter--;
-
-            if (counter > 0)
+            if (flag == false)
             {
-                UpdateBoat();
-            }
+                flag = true;
 
-            else
-            {
-                enabled = false;
+                StartCoroutine(DelayedCheck()); // will run coroutine to check position 2 more times
+
+                enabled = false; // will stop running update
             }
         }
 
@@ -49,8 +46,8 @@ namespace StatePattern
         // changes the boats state based on position of it
         public virtual void UpdateBoat()
         {
-            //Debug.Log("1 - Made it to UpdateBoat");
-            float valueX = this.gameObject.transform.position.x;
+            Debug.Log("1 - Made it to UpdateBoat");
+            float valueX = this.gameObject.transform.position.x; // obatins ship x, y, z coordinates
             float valueY = this.gameObject.transform.position.y;
             float valueZ = this.gameObject.transform.position.z;
 
@@ -58,16 +55,16 @@ namespace StatePattern
             {
                 // indicates boat is still offset and keeps state that way
                 case BoatPosition.Offset:
-                    if (valueX >= 2 || valueY >= 5.5 || valueZ >= 2 || valueX <= -2
-                        || valueY <= 3.5 || valueZ <= -2)
+                    if (valueX > 2 || valueY > 6.5 || valueZ > 2 || valueX < -2
+                        || valueY < 3 || valueZ < -2)
                     {
                         //Debug.Log("1 - Made it to case BoatPosition.Offset first if");
                         initialLocationMode = BoatPosition.Offset; 
                     }
 
                     // indicates boat is now standard position and switches state from offset to standard 
-                    else if (valueX <= 2 && valueY <= 5.5 && valueZ <= 2 && valueX >= -2
-                        && valueY >= 3.5 && valueZ >= -2)
+                    else if (valueX <= 2 && valueY <= 6.5 && valueZ <= 2 && valueX >= -2
+                        && valueY >= 3 && valueZ >= -2)
                     {
                         //Debug.Log("1 - Made it to case BoatPosition.Offset else if");
                         initialLocationMode = BoatPosition.Standard;
@@ -77,16 +74,16 @@ namespace StatePattern
     
                 // indicates boat is still in standard position and maintains state
                 case BoatPosition.Standard:
-                    if (valueX <= 2 && valueY <= 5.5 && valueZ <= 2 && valueX >= -2
-                        && valueY >= 3.5 && valueZ >= -2)
+                    if (valueX <= 2 && valueY <= 6.5 && valueZ <= 2 && valueX >= -2
+                        && valueY >= 3 && valueZ >= -2)
                     {
                         //Debug.Log("1 - Made it to case BoatPosition.Standard if");
                         initialLocationMode = BoatPosition.Standard;
                     }
 
                     // indiactes boat is offset and switches state from standard to offset
-                    else if (valueX >= 2 || valueY >= 5.5 || valueZ >= 2 || valueX <= -2
-                        || valueY <= 3.5 || valueZ <= -2)
+                    else if (valueX > 2 || valueY > 6.5 || valueZ > 2 || valueX < -2
+                        || valueY < 3 || valueZ < -2)
                     {
                         //Debug.Log("1 - Made it to case BoatPosition.Offset first if");
                         initialLocationMode = BoatPosition.Offset;
@@ -97,7 +94,6 @@ namespace StatePattern
 
             // performs action based off of internal state
             DoAction(initialLocationMode);
-
         }
 
         // will perform action based on state 
@@ -116,9 +112,21 @@ namespace StatePattern
                 case BoatPosition.Offset:
                     // move ship back to original
                     //Debug.Log("2 - Made it to case BoatPosition.offset: ");
-                    transform.position = new Vector3(0f, 4.5f, 0f);
+                    transform.position = new Vector3(0f, 5.5f, 0f);
                     break;
             }
         }
+
+        // will update boat on call and then again after 1 second
+        IEnumerator DelayedCheck()
+        {
+            UpdateBoat();
+            yield return new WaitForSeconds(0.5f);
+            UpdateBoat();
+
+            yield return null;
+        }
     }
+
+    
 }
