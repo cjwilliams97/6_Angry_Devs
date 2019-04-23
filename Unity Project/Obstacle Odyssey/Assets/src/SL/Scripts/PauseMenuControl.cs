@@ -28,7 +28,8 @@ public class PauseMenuControl : MonoBehaviour
     /* When Restart is Clicked STILL A WIP */
     void Restart_Clicked()
     {
-        //SceneManager.LoadScene("GameScene",LoadSceneMode.Single);
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     /* Restarts Time, Loads the Lobby Scene */
     void Exit_Clicked()
