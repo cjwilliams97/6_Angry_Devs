@@ -59,6 +59,7 @@ public class CannonFire : MonoBehaviour
         Ball.transform.position = CannonFirePoint.transform.position;
         Ball.transform.eulerAngles = CannonFirePoint.transform.eulerAngles;
         Ball.AddComponent<Rigidbody>();
+        Ball.AddComponent<BoxCollider>();
         Ball.GetComponent<Renderer>().material.mainTexture = CannonballMat;
         rigid = Ball.GetComponent<Rigidbody>();
         rigid.AddRelativeForce(Power, 0.0f, 0.0f);
@@ -91,6 +92,7 @@ public class CannonFire : MonoBehaviour
         Ball.transform.position = CannonFirePoint.transform.position;
         Ball.transform.eulerAngles = CannonFirePoint.transform.eulerAngles;
         Ball.AddComponent<Rigidbody>();
+        Ball.AddComponent<BoxCollider>();
         Ball.GetComponent<Renderer>().material.mainTexture = CannonballMat;
         rigid = Ball.GetComponent<Rigidbody>();
         rigid.AddRelativeForce(Power, 0.0f, 0.0f);
