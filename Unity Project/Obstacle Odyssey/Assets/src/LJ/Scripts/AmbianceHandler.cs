@@ -21,7 +21,7 @@ public class AmbianceHandler : AudioTemplate
         }
 
         // ambiance to call from start
-        PlayAudio("ocean waves");
+        InitAudio();
     }
 
     // ensures a single instance on the bound object
@@ -61,5 +61,10 @@ public class AmbianceHandler : AudioTemplate
                 return;
             }
         }
+    }
+
+    public void InitAudio()
+    {
+        PlayAudio("ocean waves");
     }
 }
