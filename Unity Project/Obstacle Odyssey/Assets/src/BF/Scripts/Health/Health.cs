@@ -61,7 +61,7 @@ public class Health : MonoBehaviour
             }
 
             string newHealth = (updatedHealth).ToString(); // converts the float values to a string
-            oldHealth = oldHealth - healthChange; // changes oldHealth to updated version after being used
+            oldHealth = updatedHealth; // changes oldHealth to updated version after being used
             healthText.text = "Health: " + newHealth + " / " + maxHealth; // alters the text that is displayed to the screen
         }
     }
@@ -69,16 +69,15 @@ public class Health : MonoBehaviour
     // this can be called to increase health when a bonus is picked up
     public virtual void HealthChangeBonus(float healthChange)
     {
-        updatedHealth = oldHealth - healthChange; // figures out new health value
+        updatedHealth = oldHealth + healthChange; // figures out new health value
 
         if(updatedHealth > maxHealth) // checks to make sure health doesn't go over max
         {
             updatedHealth = maxHealth;
+            StartCoroutine(MaxedHealth());
         }
 
-        string newHealth = (updatedHealth).ToString(); // converts the float values to a string
-        oldHealth = oldHealth - healthChange; // changes oldHealth to updated version after being used
-        healthText.text = "Health: " + newHealth + " / " + maxHealth; // alters the text that is displayed to the screen
+        oldHealth = updatedHealth; // changes oldHealth to updated version after being used        
     }
 
     // this can be called to change the MaxHealth value
@@ -99,6 +98,16 @@ public class Health : MonoBehaviour
     public float ReturnHealth()
     {
         return updatedHealth;
+    }
+
+    IEnumerator MaxedHealth()
+    {
+        Debug.Log("made it hereeererere");
+        healthText.text = "Health Maxed!";
+        yield return new WaitForSeconds(2f);
+        string newHealth = (updatedHealth).ToString(); // converts the float values to a string
+        healthText.text = "Health: " + newHealth + " / " + maxHealth; // alters the text that is displayed to the screen
+
     }
 }
 
