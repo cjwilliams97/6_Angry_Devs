@@ -26,7 +26,7 @@ public class CannonFire : MonoBehaviour
         Power = 1000f;
         FireTime = 1.0f;
         IsInFiringCooldown = false;
-        KeepFiring = true;
+        
 
     }
 
