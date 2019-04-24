@@ -21,7 +21,7 @@ public class WhaleCollision : Collision
         if (active)
         {
             GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage); // calls damage script
-            audioHandler.PlayAudio("orca impact"); // calls audio script to play orca sounds
+            sfxHandler.PlayAudio("orca impact"); // calls audio script to play orca sounds
             base.StartCoroutine("DisableScript"); // disables script for 3 seconds to avoid rapid collisions
         }
     }

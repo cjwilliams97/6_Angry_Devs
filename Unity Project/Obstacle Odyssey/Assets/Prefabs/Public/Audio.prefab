@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8737228311192580844}
-  - component: {fileID: 8737228311192580845}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -31,41 +30,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8737228311192580845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8737228311192580846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48cac34dcbfc72b44b291450d7ecef73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio:
-  - fileName: high Cs
-    clip: {fileID: 8300000, guid: 858865dd146fc2e4e9156fb85ccbeade, type: 3}
-    volume: 1
-    loop: 1
-    playOnAwake: 0
-  - fileName: ocean
-    clip: {fileID: 8300000, guid: caf37e87bd88f154cb67f6a112932bbf, type: 3}
-    volume: 0.6
-    loop: 1
-    playOnAwake: 0
-  - fileName: barrel impact
-    clip: {fileID: 8300000, guid: f36bda8d93076734e842ac0c08e29eac, type: 3}
-    volume: 0.6
-    loop: 0
-    playOnAwake: 0
-  - fileName: rock impact
-    clip: {fileID: 8300000, guid: 19f318f86f8c92e4d834218bfc42dd9c, type: 3}
-    volume: 0.4
-    loop: 0
-    playOnAwake: 0
-  - fileName: orca impact
-    clip: {fileID: 8300000, guid: 69b6dbf524f804b4f9f3b1992a73ea7b, type: 3}
-    volume: 0.4
-    loop: 0
-    playOnAwake: 0
