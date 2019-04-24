@@ -34,7 +34,7 @@ public class ChangeColor : MonoBehaviour
     {
         while (GameObject.Find("question") != null)
         {
-            yield return new WaitForSeconds(3f); // will wait 3 seconds
+            yield return new WaitForSeconds(2f); // will wait 2 seconds
 
             if (check1 == false)
             {

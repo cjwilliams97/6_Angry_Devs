@@ -12,6 +12,7 @@ public class QuestionMarkCollision : Collision
 {
     private int randomNumber = 0; // used later to randomize result
     private float bonusHealth = 25;
+    public GameObject coinPrefab; // lets me modify what to spawn for prefabs
 
     void Start()
     {
@@ -30,14 +31,29 @@ public class QuestionMarkCollision : Collision
 
             switch (randomNumber)
             {
-                case int n when (n >= 0 && n < 51):
+                case int n when (n >= 0 && n <= 33):
                     Debug.Log("made it to first case");
                     GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage);
                     break;
 
-                case int n when (n >= 51 && n < 101):
+                case int n when (n > 33 && n <= 66):
                     Debug.Log("made it to second case");
                     GameObject.Find("Scripts").SendMessage("HealthChangeBonus", bonusHealth);
+                    break;
+
+                case int n when (n > 66 && n <= 100):
+                    Debug.Log("made it to third case");
+                    float valueX = GameObject.Find("caravel").transform.position.x; // obatins ship x, y, z coordinates
+                    float valueY = GameObject.Find("caravel").transform.position.y;
+                    float valueZ = GameObject.Find("caravel").transform.position.z;
+                    valueX -= 10; // offsets coins for easier visibility
+                    valueY += 4f; // keeps coins lower to ground
+                    valueZ += 30; // starts coins in front of boat
+                    for (int i = 0; i < 5; i++)
+                    {
+                        valueZ += 5;
+                        Instantiate(coinPrefab, new Vector3(valueX, valueY, valueZ), Quaternion.Euler(-90,0,0));
+                    }
                     break;
             }
                     
