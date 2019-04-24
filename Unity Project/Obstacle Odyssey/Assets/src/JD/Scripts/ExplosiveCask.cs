@@ -22,9 +22,9 @@ public class ExplosiveCask : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
 
-        newMat = Resources.Load("JD/Barrels/Materials/BARREL_RED", typeof(Material)) as Material;
-        oldMat = Resources.Load("JD/Barrels/Materials/casket_atlas", typeof(Material)) as Material;
-
+        newMat = Resources.Load("JD/Barrels/Materials/BARREL_RED", typeof(Material)) as Material;   //new barrel material
+        oldMat = Resources.Load("JD/Barrels/Materials/casket_atlas", typeof(Material)) as Material; //old barrel material (legacy)
+    
         red = Resources.Load("JD/Barrels/red", typeof(Material)) as Material;
         cream = Resources.Load("JD/Barrels/cream", typeof(Material)) as Material;
         grey = Resources.Load("JD/Barrels/grey", typeof(Material)) as Material;
@@ -41,7 +41,6 @@ public class ExplosiveCask : MonoBehaviour
     }
 
     // Update is called once per frame
-    bool flag = false;
     void FixedUpdate()
     {
         dist = CalcDist(PARENT, barrel);
@@ -50,20 +49,19 @@ public class ExplosiveCask : MonoBehaviour
         {
             if(dist <= (threshold / 3))
             {
-                ExplodeCask(barrel, flag);
-                flag = true;
+                ExplodeCask(barrel);
             }
         }
         return;
     }
-  
+
     IEnumerator FlashyFlash(Material[] newMatArray, Material[] oldMatArray)
     {
         for (; ;)
         {
             if (dist > threshold)
             {
-                if(rend.materials != oldMatArray)
+                if(rend.materials != oldMatArray)   //resets materials array to old materials and returns
                 {
                     rend.materials = oldMatArray;
                 }
@@ -71,44 +69,30 @@ public class ExplosiveCask : MonoBehaviour
             }
             else
             {
-                rend.materials = newMatArray;
+                rend.materials = newMatArray;       //set materials to a new red / orange color and flash back and forth
                 float waitTime = 0.3f;
-                Wait(waitTime);
+                yield return new WaitForSeconds(waitTime);
                 rend.materials = oldMatArray;
-                Wait(waitTime);
+                yield return new WaitForSeconds(waitTime);
             }
         }
     }
-
     //WIP, currently spawns in bunches of explosions if not destroyed, we want one and wait
     public GameObject ExplodeyPrefab;
-    void ExplodeCask(GameObject barrel, bool flag)
+    int count = 0;
+    void ExplodeCask(GameObject barrel)
     {
-        if (flag)
+        Debug.Log("BARREL TO BE EXPLODED!");
+        count++;
+        if(count == 1)  //ensures that it only instantiates a single instance of the explosion prefab
         {
-            return;
+            Instantiate(ExplodeyPrefab, new Vector3(barrel.transform.position.x, barrel.transform.position.y, barrel.transform.position.z), Quaternion.identity);
         }
         else
         {
-            Debug.Log("BARREL TO BE EXPLODED!");
-            /*
-            Instantiate(ExplodeyPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            Wait(4f);
-            Destroy(barrel);
-            */
-            return;
+            Destroy(barrel);    //destroys barrel gameobject along with its child scripts / componenets
         }
-    }
-
-    void Wait(float time)
-    {
-        StartCoroutine(WaitFor(time));
         return;
-    }
-
-    IEnumerator WaitFor(float time)
-    {
-        yield return new WaitForSeconds(time);
     }
 
     float CalcDist(GameObject PARENT, GameObject barrel)
