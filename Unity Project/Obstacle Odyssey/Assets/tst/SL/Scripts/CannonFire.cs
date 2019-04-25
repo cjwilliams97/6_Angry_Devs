@@ -21,6 +21,7 @@ public class CannonFire : MonoBehaviour
     private bool test;
     public int predictionStepsPerFrame = 6;
     public Vector3 BallVelocity;
+    
 
 
 
@@ -30,10 +31,12 @@ public class CannonFire : MonoBehaviour
     void Start()
     {
         
-        Power = 1000f;
-        FireTime = 1f;
+       // Power = 1000f;
+        //FireTime = 1f;
         IsInFiringCooldown = false;
         test = false;
+        FireCannonTimed(Power, FireTime);
+       
         //float PowerToVelocityScale = 53.708f;
 
     }
@@ -41,7 +44,7 @@ public class CannonFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        /*
         if (IsInFiringCooldown == false)
         {
             if (Input.GetKeyDown(Fire))
@@ -53,12 +56,9 @@ public class CannonFire : MonoBehaviour
 
             }
           
-        }
+        }*/
+        
         /*
-        if (test == true)
-        {
-            Debug.Log(rigid.velocity.x);
-        }
         Vector3 point1 = this.transform.position;
         float stepSize = 1.0f / predictionStepsPerFrame;
         for (float step = 0; step < 1; step += stepSize)
@@ -84,7 +84,7 @@ public class CannonFire : MonoBehaviour
      */ 
     public void FireCannon( float power)
     {
-        Power = power;
+        
         Ball = (GameObject)Instantiate(CannonBall);
         Ball.transform.parent = CannonFirePoint.transform;
         Ball.transform.position = CannonFirePoint.transform.position;
@@ -101,8 +101,6 @@ public class CannonFire : MonoBehaviour
         Explosion.transform.eulerAngles = CannonFirePoint.transform.eulerAngles;
         Explosion.transform.Rotate(0.0f, 0.0f, 90.0f);
         Explosion.transform.localScale = new Vector3(.001f, .001f, .001f);
-        //Debug.Break();
-        //Debug.Log(rigid.velocity);
         Destroy(Explosion, 2.0f);
         Destroy(Ball, 60.0f);
 
@@ -119,6 +117,7 @@ public class CannonFire : MonoBehaviour
      */
     public void FireCannonTimed(float power, float time)
     {   
+      
         coroutine = FireTimer(time);
         IsInFiringCooldown = true;
         Power = power;
@@ -141,13 +140,14 @@ public class CannonFire : MonoBehaviour
         Explosion.transform.localScale = new Vector3(.001f, .001f, .001f);
         StartCoroutine(coroutine);
         Destroy(Explosion, 2.0f);
-        Destroy(Ball,60.0f);
+        Destroy(Ball, 60.0f);
+
+
         
-        
+
     }
     private void AngularTorqueCalculation(Rigidbody rigid)
     {
-        Debug.Break();
         bool XNeg = false;
         bool YNeg = false;
         bool ZNeg = false;

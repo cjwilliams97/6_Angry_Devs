@@ -464,8 +464,8 @@ MonoBehaviour:
   CannonBall: {fileID: 100000, guid: 6b6a14e33a462284ab422a64b3dfc1fa, type: 3}
   CannonFirePoint: {fileID: 1040505708}
   CannonballMat: {fileID: 2800000, guid: eea0c38e16243774c9cf35997174d407, type: 3}
-  Power: 0
-  FireTime: 0
+  Power: 1000
+  FireTime: 1
   ExplosionObj: {fileID: 437906461632339821, guid: 09696a1d01646b74dacd3b353aa2cd7f,
     type: 3}
   predictionStepsPerFrame: 6
