@@ -21,7 +21,7 @@ public class MusicHandler : AudioTemplate
         }
 
         // music to play from start
-        PlayAudio("high Cs");
+        InitAudio();
     }
 
     // ensures a single instance on the bound object
@@ -55,5 +55,25 @@ public class MusicHandler : AudioTemplate
                 return;
             }
         }
+    }
+
+    // pause music based on name
+    public void PauseAudio(string name)
+    {
+        for (int i = 0; i < audio.Length; i++)
+        {
+            // a match found, apply parameters and play it
+            if (name == audio[i].fileName)
+            {
+                audio[i].Pause();
+                return;
+            }
+        }
+    }
+
+    // starts playing first music file
+    public void InitAudio()
+    {
+        audio[0].Play();
     }
 }
