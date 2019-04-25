@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
 {
-    public Material Green; // reference to green material initialization
-    public Material Red; // reference to red material initialization
+    private Material Green; // reference to green material initialization
+    private Material Red; // reference to red material initialization
     bool flag = false;
     bool check1 = false;
 
@@ -32,9 +32,9 @@ public class ChangeColor : MonoBehaviour
 
     IEnumerator Change()
     {
-        while (GameObject.Find("question") != null)
+        while (GameObject.Find("QuestionMark") != null) // searches for question mark object
         {
-            yield return new WaitForSeconds(2f); // will wait 2 seconds
+            yield return new WaitForSeconds(1.5f); // will wait 2 seconds
 
             if (check1 == false)
             {
