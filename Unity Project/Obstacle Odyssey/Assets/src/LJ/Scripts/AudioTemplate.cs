@@ -30,6 +30,11 @@ public class Audio
         source.Play();
     }
 
+    public void Pause()
+    {
+        source.Pause();
+    }
+
     // returns true if the source is playing
     public bool isPlaying()
     {
@@ -49,8 +54,6 @@ public abstract class AudioTemplate : MonoBehaviour
     // template loop is off
     public virtual void LoopAudio(int index)
     {
-        /*if (audio[index].loop)
-            audio[index].loop = false;*/
     }
 
     // template pitch is unchanged
@@ -62,16 +65,7 @@ public abstract class AudioTemplate : MonoBehaviour
     // template audio playing
     public virtual void PlayAudio(string name)
     {
-        /*for (int i = 0; i < audio.Length; i++)
-        {
-            // find matching audio file and apply template
-            if (name == audio[i].fileName)
-            {
-                LoopAudio(i);
-                PitchAudio();
-                audio[i].Play();
-                return;
-            }
-        }*/
+        LoopAudio(0);
+        PitchAudio();
     }
 }
