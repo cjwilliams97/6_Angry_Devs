@@ -28,26 +28,26 @@ public class CoinSystem : MonoBehaviour
     }
 
     // add to wallet on collision
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         // play pickup sound
         sfxHandler.PlayAudio("coin pickup");
 
         // add amount to persistent wallet
-        writeToWallet();
+        writeToWallet(coinValue);
 
         // destroy the coin
         Destroy(gameObject);
     }
 
     // write the coin amount to the wallet
-    void writeToWallet()
+    public void writeToWallet(int value)
     {
         string path = Path.Combine(Application.persistentDataPath, fileName);
 
         // read in the old amount and add new amount
         int amount = readFromWallet();
-        amount += coinValue;
+        amount += value;
         Debug.Log("Wallet: " + amount); 
 
         // write in new amount
@@ -79,4 +79,9 @@ public class CoinSystem : MonoBehaviour
 
         return amount;
     }
+}
+
+public class WalletHandler : CoinSystem
+{
+    
 }
