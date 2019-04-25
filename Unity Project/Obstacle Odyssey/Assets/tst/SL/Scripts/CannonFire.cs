@@ -130,7 +130,7 @@ public class CannonFire : MonoBehaviour
         Ball.AddComponent<BoxCollider>();
         Ball.GetComponent<Renderer>().material.mainTexture = CannonballMat;
         rigid = Ball.GetComponent<Rigidbody>();
-        rigid.AddRelativeForce(Power, 0.0f, 0.0f);
+        rigid.AddRelativeForce(Power*Vector3.forward);
         AngularTorqueCalculation(rigid);
         Explosion = (GameObject)Instantiate(ExplosionObj);
         Explosion.transform.parent = CannonFirePoint.transform;
