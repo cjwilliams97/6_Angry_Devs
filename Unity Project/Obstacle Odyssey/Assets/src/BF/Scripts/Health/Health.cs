@@ -12,11 +12,14 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     public Text healthText;
+    public Text healthChangeText;
+    public Text healthChangeText2;
     private float healthStart; // starting ship health
     private static float maxHealth; // creates max ship health
     private float oldHealth;
     private float updatedHealth;
     private bool flag = false;
+    private bool flag2 = false; // used to check if multiple health changes are registered
     private bool accessed = false; // will check to make sure method is accessed
 
     // this will initialize the health hud to the max health value
@@ -37,6 +40,8 @@ public class Health : MonoBehaviour
         oldHealth = healthStart; // sets old health to starting health
         string newHealth = healthStart.ToString(); // converts the float values to a string
         healthText.text = "Health: " + newHealth + " / " + maxHealth; // alters the text that is displayed to the screen
+        healthChangeText.text = ""; // will initialize this text to nothing
+        healthChangeText2.text = ""; // will initialize this text to nothing
     }
 
     // this can be called to decrease health when damage is applied from obstacle
@@ -57,8 +62,12 @@ public class Health : MonoBehaviour
                 oldHealth = 0;
                 healthText.color = Color.red;
                 healthText.text = ("You Died!!"); // alters the text that is displayed to the screen
+                healthChangeText.text = ""; // resets all text
+                healthChangeText2.text = ""; // resets all text
                 return;
             }
+
+            StartCoroutine(DisplayHealthChange(healthChange, true)); // gives damage and indicates it is damage
 
             string newHealth = (updatedHealth).ToString(); // converts the float values to a string
             oldHealth = updatedHealth; // changes oldHealth to updated version after being used
@@ -77,7 +86,14 @@ public class Health : MonoBehaviour
             StartCoroutine(MaxedHealth());
         }
 
-        oldHealth = updatedHealth; // changes oldHealth to updated version after being used        
+        else
+        {
+            StartCoroutine(DisplayHealthChange(healthChange, false));
+            string newHealth = (updatedHealth).ToString(); // converts the float values to a string
+            healthText.text = "Health: " + newHealth + " / " + maxHealth; // alters the text that is displayed to the screen 
+        }
+
+        oldHealth = updatedHealth; // changes oldHealth to updated version after being used     
     }
 
     // this can be called to change the MaxHealth value
@@ -100,14 +116,60 @@ public class Health : MonoBehaviour
         return updatedHealth;
     }
 
+    // will display new message if health is maxed and new health is added
     IEnumerator MaxedHealth()
     {
-        Debug.Log("made it hereeererere");
         healthText.text = "Health Maxed!";
         yield return new WaitForSeconds(2f);
         string newHealth = (updatedHealth).ToString(); // converts the float values to a string
         healthText.text = "Health: " + newHealth + " / " + maxHealth; // alters the text that is displayed to the screen
 
+    }
+
+    // will display new text that shows health change
+    IEnumerator DisplayHealthChange(float healthChange, bool decrease)
+    {
+        if (decrease) // if the change is damage
+        {
+            if (flag2 == false) // runs on first damage
+            {
+                flag2 = true;
+                healthChangeText.color = new Color32(224, 36, 20, 255); // changes color to redish
+                healthChangeText.text = "-" + healthChange;
+                yield return new WaitForSeconds(2f); // will wait for 2 seconds with new text display        
+                healthChangeText.text = ""; // will reset to no text
+                flag2 = false; // indicates initial display is done
+            }
+
+            else // runs if first text is in the process of displaying
+            {
+                healthChangeText2.color = new Color32(224, 36, 20, 255); // changes color to redish
+                healthChangeText2.text = "-" + healthChange;
+                yield return new WaitForSeconds(2f); // will wait for 2 seconds with new text display        
+                healthChangeText2.text = ""; // will reset to no text
+            }
+        }
+
+        else
+        {
+            if (flag2 == false) // runs on first damage
+            {
+                flag2 = true;
+                healthChangeText.color = new Color32(46, 205, 42, 255); // changes color to greenish
+                healthChangeText.text = "+" + healthChange;
+                yield return new WaitForSeconds(2f); // will wait for 2 seconds with new text display        
+                healthChangeText.text = ""; // will reset to no text
+                flag2 = false; // indicates initial display is done
+            }
+
+            else // runs if first text is in the process of displaying
+            {
+                healthChangeText2.color = new Color32(46, 205, 42, 255); // changes color to greenish
+                healthChangeText2.text = "+" + healthChange;
+                yield return new WaitForSeconds(2f); // will wait for 2 seconds with new text display        
+                healthChangeText2.text = ""; // will reset to no text
+            }
+        }
     }
 }
 
