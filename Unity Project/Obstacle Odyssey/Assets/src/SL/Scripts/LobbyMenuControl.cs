@@ -1,5 +1,7 @@
-﻿
-/* Containts the Listeners, and scene changer for the Lobby Scene */
+﻿/* 
+ * Containts the Listeners, and scene changer for the Lobby Scene
+ * Created by Sheldon Lockie
+ */
 
 
 using System.Collections;
@@ -29,6 +31,7 @@ public class LobbyMenuControl : MonoBehaviour
     public Button Play_btn, Exit_btn ,Perks_btn;
     public Dropdown drop;
     public string DesiredMap;
+    public OdysseySceneLoader OdySceneLoader; // [connor's code] used in Play_Clicked()
     void Start()
     {
         drop = GetComponent<Dropdown>();
@@ -46,9 +49,9 @@ public class LobbyMenuControl : MonoBehaviour
     void Play_Clicked()
     {
         //Debug.Log("Loading");
+        OdySceneLoader.DesiredMap = DesiredMap; // [connor's code]
         Destroy(gameObject);
-        SceneManager.LoadScene(DesiredMap, LoadSceneMode.Single);
-        
+        OdySceneLoader.LoadScene(); // [connor's code]
     }
     /* Loads the Perks Scene When Customization button is clicked */
     void Perks_Clicked()
