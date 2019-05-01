@@ -15,12 +15,6 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/src/BF/Scenes/BrandonTest.unity
-    guid: 45329f1e9f51b1449a206cd284cbadbe
-  - enabled: 0
-    path: Assets/src/BF/Scenes/BrandonLevel.unity
-    guid: f78bb010642e08f4caed41479ed3b3a6
-  - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
@@ -47,34 +41,55 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Lobby.unity
-    guid: 6aa55948df266054387c1ac9c15b8337
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: d393f587cc4ea2b46a2f6800a669bcfd
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: 6aa55948df266054387c1ac9c15b8337
   - enabled: 1
     path: Assets/Scenes/Perks.unity
     guid: d5e2a773966ae6447b74f11a14d1f062
   - enabled: 1
     path: Assets/Scenes/BFGameLevel.unity
     guid: 7ad48cf7142b61f41b42591e3fcf0372
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene.unity
     guid: a21dff4af16f1684bb8c99867c4d02da
-  - enabled: 1
+  - enabled: 0
     path: Assets/tst/SL/Scenes/SLFailedTest.unity
     guid: 8ca6a04b4d776d848a5593ad4a949c67
-  - enabled: 1
+  - enabled: 0
     path: Assets/tst/SL/Scenes/SLSucessTest.unity
     guid: 6ce095962a0d8cc46b6fcf1e893f08f7
   - enabled: 1
     path: Assets/src/JD/Scenes/JDLevel.unity
     guid: fd4038d835c6b4b4893c5124d101422e
-  - enabled: 1
+  - enabled: 0
     path: Assets/tst/BF/Scenes/BrandonHudTest.unity
     guid: 02e77f8481a5be641a61750ae994c2a1
-  - enabled: 1
+  - enabled: 0
     path: Assets/tst/BF/Scenes/BrandonStatePatternTest.unity
     guid: faae1e1a5328ea04984f1d2d4f462157
+  - enabled: 0
+    path: Assets/tst/LJ/Scenes/StressTest.unity
+    guid: f903a4f6872c560419ced7793b60f6a3
+  - enabled: 0
+    path: Assets/tst/JM/Scenes/JubalTest.unity
+    guid: 183b15879ada98f49a77a2789196f03b
+  - enabled: 0
+    path: Assets/tst/JD/Scenes/JDTest.unity
+    guid: d504a6e833fc48d4eb75fcb6b4622138
+  - enabled: 0
+    path: Assets/tst/CW/Scenes/Connor_Test.unity
+    guid: 8af9c46b7dca0f94381acc2a3909be16
+  - enabled: 0
+    path: Assets/tst/SL/Scenes/SheldonTest.unity
+    guid: edf1229c9d050e44cb662e04349de1ee
   m_configObjects: {}
