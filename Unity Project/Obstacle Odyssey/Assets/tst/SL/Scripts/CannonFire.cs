@@ -128,7 +128,9 @@ public class CannonFire : MonoBehaviour
         Ball.transform.eulerAngles = CannonFirePoint.transform.eulerAngles;
         Ball.AddComponent<Rigidbody>();
         Ball.AddComponent<BoxCollider>();
+        Ball.GetComponent<BoxCollider>().isTrigger=true;
         Ball.GetComponent<Renderer>().material.mainTexture = CannonballMat;
+        Ball.AddComponent<CannonBallCollision>();
         rigid = Ball.GetComponent<Rigidbody>();
         rigid.AddRelativeForce(Power*Vector3.forward);
         AngularTorqueCalculation(rigid);

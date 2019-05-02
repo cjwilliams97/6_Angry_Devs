@@ -1,18 +1,14 @@
-﻿/* Brandon Foss
- * This script inherits from the base collision class and modifies
- * the OnTriggerEnter method to perform as intended for a rock impact
- */
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RockCollision : Collision
+public class CannonBallCollision : Collision
 {
-    void Start() 
+  
+    void Start()
     {
         base.DoInitialization(); // calls base class initialization
-        damage = 25; // changes damage value after initialization
+        damage = 75; // changes damage value after initialization
     }
 
     // ovverides method to form to rock collisions
@@ -21,9 +17,8 @@ public class RockCollision : Collision
         if (active && other.tag == "caravelTag")
         {
             GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage); // calls damage script
-            sfxHandler.PlayAudio("rock impact"); // calls audio script to play rock sounds
+            sfxHandler.PlayAudio("explosion echo"); // calls audio script to play rock sounds
             base.StartCoroutine("DisableScript"); // disables script for 3 seconds to avoid rapid collisions
         }
     }
 }
-

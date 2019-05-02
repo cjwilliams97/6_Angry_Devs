@@ -11,7 +11,7 @@ using UnityEngine.SceneManagement;
 
 public class DropDownHandler : MonoBehaviour
 {
-    List<string> Maps = new List<string> { "Oasis","Spooki nights,Medieval Fantasy"};
+    List<string> Maps = new List<string> { "Oasis","Spooki nights","Medieval Fantasy"};
     private Dropdown drop;
     private Canvas SceneCanvas;
     public Scene DesiredScene;

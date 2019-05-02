@@ -31,7 +31,7 @@ public class Collision : MonoBehaviour
     // This method will initialize a collision to a standard collision that could be overriden
     public virtual void OnTriggerEnter(Collider other)
     {
-        if (active)
+        if (active && other.tag == "caravelTag")
         {
             GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage); // calls damage script
             sfxHandler.PlayAudio("barrel impact"); // calls audio script to play barrel sounds
