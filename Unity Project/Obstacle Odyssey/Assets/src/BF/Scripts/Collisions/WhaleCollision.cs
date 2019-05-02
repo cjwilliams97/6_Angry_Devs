@@ -18,7 +18,7 @@ public class WhaleCollision : Collision
     // ovverides method to form to orca collisions
     public override void OnTriggerEnter(Collider other)
     {
-        if (active)
+        if (active && other.tag == "caravelTag")
         {
             GameObject.Find("Scripts").SendMessage("HealthChangeDamage", damage); // calls damage script
             sfxHandler.PlayAudio("orca impact"); // calls audio script to play orca sounds
