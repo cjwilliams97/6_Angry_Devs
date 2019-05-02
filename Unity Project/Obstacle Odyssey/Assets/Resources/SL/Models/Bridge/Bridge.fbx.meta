@@ -1,93 +1,45 @@
 fileFormatVersion: 2
-guid: 5083e86f0389f7540bfd32a8abd66feb
+guid: 3e7bd79852f81f64188633323abb375f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: grey1
-    2100002: terrainrocky
-    2100004: terraingrassy
-    2100006: brown
-    2100008: blossom.003
-    2100010: blossom.001
-    2100012: blossom
-    2100014: grey
-    2100016: lightgrey
-    2100018: lightbrown
-    2100020: roof
-    2100022: Window
-    2100024: terrainbrown
+    2100000: Rock
+    2100002: Planks
+    2100004: SupportBraces
+    2100006: Rope
+    2100008: Posts
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Icosphere.022
+    4300000: BezierCurve.007
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Window
-    second: {fileID: 2100000, guid: a62c3c2e91392074883f8bc53ae22217, type: 2}
+      name: Planks
+    second: {fileID: 2100000, guid: 573ac30b5eae46243a9b5bff32b21a5e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blossom
-    second: {fileID: 2100000, guid: 6b1a5028ae9040842bde8092f12f994f, type: 2}
+      name: Posts
+    second: {fileID: 2100000, guid: 62175a04554d71c4fb7dfc277f3e6886, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blossom.001
-    second: {fileID: 2100000, guid: bf91076d446522f4eb390b0e9ed1c60a, type: 2}
+      name: Rock
+    second: {fileID: 2100000, guid: a150a724eea4bf943a2fd89ad1489c58, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blossom.003
-    second: {fileID: 2100000, guid: 4684d6f4062841343b3f5c96b5db6ed6, type: 2}
+      name: Rope
+    second: {fileID: 2100000, guid: 7258a0ff51cfdd641ba7f5aea4acb956, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: brown
+      name: SupportBraces
     second: {fileID: 2100000, guid: a54dead2f8afa4f4ea729a9c30c9e990, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: grey
-    second: {fileID: 2100000, guid: fd7b0f0cca661be439fc2503b5ee1d60, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: grey1
-    second: {fileID: 2100000, guid: d43b922f49365f9448ae5ba7740d6741, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lightbrown
-    second: {fileID: 2100000, guid: 691d624c6bbe9f64fac3435fd5a209ee, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lightgrey
-    second: {fileID: 2100000, guid: 633ee9b0bd4ccbd419d78dc3b8b2f35e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: roof
-    second: {fileID: 2100000, guid: 5c1eb293d6919474a8b5373e0ea2b729, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: terrainbrown
-    second: {fileID: 2100000, guid: be21b4ccf34eac44d91865263fc20a42, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: terraingrassy
-    second: {fileID: 2100000, guid: b39f093412f0bf34199c3afef51b72b9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: terrainrocky
-    second: {fileID: 2100000, guid: 6312ea62660b31a44afe8fc64df7a350, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
