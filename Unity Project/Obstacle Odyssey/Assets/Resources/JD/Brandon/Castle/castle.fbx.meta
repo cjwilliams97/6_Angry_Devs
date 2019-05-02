@@ -17,6 +17,7 @@ ModelImporter:
     2100018: lightbrown
     2100020: roof
     2100022: Window
+    2100024: terrainbrown
     2300000: //RootNode
     3300000: //RootNode
     4300000: Icosphere.022
@@ -72,6 +73,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: roof
     second: {fileID: 2100000, guid: 5c1eb293d6919474a8b5373e0ea2b729, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: terrainbrown
+    second: {fileID: 2100000, guid: be21b4ccf34eac44d91865263fc20a42, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

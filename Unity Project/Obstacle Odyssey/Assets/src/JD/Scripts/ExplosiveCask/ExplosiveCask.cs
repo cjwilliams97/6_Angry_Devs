@@ -90,13 +90,15 @@ public class ExplosiveCask : MonoBehaviour
             {
                 Instantiate(ExplodeyPrefab, new Vector3(barrel.transform.position.x, barrel.transform.position.y, barrel.transform.position.z), Quaternion.identity);
                 //do damage
-                Debug.Log("Explosion barrel damage");
-                GameObject.Find("Scripts").SendMessage("HealthChangeDamage", 35f);
+                if(dist < 3.0f)
+                {
+                    Debug.Log("Explosion barrel damage");
+                    GameObject.Find("Scripts").SendMessage("HealthChangeDamage", 35f);
+                }
                // GetComponent<Health>().HealthChangeDamage(35f);
             }
             catch
             { }
-            
         }
         else
         {
