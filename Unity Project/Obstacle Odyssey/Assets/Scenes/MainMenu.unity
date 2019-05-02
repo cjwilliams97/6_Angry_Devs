@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -885,10 +885,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 100000, guid: b338e8f55ae940643af85d2ec12f4d75, type: 3}
-      propertyPath: m_Name
-      value: Cannon
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b338e8f55ae940643af85d2ec12f4d75, type: 3}
       propertyPath: m_LocalPosition.x
       value: 71.072784
@@ -944,6 +940,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: b338e8f55ae940643af85d2ec12f4d75, type: 3}
       propertyPath: m_LocalScale.z
       value: 250.78001
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b338e8f55ae940643af85d2ec12f4d75, type: 3}
+      propertyPath: m_Name
+      value: Cannon
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: b338e8f55ae940643af85d2ec12f4d75, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1097,7 +1097,7 @@ MonoBehaviour:
   audio:
   - fileName: high c menu
     clip: {fileID: 8300000, guid: b50835d0ebc1883498af2e6131ad1588, type: 3}
-    volume: 0.5
+    volume: 0.1
     loop: 1
     pitch: 1
 --- !u!4 &1070964078

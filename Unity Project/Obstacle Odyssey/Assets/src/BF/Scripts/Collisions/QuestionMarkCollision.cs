@@ -28,6 +28,7 @@ public class QuestionMarkCollision : Collision
     {
         if (active && other.tag == "caravelTag")
         {
+            sfxHandler.PlayAudio("question impact");
             randomNumber = Random.Range(0, 101); // returns random number between 0 and 100
             //Debug.Log("Random number is: " + randomNumber);
 

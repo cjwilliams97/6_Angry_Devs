@@ -41,7 +41,7 @@ public class SFXHandler : AudioTemplate
     // random pitch system for sfx
     public override float PitchAudio()
     {
-        return Random.Range(0.5F, 1.5F);
+        return Random.Range(0.3F, 1.8F);
     }
 
     // play sfx based on name

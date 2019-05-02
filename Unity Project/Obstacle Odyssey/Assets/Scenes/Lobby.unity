@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2333,7 +2333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -6.3960004, y: 0, z: 0}
   m_AnchorMin: {x: 0.70400006, y: 0.039}
   m_AnchorMax: {x: 0.9567118, y: 0.22441089}
-  m_AnchoredPosition: {x: 44, y: -18.99997}
+  m_AnchoredPosition: {x: 44, y: -19}
   m_SizeDelta: {x: 63.200012, y: -15.300003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074006519
@@ -3285,11 +3285,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6270220779382907964, guid: 7e463711d8cd4ea4a9aa1c5636067599,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6270220779382907967, guid: 7e463711d8cd4ea4a9aa1c5636067599,
         type: 3}
       propertyPath: m_UiScaleMode
@@ -3319,6 +3314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270220779382907964, guid: 7e463711d8cd4ea4a9aa1c5636067599,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e463711d8cd4ea4a9aa1c5636067599, type: 3}
@@ -4106,6 +4106,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1729996662}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1743808078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1743808081}
+  - component: {fileID: 1743808080}
+  - component: {fileID: 1743808079}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1743808079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743808078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662365c4b75a9e1429539f536a4ef78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio:
+  - fileName: ocean waves
+    clip: {fileID: 8300000, guid: 21f6b1b904af34349b5a0061bbab8048, type: 3}
+    volume: 0.3
+    loop: 1
+    pitch: 1
+--- !u!114 &1743808080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743808078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fab7d4f2f0bd3544963b80467bca744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio:
+  - fileName: high c menu
+    clip: {fileID: 8300000, guid: b50835d0ebc1883498af2e6131ad1588, type: 3}
+    volume: 0.1
+    loop: 1
+    pitch: 1
+--- !u!4 &1743808081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743808078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1838578280
 PrefabInstance:
   m_ObjectHideFlags: 0

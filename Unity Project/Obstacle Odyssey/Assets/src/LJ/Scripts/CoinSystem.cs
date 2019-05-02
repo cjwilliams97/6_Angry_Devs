@@ -48,7 +48,6 @@ public class CoinSystem : MonoBehaviour
         // read in the old amount and add new amount
         int amount = readFromWallet();
         amount += value;
-        Debug.Log("Wallet: " + amount); 
 
         // write in new amount
         StreamWriter file = new StreamWriter(path);
