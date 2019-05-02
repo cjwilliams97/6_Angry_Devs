@@ -1,12 +1,45 @@
 fileFormatVersion: 2
-guid: a7e393ba029b17045a554aa217ca111c
+guid: 3e7bd79852f81f64188633323abb375f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
+    2100000: Rock
+    2100002: Planks
+    2100004: SupportBraces
+    2100006: Rope
+    2100008: Posts
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: BezierCurve.007
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planks
+    second: {fileID: 2100000, guid: 573ac30b5eae46243a9b5bff32b21a5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Posts
+    second: {fileID: 2100000, guid: 62175a04554d71c4fb7dfc277f3e6886, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock
+    second: {fileID: 2100000, guid: a150a724eea4bf943a2fd89ad1489c58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rope
+    second: {fileID: 2100000, guid: 7258a0ff51cfdd641ba7f5aea4acb956, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SupportBraces
+    second: {fileID: 2100000, guid: a54dead2f8afa4f4ea729a9c30c9e990, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
