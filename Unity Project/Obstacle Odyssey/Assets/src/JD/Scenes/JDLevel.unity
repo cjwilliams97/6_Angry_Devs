@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1171593, g: 0.1201243, b: 0.16054246, a: 1}
+  m_IndirectSpecularColor: {r: 0.11715942, g: 0.12012445, b: 0.1605427, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11799,6 +11799,11 @@ PrefabInstance:
       propertyPath: rigid
       value: 
       objectReference: {fileID: 798996932}
+    - target: {fileID: 8007762665730424622, guid: e75cb3a352e92fa4ead073d8e476af60,
+        type: 3}
+      propertyPath: m_TagString
+      value: caravelTag
+      objectReference: {fileID: 0}
     - target: {fileID: 8007762667045264863, guid: e75cb3a352e92fa4ead073d8e476af60,
         type: 3}
       propertyPath: healthText
