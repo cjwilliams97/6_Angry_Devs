@@ -86,11 +86,26 @@ public class ExplosiveCask : MonoBehaviour
         count++;
         if(count == 1)  //ensures that it only instantiates a single instance of the explosion prefab
         {
-            Instantiate(ExplodeyPrefab, new Vector3(barrel.transform.position.x, barrel.transform.position.y, barrel.transform.position.z), Quaternion.identity);
+            try
+            {
+                Instantiate(ExplodeyPrefab, new Vector3(barrel.transform.position.x, barrel.transform.position.y, barrel.transform.position.z), Quaternion.identity);
+                //do damage
+                Debug.Log("Explosion barrel damage");
+                GameObject.Find("Scripts").SendMessage("HealthChangeDamage", 35f);
+               // GetComponent<Health>().HealthChangeDamage(35f);
+            }
+            catch
+            { }
+            
         }
         else
         {
-            Destroy(barrel);    //destroys barrel gameobject along with its child scripts / componenets
+            try
+            {
+                Destroy(barrel);    //destroys barrel gameobject along with its child scripts / componenets
+            }
+            catch
+            { }
         }
         return;
     }
