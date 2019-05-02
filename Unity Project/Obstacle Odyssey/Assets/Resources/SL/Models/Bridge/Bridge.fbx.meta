@@ -23,6 +23,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Posts
+    second: {fileID: 2100000, guid: 62175a04554d71c4fb7dfc277f3e6886, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Rock
     second: {fileID: 2100000, guid: a150a724eea4bf943a2fd89ad1489c58, type: 2}
   - first:
@@ -34,7 +39,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SupportBraces
-    second: {fileID: 2100000, guid: 0a3c05011a84b8144abdc2d1ef8e844a, type: 2}
+    second: {fileID: 2100000, guid: a54dead2f8afa4f4ea729a9c30c9e990, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
