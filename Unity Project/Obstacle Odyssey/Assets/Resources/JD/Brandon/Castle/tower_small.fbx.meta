@@ -1,12 +1,32 @@
 fileFormatVersion: 2
-guid: a7e393ba029b17045a554aa217ca111c
+guid: 4139519ee5fc5c74a86af08411e43c70
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2186277476908879412: ImportLogs
-  externalObjects: {}
+    2100000: grey
+    2100002: lightgrey
+    2100004: lightbrown
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube.018
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey
+    second: {fileID: 2100000, guid: 1ee85099ae19d4f4c892c506e88b7697, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightbrown
+    second: {fileID: 2100000, guid: 691d624c6bbe9f64fac3435fd5a209ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lightgrey
+    second: {fileID: 2100000, guid: 633ee9b0bd4ccbd419d78dc3b8b2f35e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

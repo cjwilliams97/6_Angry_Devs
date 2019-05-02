@@ -92,4 +92,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/tst/SL/Scenes/SheldonTest.unity
     guid: edf1229c9d050e44cb662e04349de1ee
+  - enabled: 1
+    path: Assets/Scenes/BFMedievalLevel.unity
+    guid: 90345f3fd0e71cb4cbce68165cbcec2f
   m_configObjects: {}
