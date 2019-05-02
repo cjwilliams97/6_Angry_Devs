@@ -80,8 +80,3 @@ public class CoinSystem : MonoBehaviour
         return amount;
     }
 }
-
-public class WalletHandler : CoinSystem
-{
-    
-}
