@@ -12,6 +12,9 @@ public class GameFinish : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("Scripts").SendMessage("GameFinish");
+        if (other.tag == "caravelTag")
+        {
+            GameObject.Find("Scripts").SendMessage("GameFinish");
+        }
     }
 }
