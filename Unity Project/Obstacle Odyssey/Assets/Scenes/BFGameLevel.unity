@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43743128, g: 0.40231007, b: 0.29877657, a: 1}
+  m_IndirectSpecularColor: {r: 0.4374321, g: 0.4023106, b: 0.29877672, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19893,6 +19893,11 @@ PrefabInstance:
       propertyPath: TimerHudBackground
       value: 
       objectReference: {fileID: 276962436}
+    - target: {fileID: 8007762665730424622, guid: e75cb3a352e92fa4ead073d8e476af60,
+        type: 3}
+      propertyPath: m_TagString
+      value: caravelTag
+      objectReference: {fileID: 0}
     - target: {fileID: 8007762667045264863, guid: e75cb3a352e92fa4ead073d8e476af60,
         type: 3}
       propertyPath: healthText
